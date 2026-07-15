@@ -41,9 +41,8 @@ jobs:
       - name: Compilar janela WebView2
         shell: pwsh
         run: |
-          Expand-Archive -Path desktop-source-v2.zip -DestinationPath desktop -Force
-          dotnet restore desktop\Rasputim.Desktop.csproj
-          dotnet build desktop\Rasputim.Desktop.csproj -c Release -o build\launcher
+          dotnet restore desktop-source-v2\Rasputim.Desktop.csproj
+dotnet build desktop-source-v2\Rasputim.Desktop.csproj -c Release -o build\launcher
 
       - name: Montar aplicativo portatil
         shell: pwsh
