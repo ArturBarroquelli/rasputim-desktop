@@ -49,7 +49,7 @@ jobs:
         run: |
           Copy-Item build\launcher\* build\app -Recurse -Force
           Copy-Item (Get-Command node.exe).Source build\app\node.exe -Force
-          Copy-Item desktop\Rasputim.ico build\app\Rasputim.ico -Force
+          Copy-Item desktop-source-v2\Rasputim.ico build\app\Rasputim.ico -Force
           Get-ChildItem build\app -Recurse -Include *.bat,*.cmd,*.ps1,*.vbs | Remove-Item -Force
           if (Test-Path build\app\.env) { Remove-Item build\app\.env -Force }
           Compress-Archive -Path build\app\* -DestinationPath Rasputim-v5.4-Desktop-Windows.zip -CompressionLevel Optimal
