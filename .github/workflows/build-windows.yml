@@ -42,7 +42,7 @@ jobs:
         shell: pwsh
         run: |
           dotnet restore desktop-source-v2\Rasputim.Desktop.csproj
-dotnet build desktop-source-v2\Rasputim.Desktop.csproj -c Release -o build\launcher
+          dotnet build desktop-source-v2\Rasputim.Desktop.csproj -c Release -o build\launcher
 
       - name: Montar aplicativo portatil
         shell: pwsh
