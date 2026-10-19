@@ -1,27 +1,17 @@
 {
-  "name": "rasputim-tecnologis-react",
-  "version": "0.5.0",
-  "description": "Rasputim Tecnologis — React + TypeScript + Electron para PCP, estoque, ferramentas e IA local",
-  "productName": "Rasputim Tecnologis",
-  "main": "src/main.cjs",
-  "author": "Artur Barroquelli",
-  "license": "UNLICENSED",
+  "name": "rasputim-react-typescript-showcase",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:renderer": "vite --config vite.config.ts",
-    "build:renderer": "vite build --config vite.config.ts",
-    "typecheck": "tsc --noEmit",
-    "test": "node --test test/*.test.cjs",
-    "verify": "npm run typecheck && npm run build:renderer && node --check src/main.cjs && node --check src/preload.cjs && node --test test/*.test.cjs",
-    "build:windows": "npm run build:renderer && node scripts/package-windows.cjs"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "xlsx": "0.18.5"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/node": "22.10.7",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.3.4",

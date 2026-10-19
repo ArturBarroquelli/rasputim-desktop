@@ -1,70 +1,38 @@
-# Rasputim Tecnologis v0.5.0
+# Rasputim — React + TypeScript Showcase
 
-**React + TypeScript + Electron + Node.js + IA local** aplicados a um sistema desktop de operação fabril.
+Versão pública e sanitizada do **Rasputim Tecnologis**, criada exclusivamente para portfólio.
 
-O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.5.0 migra o renderer para React + TypeScript sem reescrever o Core já validado.
+Este repositório demonstra a arquitetura visual e técnica do projeto sem expor dados, regras internas, credenciais, integrações privadas ou lógica operacional da empresa.
 
 ## Stack
 
 - React 18
 - TypeScript
 - Vite
-- Electron 28.3.3
-- Node.js / CommonJS no Core
-- SheetJS (`xlsx`)
-- `node:test`
+- CSS
 - GitHub Actions
-- llama.cpp / GGUF para IA local opcional
 
-## Arquitetura
+## O que esta versão demonstra
 
-```text
-React + TypeScript (renderer)
-            │
-            ▼
-Electron preload / IPC seguro
-            │
-            ▼
-Node.js Core
-├── PCP
-├── Estoque e compras
-├── Ferramentas
-├── Usuários e permissões
-├── Relatórios
-└── IA local
-```
+- Dashboard de PCP com dados fictícios
+- Painel de estoque com alertas simulados
+- Gestão visual de ferramentas
+- Núcleo visual de IA local
+- Componentização em React
+- Tipagem TypeScript
+- Build automatizado
 
-O renderer não recebe acesso direto ao Node.js. A comunicação acontece pelo `preload.cjs` com `contextIsolation: true`, `nodeIntegration: false` e sandbox habilitado.
+> Importante: esta é uma versão de demonstração. O projeto privado completo inclui Electron, Node.js, IPC seguro, persistência, usuários, estoque, PCP, ferramentas e integração com IA local.
 
-## Funcionalidades demonstráveis
-
-- Quadro PCP com etapas, prazos, responsáveis e movimentações.
-- Dashboard de estoque, estoque mínimo e necessidade de compra.
-- Gestão de ferramentas, disponibilidade e manutenção.
-- Login individual e trilha de responsabilidade.
-- Assistente de IA local conectado ao `llama-server`.
-- Build Windows x64 automatizado pelo GitHub Actions.
-
-## Desenvolvimento
+## Executar
 
 ```bash
 npm install
-npm run verify
+npm run dev
 ```
 
-Renderer:
+## Build
 
 ```bash
-npm run dev:renderer
+npm run build
 ```
-
-## Build Windows
-
-```bash
-npm install --no-save electron@28.3.3 @electron/packager@18.3.2
-npm run build:windows
-```
-
-## Portfólio
-
-Este projeto demonstra frontend moderno, aplicação desktop, IPC seguro, regras de negócio, persistência local/rede, CI/CD e IA local em um cenário empresarial real.
