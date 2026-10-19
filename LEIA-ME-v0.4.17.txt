@@ -1,0 +1,167 @@
+RASPUTIM TECNOLOGIS v0.4.17 — MOVIMENTAÇÃO LIVRE DE ESTOQUE
+========================================================
+
+INSTALAÇÃO
+1. Extraia todo o ZIP para uma pasta nova, por exemplo C:\Rasputim\v0.4.17.
+2. Não execute o programa dentro do ZIP.
+3. Abra Rasputim Tecnologis.exe.
+4. Não mova somente o executável: as pastas resources e locales devem permanecer ao lado dele.
+
+CORREÇÃO PRINCIPAL DA v0.4.17 — ENTRADAS E SAÍDAS SEM BARREIRA
+- Não existe limite de quantidade de movimentações por material, operador ou sessão.
+- Depois de salvar uma movimentação, qualquer outro material pode ser alterado imediatamente.
+- O botão SALVAR E REGISTRAR OUTRO mantém o fluxo aberto para lançamentos consecutivos.
+- Entradas e saídas são aceitas mesmo quando o saldo anterior ainda não foi contado.
+- Saídas acima do saldo disponível são registradas e podem gerar saldo negativo, sem bloqueio.
+- Saldos desconhecidos usam zero como base inicial e recebem um aviso explícito no histórico.
+- Saldos negativos aparecem como COMPRA URGENTE, mas não impedem novas entradas ou saídas.
+- Motivo, responsável, documento, saldo anterior e saldo posterior continuam registrados.
+- O histórico completo de movimentações não é mais cortado em cinco mil registros.
+
+NOVA FUNÇÃO DA v0.4.16 — PCP INTEGRADO AO RASPUTIM
+- A nova aba PCP · PRODUÇÃO monitora cada obra completa em um quadro operacional.
+- O fluxo oficial tem oito etapas: Orçamento; Lista de compra + caderno técnico; Usinagem;
+  Montagem; Expedição; Entrega; Instalação; e Concluído.
+- A obra avança como uma entrega única. Não existe movimentação separada por ambiente.
+- Cada cartão mostra cliente, obra, responsável, prioridade, prazo e percentual do fluxo.
+- Prazos atrasados, prioridades urgentes e entregas próximas aparecem nos indicadores críticos.
+- Uma obra bloqueada exige motivo e não pode avançar até ser desbloqueada.
+- É possível voltar apenas uma etapa por vez, sempre com confirmação e registro no histórico.
+- Toda criação, edição, movimentação, devolução, bloqueio, desbloqueio e arquivamento grava data,
+  responsável e observação para auditoria.
+- O arquivamento retira a obra do quadro ativo sem apagar seu histórico.
+- Projetos analisados no Rasputim podem ser vinculados ao cadastro da obra no PCP.
+
+USAR O PCP EM QUATRO COMPUTADORES
+1. No primeiro computador, abra PCP · PRODUÇÃO > 4 COMPUTADORES.
+2. Informe um nome para a estação, por exemplo ORÇAMENTO, USINAGEM, MONTAGEM ou EXPEDIÇÃO.
+3. Clique em SELECIONAR PASTA COMPARTILHADA e escolha uma pasta de rede do Windows.
+4. Nos outros três computadores, repita os passos usando exatamente a mesma pasta.
+5. O quadro verifica novas movimentações automaticamente a cada três segundos.
+
+A pasta precisa estar acessível com permissão de leitura e gravação nos quatro computadores.
+O Rasputim usa gravação atômica, revisão e bloqueio temporário do arquivo para impedir que duas
+estações sobrescrevam a mesma atualização. Se a rede cair, a última cópia sincronizada continua
+visível apenas para consulta; novas gravações são recusadas até a conexão voltar. O estoque,
+clientes e demais dados atuais permanecem preservados e não são movidos para essa pasta.
+
+CONFIGURAR UMA CHAVE TAVILY
+1. Crie ou copie sua chave no painel oficial: https://app.tavily.com
+2. No Rasputim, abra Configurações > Pesquisa Tavily.
+3. Cole a chave iniciada por tvly-.
+4. Clique em TESTAR.
+5. Depois da confirmação, clique em SALVAR.
+
+O botão SALVAR testa novamente a chave antes de ativá-la. Depois de salva, a tela mostra
+somente uma versão mascarada. A chave não fica no código, no ZIP, nas planilhas nem no
+histórico de compras. No Windows, ela é cifrada pela proteção de credenciais do próprio
+sistema operacional no perfil local do aplicativo.
+
+MODOS DE PESQUISA
+- Com chave: a Tavily autenticada tem prioridade.
+- Falha ou limite da chave: o Rasputim tenta automaticamente o Tavily Keyless.
+- Falha ou retorno vazio da Tavily: uma fonte web gratuita de reserva pode ser utilizada.
+- Lojas locais compatíveis também são consultadas de forma estruturada no OpenStreetMap,
+  sempre dentro do Paraná e do raio escolhido.
+- O endereço e a distância são validados no computador antes da exibição.
+- A pesquisa continua limitada a fornecedores confirmados no Paraná e dentro do raio.
+
+NOVA FUNÇÃO DA v0.4.15 — SUBSTITUIÇÃO TOTAL DO ESTOQUE
+- A base ativa foi recriada a partir de "estoque profissional - 14-08-2026.xlsx".
+- Foram cadastrados 130 materiais únicos: 105 de FERRAGEM e 25 de MATERIAL GERAL.
+- A planilha informa que não há material MDF nesta contagem; nenhum MDF fictício é criado.
+- Ao abrir a v0.4.15 pela primeira vez, o estoque salvo por uma versão anterior é substituído
+  automaticamente uma única vez.
+- Antes da troca, o sistema guarda uma cópia interna da base anterior, das movimentações,
+  levantamentos, cotações e pesquisas vinculadas ao estoque.
+- Projetos, clientes, configurações e fornecedores cadastrados não são apagados.
+- A área LEVANTAMENTOS agora permite escolher SUBSTITUIR TODO O ESTOQUE ou ATUALIZAR SEM
+  EXCLUIR AUSENTES. O modo total exige prévia, responsável e confirmação expressa.
+- Quantidades textuais são interpretadas sem confundir medidas: "1 corda de 10 m" vale uma
+  corda; "50 unidades em pacote + 41 abertas" vale 91 unidades.
+- O texto original da quantidade permanece visível para auditoria.
+- Quantidades com unidades incompatíveis ou metas "cada" ficam sinalizadas para conferência.
+- Quantidades ideais informadas na planilha têm prioridade; campos vazios usam o padrão 100.
+- A indicação "??" permanece como mínimo não definido, sem inventar um número.
+
+NOVA FUNÇÃO DA v0.4.14 — SITE, TELEFONE E WHATSAPP
+- Depois de localizar os fornecedores, o Rasputim executa uma busca complementar de contatos.
+- Cada cartão mostra ENDEREÇO, SITE OFICIAL, TELEFONE e WHATSAPP em campos separados.
+- O botão ABRIR SITE OFICIAL leva diretamente ao domínio comercial confirmado da empresa.
+- O botão ABRIR WHATSAPP leva diretamente ao atendimento quando o canal foi publicado.
+- Quando apenas um número móvel é encontrado, aparece TENTAR WHATSAPP, sem afirmar que o
+  canal foi confirmado pela empresa.
+- O botão COPIAR TELEFONE coloca o número na área de transferência do Windows.
+- Resultados de oferta podem mostrar ao mesmo tempo o link do produto e o site oficial do
+  fornecedor.
+- Telefones são aceitos somente em formato brasileiro válido e números encontrados no site
+  oficial ou em fonte territorial estruturada têm prioridade.
+- Mapas, guias comerciais, páginas de CNPJ e redes sociais continuam proibidos como site
+  oficial, mesmo quando ajudam na validação interna.
+- Se a empresa não publicar o dado, a tela informa NÃO ENCONTRADO AUTOMATICAMENTE em vez de
+  criar um link ou número enganoso.
+
+CORREÇÃO PRINCIPAL DA v0.4.13
+- A busca não descarta mais um fornecedor somente porque o resumo inicial não mostra endereço.
+- Primeiro o Rasputim encontra páginas de catálogo, produto e fornecedor.
+- Depois abre até 20 domínios candidatos em uma segunda etapa focada em endereço físico,
+  sede, filial, cidade, estado, CEP, CNPJ e contato.
+- O fornecedor só é exibido quando essa prova confirma município do Paraná dentro do raio.
+- "Entrega para Maringá" continua proibida como prova de localização.
+- Resultados de SP, SC, MS ou qualquer outro estado continuam bloqueados na coleta e na tela.
+- A pesquisa informa separadamente quantas páginas foram encontradas e quantos endereços
+  foram realmente verificados.
+- Para raios menores, a consulta passa a mencionar explicitamente as cidades paranaenses
+  dentro da área, melhorando a descoberta local sem autorizar outros estados.
+- Quando os resumos da web não comprovam endereço, a busca estruturada ainda pode apresentar
+  lojas locais de ferragens, material de construção e categorias compatíveis para cotação.
+- Diretórios, mapas e guias podem ajudar somente na validação interna do endereço; nunca são
+  exibidos pelo botão de site oficial.
+- Páginas de prefeitura, cidade, notícia, leilão e emprego são descartadas como falsos
+  fornecedores, mesmo quando mencionam Maringá ou Paraná.
+
+FUNÇÃO PRESERVADA E AMPLIADA DA v0.4.12
+- Nova área Estoque > LEVANTAMENTOS para adicionar planilhas atualizadas.
+- Aceita XLS, XLSX, XLSM e CSV.
+- A planilha gera uma prévia antes de qualquer alteração.
+- A prévia mostra saldo anterior, novo saldo, diferença, materiais novos e pendências.
+- O responsável pelo levantamento é obrigatório antes da confirmação.
+- No modo parcial, materiais ausentes permanecem preservados; no modo total, são arquivados
+  em backup e removidos da base ativa.
+- Quantidade vazia, textual ou negativa nunca vira zero: fica VERIFICAR NO ESTOQUE.
+- Cada aplicação grava arquivo, aba, data, responsável, totais e movimentações no histórico.
+- O mesmo arquivo não pode ser aplicado duas vezes por engano.
+- O leitor escolhe as colunas pelo cabeçalho e pelo conteúdo real dos dados.
+
+CORREÇÃO PRESERVADA DA v0.4.11
+- Corrigida a regressão que descartava todo resultado da Tavily quando o mesmo fornecedor
+  não aparecia com nome idêntico no OpenStreetMap.
+- O aplicativo agora reconhece os 399 municípios do Paraná localmente e calcula a distância
+  aproximada a partir de Maringá, sem depender de uma segunda resposta de mapa para cada site.
+- O mapa, o conteúdo do site e o cadastro interno são provas independentes de localização.
+- "Entrega para Maringá" não é aceita como endereço do fornecedor.
+- Resultados de SC, SP, MS ou qualquer outro estado continuam bloqueados.
+- Fornecedor paranaense fora do raio escolhido continua bloqueado.
+- A Tavily de fornecedores lê o conteúdo da página para localizar o endereço físico mesmo
+  quando ele não aparece no pequeno resumo da busca.
+- Se a busca responder mas não comprovar endereço, a tela informa o motivo em vez de parecer
+  que a pesquisa não foi executada.
+
+CORREÇÕES PRESERVADAS
+- A pesquisa Tavily rápida não envia o parâmetro country incompatível com search_depth fast.
+- ENDEREÇO e SITE OFICIAL permanecem campos independentes na tela e nos dados salvos.
+- O botão ABRIR SITE OFICIAL utiliza somente o domínio comercial confirmado da empresa.
+- Mapas, guias comerciais, consultas de CNPJ, redes sociais e páginas de endereço não são
+  aceitos como site oficial.
+- Se o domínio não puder ser confirmado, aparece SITE NÃO ENCONTRADO sem link enganoso.
+- Frete desconhecido é exibido como "a confirmar", nunca como gratuito.
+- Importação automática de orçamento/projeto e base de clientes em XLS/XLSX.
+
+ATENÇÃO
+Preço anunciado não é cotação final. Antes da compra, confirme por escrito especificação,
+unidade/embalagem, CNPJ, estoque, frete, prazo e condição de pagamento.
+
+MIGRAÇÃO
+Mantenha a versão anterior fechada ao abrir a v0.4.17 e não utilize o atalho antigo. A
+substituição automática do estoque ocorre somente na primeira abertura desta versão. A base
+anterior fica arquivada internamente antes da troca; os demais módulos permanecem preservados.

@@ -1,0 +1,4113 @@
+{
+  "migrationId": "stock-reset-2026-08-14-v0415",
+  "sourceFile": "estoque profissional - 14-08-2026.xlsx",
+  "sourceHash": "a344d200b459273bf43c0c3a18e2a64bdabf15edd456fc26798753e50b1c0754",
+  "fileType": "XLSX",
+  "importedAt": "2026-08-14T12:00:00.000Z",
+  "generatedAt": "2026-08-17T11:30:04.012Z",
+  "reason": "Substituição total do estoque pela planilha profissional de 14-08-2026.",
+  "sheetName": "FERRAGEM + MATERIAL GERAL",
+  "sheetNamesUsed": [
+    "FERRAGEM",
+    "MATERIAL GERAL"
+  ],
+  "headerRow": 3,
+  "columns": {
+    "material": {
+      "column": "A",
+      "header": "MATERIAL:"
+    },
+    "current": {
+      "column": "C",
+      "header": "QUANTIDADE:"
+    },
+    "minimum": {
+      "column": "H",
+      "header": "QUANTIDADE IDEAL:"
+    }
+  },
+  "sourceRowCount": 131,
+  "ignoredRows": [],
+  "warnings": [
+    "2 abas categorizadas foram consolidadas em uma única base de estoque.",
+    "1 material possui quantidades compostas; o detalhamento original será preservado para conferência.",
+    "1 linha repetida foi consolidada pelo nome do material."
+  ],
+  "summary": {
+    "materialCount": 130,
+    "categories": {
+      "FERRAGEM": 105,
+      "MATERIAL GERAL": 25
+    },
+    "knownBalances": 130,
+    "reviewItems": 4
+  },
+  "stock": [
+    {
+      "code": "MAT-001",
+      "category": "FERRAGEM",
+      "material": "TAMPA FUROS: BRANCO/PRETO/MARROM",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 65,
+      "current": 65,
+      "balanceKnown": true,
+      "minimum": 50,
+      "minimumKnown": true,
+      "minimumDetail": "50 CADA",
+      "minimumRequiresReview": true,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "53 PACOTES PEQUEOS/11 PACOTES MÉDIOS/1 PACOTE GRANDES",
+      "quantityComponents": [
+        {
+          "quantity": 53,
+          "unit": "PACOTE",
+          "detail": "53 PACOTES PEQUEOS"
+        },
+        {
+          "quantity": 11,
+          "unit": "PACOTE",
+          "detail": "11 PACOTES MÉDIOS"
+        },
+        {
+          "quantity": 1,
+          "unit": "PACOTE",
+          "detail": "1 PACOTE GRANDES"
+        }
+      ],
+      "requiresReview": true,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!4"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-002",
+      "category": "FERRAGEM",
+      "material": "PÉS PALITOS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3 UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3 UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!5"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-003",
+      "category": "FERRAGEM",
+      "material": "KIT DE PARAFUSOS DE FECHADRUAS",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-PARZINHOS",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "PAR",
+          "detail": "9-PARZINHOS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!6"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-004",
+      "category": "FERRAGEM",
+      "material": "CONECTOR FÉMEA PRETO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!7"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-005",
+      "category": "FERRAGEM",
+      "material": "PROLONGADORES",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 85,
+      "current": 85,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "85-PROLONGADORES CROMADOS",
+      "quantityComponents": [
+        {
+          "quantity": 85,
+          "unit": "UN.",
+          "detail": "85-PROLONGADORES CROMADOS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!8"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-006",
+      "category": "FERRAGEM",
+      "material": "PARAFUSOS 8,8MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 91,
+      "current": 91,
+      "balanceKnown": true,
+      "minimum": 150,
+      "minimumKnown": true,
+      "minimumDetail": "150",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "50UNID PACOTE FECH/41 UNID ABERTO",
+      "quantityComponents": [
+        {
+          "quantity": 50,
+          "unit": "UN.",
+          "detail": "50UNID PACOTE FECH"
+        },
+        {
+          "quantity": 41,
+          "unit": "UN.",
+          "detail": "41 UNID ABERTO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!9"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-007",
+      "category": "FERRAGEM",
+      "material": "KIT BLINDEX BOX BANHEIRO",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 KIT BOX COMPLETO",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "KIT",
+          "detail": "1 KIT BOX COMPLETO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!10"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-008",
+      "category": "FERRAGEM",
+      "material": "CAMINHO BOX BANEHIRO - BLINDEX",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4 UNIDES DE CAMINHO",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4 UNIDES DE CAMINHO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!11"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-009",
+      "category": "FERRAGEM",
+      "material": "KIT FECHADURAS",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-KIT FECHADOS DE FECHADURAS",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "KIT",
+          "detail": "2-KIT FECHADOS DE FECHADURAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!12"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-010",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS PORTAS DE VIDRO BLINDEX",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 28,
+      "current": 28,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "28-UNIDADES DE CANTNEIRAS CROMADAS",
+      "quantityComponents": [
+        {
+          "quantity": 28,
+          "unit": "UN.",
+          "detail": "28-UNIDADES DE CANTNEIRAS CROMADAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!13"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-011",
+      "category": "FERRAGEM",
+      "material": "SUPORTES TUCANO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-SUPORTES TUCANO",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-SUPORTES TUCANO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!14"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-012",
+      "category": "FERRAGEM",
+      "material": "PARAFUSOS BROCANTES",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 6,
+      "current": 6,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "6-UNID PARAFUSOS BROCANTES",
+      "quantityComponents": [
+        {
+          "quantity": 6,
+          "unit": "UN.",
+          "detail": "6-UNID PARAFUSOS BROCANTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!15"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-013",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE FACETATO-BRONZE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 19,
+      "current": 19,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "19-PONTEIRAS DE FACETATO-15,MM",
+      "quantityComponents": [
+        {
+          "quantity": 19,
+          "unit": "UN.",
+          "detail": "19-PONTEIRAS DE FACETATO-15,MM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!16"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-014",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE FACETATO-PRETA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 49,
+      "current": 49,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "49-PONTEIRAS DE FACETATO-15MM",
+      "quantityComponents": [
+        {
+          "quantity": 49,
+          "unit": "UN.",
+          "detail": "49-PONTEIRAS DE FACETATO-15MM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!17"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-015",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE FACETATO-PRATA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 10,
+      "current": 10,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "10-PONTEIRAS DE FACETATO-15MM",
+      "quantityComponents": [
+        {
+          "quantity": 10,
+          "unit": "UN.",
+          "detail": "10-PONTEIRAS DE FACETATO-15MM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!18"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-016",
+      "category": "FERRAGEM",
+      "material": "PUXADOR BRONZE FACETATO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 8,
+      "current": 8,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "8-PUXADORES DE FACETATO BRONZE",
+      "quantityComponents": [
+        {
+          "quantity": 8,
+          "unit": "UN.",
+          "detail": "8-PUXADORES DE FACETATO BRONZE"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!19"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-017",
+      "category": "FERRAGEM",
+      "material": "FECHADURAS STAM SIMPLES",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-FECHADURAS STAM",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-FECHADURAS STAM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!20"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-018",
+      "category": "FERRAGEM",
+      "material": "FECHADURAS STAM MÉDIO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-FECHADURAS STAM",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-FECHADURAS STAM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!21"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-019",
+      "category": "FERRAGEM",
+      "material": "MIOLOS DE FECHADRUAS STAM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-MIOLOS DE FECHADURAS",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "UN.",
+          "detail": "9-MIOLOS DE FECHADURAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!22"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-020",
+      "category": "FERRAGEM",
+      "material": "FECHADRUAS STAM GRANDE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-FECHADURAS STAM",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-FECHADURAS STAM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!23"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-021",
+      "category": "FERRAGEM",
+      "material": "FECHADURAS BENHEIRO STAM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-FECHADURA STAM",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-FECHADURA STAM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!24"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-022",
+      "category": "FERRAGEM",
+      "material": "FECHADURAS PORTA REDONDA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-FECHADURA STAM",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-FECHADURA STAM"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!25"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-023",
+      "category": "FERRAGEM",
+      "material": "DOBRADIÇAS PORTA GRANDE-PRATA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 50,
+      "minimumKnown": true,
+      "minimumDetail": "50",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!26"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-024",
+      "category": "FERRAGEM",
+      "material": "ESPELHO DE MIOLO DE FECHADURA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-UNIDADE",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-UNIDADE"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!27"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-025",
+      "category": "FERRAGEM",
+      "material": "DOBRADIÇA DE PORTA DE VIDRO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 30,
+      "minimumKnown": true,
+      "minimumDetail": "30",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!28"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-026",
+      "category": "FERRAGEM",
+      "material": "KIT ROPEIRO R082-MAX",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-KIT (IMCOMPLETO)",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "KIT",
+          "detail": "1-KIT (IMCOMPLETO)"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!29"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-027",
+      "category": "FERRAGEM",
+      "material": "KIT DOBRADIÇAS CAVA",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 18,
+      "current": 18,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "18-KIT",
+      "quantityComponents": [
+        {
+          "quantity": 18,
+          "unit": "KIT",
+          "detail": "18-KIT"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!30"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-028",
+      "category": "FERRAGEM",
+      "material": "PINOS DE MADEIRA PARA ENCAIXE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 100,
+      "current": 100,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "100-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 100,
+          "unit": "UN.",
+          "detail": "100-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!31"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-029",
+      "category": "FERRAGEM",
+      "material": "SUPORTE DE PERFIL M12",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 69,
+      "current": 69,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "69-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 69,
+          "unit": "UN.",
+          "detail": "69-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!32"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-030",
+      "category": "FERRAGEM",
+      "material": "CINTA DE COURO PARA SEGURAR ARMARIO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-UNIDADE",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-UNIDADE"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!33"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-031",
+      "category": "FERRAGEM",
+      "material": "FECHADURA DE CLICK",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 11,
+      "current": 11,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "11-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 11,
+          "unit": "UN.",
+          "detail": "11-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!34"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-032",
+      "category": "FERRAGEM",
+      "material": "ENGATES DE PRATELEIRA-FECHO CLICK",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 6,
+      "current": 6,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "6-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 6,
+          "unit": "UN.",
+          "detail": "6-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!35"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-033",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE 10 INOX BRONZE/ESCOVADO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 22,
+      "current": 22,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "22-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 22,
+          "unit": "UN.",
+          "detail": "22-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!36"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-034",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE 10 INOX PRATA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 6,
+      "current": 6,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "6-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 6,
+          "unit": "UN.",
+          "detail": "6-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!37"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-035",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DE 10 INOX PRETA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 10,
+      "current": 10,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "10-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 10,
+          "unit": "UN.",
+          "detail": "10-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!38"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-036",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA GOLF VAZADA 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 116,
+      "current": 116,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "116-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 116,
+          "unit": "UN.",
+          "detail": "116-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!39"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-037",
+      "category": "FERRAGEM",
+      "material": "TAMPA VAZADA PRETA 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 20,
+      "current": 20,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "20-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 20,
+          "unit": "UN.",
+          "detail": "20-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!40"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-038",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA COLLGATE 15MM - PRATA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 61,
+      "current": 61,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "61-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 61,
+          "unit": "UN.",
+          "detail": "61-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!41"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-039",
+      "category": "FERRAGEM",
+      "material": "MÃO AMIGA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 12,
+      "current": 12,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "12-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 12,
+          "unit": "UN.",
+          "detail": "12-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!42"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-040",
+      "category": "FERRAGEM",
+      "material": "KIT CORREDIÇAS ESCONDIDAS",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-KIT = 4 CORREDIÇAS ESCONDIDAS",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "KIT",
+          "detail": "1-KIT = 4 CORREDIÇAS ESCONDIDAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!43"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-041",
+      "category": "FERRAGEM",
+      "material": "BAT 80 C170 CROMADO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 61,
+      "current": 61,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "61-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 61,
+          "unit": "UN.",
+          "detail": "61-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!44"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-042",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA DE FACETA BRONZE 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 16,
+      "current": 16,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "16-PONTEIRAS + 1 ROLO DE 15MM BRONZE",
+      "quantityComponents": [
+        {
+          "quantity": 16,
+          "unit": "UN.",
+          "detail": "16-PONTEIRAS"
+        },
+        {
+          "quantity": 1,
+          "unit": "ROLO",
+          "detail": "1 ROLO DE 15MM BRONZE"
+        }
+      ],
+      "requiresReview": true,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!45"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-043",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA TAMPA 18MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 21,
+      "current": 21,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "21-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 21,
+          "unit": "UN.",
+          "detail": "21-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!46"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-044",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA TAMPA 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 19,
+      "current": 19,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "19-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 19,
+          "unit": "UN.",
+          "detail": "19-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!47"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-045",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA GOLA PRATA 18MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 41,
+      "current": 41,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "41-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 41,
+          "unit": "UN.",
+          "detail": "41-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!48"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-046",
+      "category": "FERRAGEM",
+      "material": "KIT CAMARÃO",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-KIT",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "KIT",
+          "detail": "1-KIT"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!49"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-047",
+      "category": "FERRAGEM",
+      "material": "KIT PISTÃO LINHA MAG TRILHO COM ABA",
+      "unit": "KIT",
+      "sourcePresentation": "KIT",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-KIT",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "KIT",
+          "detail": "4-KIT"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!50"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-048",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS DOBRADAS 18MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 42,
+      "current": 42,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "42-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 42,
+          "unit": "UN.",
+          "detail": "42-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!51"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-049",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS DOURADAS 18MM",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-PARES",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "PAR",
+          "detail": "9-PARES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!52"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-050",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS TITÂNIO 18MM",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 13,
+      "current": 13,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "13-PARES",
+      "quantityComponents": [
+        {
+          "quantity": 13,
+          "unit": "PAR",
+          "detail": "13-PARES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!53"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-051",
+      "category": "FERRAGEM",
+      "material": "UNIBLOCK 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 21,
+      "current": 21,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "21-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 21,
+          "unit": "UN.",
+          "detail": "21-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!54"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-052",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA PUXADOR GOLF/GOLA PRATA 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 90,
+      "current": 90,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "33-UNIDADES + 57-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 33,
+          "unit": "UN.",
+          "detail": "33-UNIDADES"
+        },
+        {
+          "quantity": 57,
+          "unit": "UN.",
+          "detail": "57-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!55",
+        "FERRAGEM!57"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-053",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA PUXADOR GOLF/GOLA DOURADO/LATÃO 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 19,
+      "current": 19,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "19-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 19,
+          "unit": "UN.",
+          "detail": "19-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!56"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-054",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA PUXADOR GOLF CROMADO 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 37,
+      "current": 37,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "37-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 37,
+          "unit": "UN.",
+          "detail": "37-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!58"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-055",
+      "category": "FERRAGEM",
+      "material": "PONTEIRA PUXADOR GOLF FACETADO PRETA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 17,
+      "current": 17,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "17-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 17,
+          "unit": "UN.",
+          "detail": "17-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!59"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-056",
+      "category": "FERRAGEM",
+      "material": "CAIXA REBITE GRANDE",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!60"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-057",
+      "category": "FERRAGEM",
+      "material": "CAIXA REBITE MÉDIO",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!61"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-058",
+      "category": "FERRAGEM",
+      "material": "CAIXA REBITE PEQUENO",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!62"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-059",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS FACETA BRONZE 18MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!63"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-060",
+      "category": "FERRAGEM",
+      "material": "PACOTES PINO DE PRATELEIRA",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 5,
+      "current": 5,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "5-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 5,
+          "unit": "PACOTE",
+          "detail": "5-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!64"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-061",
+      "category": "FERRAGEM",
+      "material": "CAIXA DE BOLINHA BRANCA",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!65"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-062",
+      "category": "FERRAGEM",
+      "material": "PACOTES ACABAMENTO PINO",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 5,
+      "current": 5,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "5-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 5,
+          "unit": "PACOTE",
+          "detail": "5-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!66"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-063",
+      "category": "FERRAGEM",
+      "material": "PISTÃO ABERTOS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 24,
+      "current": 24,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "24-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 24,
+          "unit": "UN.",
+          "detail": "24-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!67"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-064",
+      "category": "FERRAGEM",
+      "material": "PACOTES PEÇAS PISTÃO",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "PACOTE",
+          "detail": "2-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!68"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-065",
+      "category": "FERRAGEM",
+      "material": "PISTÃO FECHADOS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 22,
+      "current": 22,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "22-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 22,
+          "unit": "UN.",
+          "detail": "22-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!69"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-066",
+      "category": "FERRAGEM",
+      "material": "BRAÇOS ARTICULADOS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 6,
+      "current": 6,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "6-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 6,
+          "unit": "UN.",
+          "detail": "6-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!70"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-067",
+      "category": "FERRAGEM",
+      "material": "PUXADOR T",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 20,
+      "current": 20,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "20-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 20,
+          "unit": "UN.",
+          "detail": "20-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!71"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-068",
+      "category": "FERRAGEM",
+      "material": "PACOTES FECHADOS CANTONEIRAS PRETAS 2 FUROS",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "PACOTE",
+          "detail": "3-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!72"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-069",
+      "category": "FERRAGEM",
+      "material": "PACOTES FECHADOS CANTONEIRAS BRANCAS 2 FUROS",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "PACOTE",
+          "detail": "3-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!73"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-070",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS BRANCA 3 FUROS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 16,
+      "current": 16,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "16-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 16,
+          "unit": "UN.",
+          "detail": "16-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!74"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-071",
+      "category": "FERRAGEM",
+      "material": "PACOTES CANTONEIRAS 3 FUROS - PRETO",
+      "unit": "PACOTE",
+      "sourcePresentation": "PACOTE",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-PACOTES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "PACOTE",
+          "detail": "2-PACOTES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!75"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-072",
+      "category": "FERRAGEM",
+      "material": "CANTONEIRAS PRETAS 3 FUROS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 57,
+      "current": 57,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "57-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 57,
+          "unit": "UN.",
+          "detail": "57-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!76"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-073",
+      "category": "FERRAGEM",
+      "material": "PUXADORES ROSE CONCHA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "UN.",
+          "detail": "9-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!77"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-074",
+      "category": "FERRAGEM",
+      "material": "PUXADORES VERTICAL CONCHA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "UN.",
+          "detail": "9-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!78"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-075",
+      "category": "FERRAGEM",
+      "material": "PUXADORES 96MM COM PEDRAS = RETO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 5,
+      "current": 5,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "5-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 5,
+          "unit": "UN.",
+          "detail": "5-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!79"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-076",
+      "category": "FERRAGEM",
+      "material": "PUXADORES CLÁSSICOS CROMADOS 20CM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!80"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-077",
+      "category": "FERRAGEM",
+      "material": "PUXADORES 1350 - 96 - CROMADO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!81"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-078",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS P/ PUXAR CROMADA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 21,
+      "current": 21,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "21-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 21,
+          "unit": "UN.",
+          "detail": "21-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!82"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-079",
+      "category": "FERRAGEM",
+      "material": "PUXADORES DOURADOS CONCHA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!83"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-080",
+      "category": "FERRAGEM",
+      "material": "PUXADORES 96MM COM PEDRAS - CROMADO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!84"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-081",
+      "category": "FERRAGEM",
+      "material": "PUXADOR RETO 1203-AL-182-AE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 7,
+      "current": 7,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "7-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 7,
+          "unit": "UN.",
+          "detail": "7-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!85"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-082",
+      "category": "FERRAGEM",
+      "material": "PAR DE PUX [NOME NÃO TOTALMENTE LEGÍVEL] BLACK CROMADO 128MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-PAR",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-PAR"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!86"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-083",
+      "category": "FERRAGEM",
+      "material": "PUXADOR 2092 - CROMADO CURVO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 9,
+      "current": 9,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "9-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 9,
+          "unit": "UN.",
+          "detail": "9-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!87"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-084",
+      "category": "FERRAGEM",
+      "material": "PUXADORES FUME C/ESPICO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!88"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-085",
+      "category": "FERRAGEM",
+      "material": "PUXADORES 15MM CROMADO CURVO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!89"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-086",
+      "category": "FERRAGEM",
+      "material": "PUXADORES 18MM CROMADO CURVO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!90"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-087",
+      "category": "FERRAGEM",
+      "material": "PUXADORES LINHA PRETO 950-96",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!91"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-088",
+      "category": "FERRAGEM",
+      "material": "PUXADORES VELHO PRETO FOSCO - 2 FUROS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 13,
+      "current": 13,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "13-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 13,
+          "unit": "UN.",
+          "detail": "13-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!92"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-089",
+      "category": "FERRAGEM",
+      "material": "PUXADORES VELHO DOURADO - 2 FUROS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!93"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-090",
+      "category": "FERRAGEM",
+      "material": "PUXADORES COM E DE GOSTO (ALÇA QUADRADA)",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 18,
+      "current": 18,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "18-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 18,
+          "unit": "UN.",
+          "detail": "18-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!94"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-091",
+      "category": "FERRAGEM",
+      "material": "TAMPA ROGADA 15MM INOX",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 21,
+      "current": 21,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "21-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 21,
+          "unit": "UN.",
+          "detail": "21-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!95"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-092",
+      "category": "FERRAGEM",
+      "material": "TAMPA ROGADA 16MM INOX + 1 PRETO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 25,
+      "current": 25,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "24-UNIDADES + 1 PRETO",
+      "quantityComponents": [
+        {
+          "quantity": 24,
+          "unit": "UN.",
+          "detail": "24-UNIDADES"
+        },
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1 PRETO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!96"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-093",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS COLGATE 18MM INOX",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 26,
+      "current": 26,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "26-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 26,
+          "unit": "UN.",
+          "detail": "26-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!97"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-094",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS PERFIL X PRETO 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 20,
+      "current": 20,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "20-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 20,
+          "unit": "UN.",
+          "detail": "20-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!98"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-095",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS PERFIL Y PRETO [MEDIDA NÃO LEGÍVEL]MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 21,
+      "current": 21,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "21-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 21,
+          "unit": "UN.",
+          "detail": "21-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!99"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-096",
+      "category": "FERRAGEM",
+      "material": "PONTEIRAS DOURADO - 15MM",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 15,
+      "current": 15,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "15-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 15,
+          "unit": "UN.",
+          "detail": "15-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!100"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-097",
+      "category": "FERRAGEM",
+      "material": "PARES PONTEIRA PRETO - 15MM",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 36,
+      "current": 36,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "36-PARES",
+      "quantityComponents": [
+        {
+          "quantity": 36,
+          "unit": "PAR",
+          "detail": "36-PARES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!101"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-098",
+      "category": "FERRAGEM",
+      "material": "PARES PONTEIRA DOURADO - 15MM",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 38,
+      "current": 38,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "38-PARES",
+      "quantityComponents": [
+        {
+          "quantity": 38,
+          "unit": "PAR",
+          "detail": "38-PARES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!102"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-099",
+      "category": "FERRAGEM",
+      "material": "PARES PONTEIRA TITÂNIO - 15MM",
+      "unit": "PAR",
+      "sourcePresentation": "PAR",
+      "unitsPerPackage": 1,
+      "sourceBalance": 13,
+      "current": 13,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "13-PARES",
+      "quantityComponents": [
+        {
+          "quantity": 13,
+          "unit": "PAR",
+          "detail": "13-PARES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!103"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-100",
+      "category": "FERRAGEM",
+      "material": "CAIXA PINO +30 = 4/4",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!104"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-101",
+      "category": "FERRAGEM",
+      "material": "CAIXAS PINO F25 = 4/4",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-CAIXAS",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "CAIXA",
+          "detail": "2-CAIXAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!105"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-102",
+      "category": "FERRAGEM",
+      "material": "CANT. SUPERIOR = 50MM = 4/4",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-UNIDADE",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-UNIDADE"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!106"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-103",
+      "category": "FERRAGEM",
+      "material": "CAIXA PINO 25MM - 4/4",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!107"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-104",
+      "category": "FERRAGEM",
+      "material": "CAIXA PINO +20 - 2/4",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!108"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-105",
+      "category": "FERRAGEM",
+      "material": "CAIXA PINO +30 - 3/4",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-CAIXA",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "CAIXA",
+          "detail": "1-CAIXA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "FERRAGEM!109"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-106",
+      "category": "MATERIAL GERAL",
+      "material": "FITA LED/ILUMINAÇÃO",
+      "unit": "CAIXA",
+      "sourcePresentation": "CAIXA",
+      "unitsPerPackage": 1,
+      "sourceBalance": 6,
+      "current": 6,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "6-CAIXAS DE 5M DE FITA",
+      "quantityComponents": [
+        {
+          "quantity": 6,
+          "unit": "CAIXA",
+          "detail": "6-CAIXAS DE 5M DE FITA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!4"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-107",
+      "category": "MATERIAL GERAL",
+      "material": "CORDA DE LED",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 3,
+      "minimumKnown": true,
+      "minimumDetail": "3",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 CORDA DE LED 10M",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1 CORDA DE LED 10M"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!5"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-108",
+      "category": "MATERIAL GERAL",
+      "material": "FITA DE COBRE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": null,
+      "minimumKnown": false,
+      "minimumDetail": "??",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 FITA DE 5M",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1 FITA DE 5M"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!6"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-109",
+      "category": "MATERIAL GERAL",
+      "material": "LUMINARIAS SPOOT",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4 LUMIARIAS DE SPOOT",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4 LUMIARIAS DE SPOOT"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!7"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-110",
+      "category": "MATERIAL GERAL",
+      "material": "HUB DE TOMADAS VERTICAL",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 HUB CINZA 3 TOMADAS",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1 HUB CINZA 3 TOMADAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!8"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-111",
+      "category": "MATERIAL GERAL",
+      "material": "CONECTORES DE LUZ AMBIENTE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-CONECTORES SAMSUNG",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-CONECTORES SAMSUNG"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!9"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-112",
+      "category": "MATERIAL GERAL",
+      "material": "FONTES DE ALIEMNTAÇÃO CHAVEADA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-FONTES CHAVEADAS",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-FONTES CHAVEADAS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!10"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-113",
+      "category": "MATERIAL GERAL",
+      "material": "MOLDURAS DE TOMADAS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-MOLDURAS DE TOMADAS PRETA",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-MOLDURAS DE TOMADAS PRETA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!11"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-114",
+      "category": "MATERIAL GERAL",
+      "material": "TOMADAS SOLTA 3 PINOS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-TOMADAS SOLTAS 3 PINOS",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-TOMADAS SOLTAS 3 PINOS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!12"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-115",
+      "category": "MATERIAL GERAL",
+      "material": "INTERRUPTORES DE BOTÃO BOLINHA",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 4,
+      "current": 4,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "4-INTERRUPTORES PRETO PEQUENO BOLINHA",
+      "quantityComponents": [
+        {
+          "quantity": 4,
+          "unit": "UN.",
+          "detail": "4-INTERRUPTORES PRETO PEQUENO BOLINHA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!13"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-116",
+      "category": "MATERIAL GERAL",
+      "material": "ADAPTADOR HDMI EM L",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-ADAPTADORES EM L HDMI",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-ADAPTADORES EM L HDMI"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!14"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-117",
+      "category": "MATERIAL GERAL",
+      "material": "CABO DE REDE CAT6",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 6,
+      "minimumKnown": true,
+      "minimumDetail": "6",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 CABO DE REDE CAT6 2M",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1 CABO DE REDE CAT6 2M"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!15"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-118",
+      "category": "MATERIAL GERAL",
+      "material": "ESPELHOS DE INTERNET",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 14,
+      "current": 14,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "14-ESPELHOS DE INTERNET",
+      "quantityComponents": [
+        {
+          "quantity": 14,
+          "unit": "UN.",
+          "detail": "14-ESPELHOS DE INTERNET"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!16"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-119",
+      "category": "MATERIAL GERAL",
+      "material": "INTERRUPTORES DE TOMADAS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 7,
+      "current": 7,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "7-ITERRUPTORES DE TOMADA CINZA",
+      "quantityComponents": [
+        {
+          "quantity": 7,
+          "unit": "UN.",
+          "detail": "7-ITERRUPTORES DE TOMADA CINZA"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!17"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-120",
+      "category": "MATERIAL GERAL",
+      "material": "TOMADAS 3 PINOS - PRETAS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 14,
+      "current": 14,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "14 UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 14,
+          "unit": "UN.",
+          "detail": "14 UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!18"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-121",
+      "category": "MATERIAL GERAL",
+      "material": "TOMADAS 3 PINOS - BRANCAS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 2,
+      "current": 2,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "2-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!19"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-122",
+      "category": "MATERIAL GERAL",
+      "material": "ESPELHOS DE TOMADAS",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 13,
+      "current": 13,
+      "balanceKnown": true,
+      "minimum": 20,
+      "minimumKnown": true,
+      "minimumDetail": "20-CADA",
+      "minimumRequiresReview": true,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "11-UNIDADES BRANCAS/2-UNIDADES PRETOS",
+      "quantityComponents": [
+        {
+          "quantity": 11,
+          "unit": "UN.",
+          "detail": "11-UNIDADES BRANCAS"
+        },
+        {
+          "quantity": 2,
+          "unit": "UN.",
+          "detail": "2-UNIDADES PRETOS"
+        }
+      ],
+      "requiresReview": true,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!20"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-123",
+      "category": "MATERIAL GERAL",
+      "material": "TOMADAS COM ESPELHO",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 5,
+      "minimumKnown": true,
+      "minimumDetail": "5",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1-TOMADA COM ESPELHO",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "UN.",
+          "detail": "1-TOMADA COM ESPELHO"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!21"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-124",
+      "category": "MATERIAL GERAL",
+      "material": "LAMPADA DE LED",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 10,
+      "minimumKnown": true,
+      "minimumDetail": "10",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES DE PAINEIS DE LED",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES DE PAINEIS DE LED"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!22"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-125",
+      "category": "MATERIAL GERAL",
+      "material": "ROLO DE FITA LED NEON",
+      "unit": "ROLO",
+      "sourcePresentation": "ROLO",
+      "unitsPerPackage": 1,
+      "sourceBalance": 1,
+      "current": 1,
+      "balanceKnown": true,
+      "minimum": 1,
+      "minimumKnown": true,
+      "minimumDetail": "1-ROLO DE 10M",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "1 ROLO DE FITA LED DE 5M",
+      "quantityComponents": [
+        {
+          "quantity": 1,
+          "unit": "ROLO",
+          "detail": "1 ROLO DE FITA LED DE 5M"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!23"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-126",
+      "category": "MATERIAL GERAL",
+      "material": "SUPORTE MOLDURA - PERFIL DE LED",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 73,
+      "current": 73,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "100",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "73-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 73,
+          "unit": "UN.",
+          "detail": "73-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!24"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-127",
+      "category": "MATERIAL GERAL",
+      "material": "PERFIL DE LED",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 10,
+      "current": 10,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "10-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 10,
+          "unit": "UN.",
+          "detail": "10-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!25"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-128",
+      "category": "MATERIAL GERAL",
+      "material": "ELETRO CALHA CINZA - GRANDE",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 3,
+      "current": 3,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "3-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 3,
+          "unit": "UN.",
+          "detail": "3-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!26"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-129",
+      "category": "MATERIAL GERAL",
+      "material": "CALHAS DE TOMADA CINZA - SIMPLES",
+      "unit": "UN.",
+      "sourcePresentation": "UN.",
+      "unitsPerPackage": 1,
+      "sourceBalance": 17,
+      "current": 17,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "17-UNIDADES",
+      "quantityComponents": [
+        {
+          "quantity": 17,
+          "unit": "UN.",
+          "detail": "17-UNIDADES"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!27"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    },
+    {
+      "code": "MAT-130",
+      "category": "MATERIAL GERAL",
+      "material": "ROLOS DE PLÁSTICO",
+      "unit": "ROLO",
+      "sourcePresentation": "ROLO",
+      "unitsPerPackage": 1,
+      "sourceBalance": 25,
+      "current": 25,
+      "balanceKnown": true,
+      "minimum": 100,
+      "minimumKnown": true,
+      "minimumDetail": "",
+      "minimumRequiresReview": false,
+      "monthlyConsumption": 0,
+      "notes": "",
+      "quantityDetail": "25-ROLOS",
+      "quantityComponents": [
+        {
+          "quantity": 25,
+          "unit": "ROLO",
+          "detail": "25-ROLOS"
+        }
+      ],
+      "requiresReview": false,
+      "storageLocation": "",
+      "sourceLocations": [
+        "MATERIAL GERAL!28"
+      ],
+      "lastCountAt": "2026-08-14T12:00:00.000Z"
+    }
+  ]
+}
