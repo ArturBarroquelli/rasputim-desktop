@@ -2,6 +2,11 @@ name: Bootstrap Rasputim v0.4.29
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - release/v0.4.29-github-ai-local
+    paths:
+      - 'release/START-V0429'
 
 permissions:
   contents: write
@@ -25,11 +30,11 @@ jobs:
       - name: Rebuild and expand validated source
         shell: pwsh
         run: |
-          $parts = Get-ChildItem 'release/parts/*.b64' | Sort-Object Name
-          if (-not $parts) { throw 'Source parts not found.' }
-          $base64 = ($parts | ForEach-Object { Get-Content $_.FullName -Raw }) -join ''
+          $payload = Join-Path $PWD 'release/Rasputim-v0.4.29-source.b64'
+          if (-not (Test-Path $payload)) { throw "Source payload not found: $payload" }
+          $base64 = Get-Content $payload -Raw
           $archive = Join-Path $env:RUNNER_TEMP 'Rasputim-Tecnologis-v0.4.29-source.zip'
-          [IO.File]::WriteAllBytes($archive, [Convert]::FromBase64String($base64))
+          [IO.File]::WriteAllBytes($archive, [Convert]::FromBase64String($base64.Trim()))
           $temp = Join-Path $env:RUNNER_TEMP 'rasputim-v0429-source'
           Remove-Item $temp -Recurse -Force -ErrorAction SilentlyContinue
           New-Item -ItemType Directory -Path $temp | Out-Null
