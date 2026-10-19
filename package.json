@@ -1,18 +1,30 @@
 {
-  "name": "rasputim-tecnologis-ferramentas-win10",
-  "version": "0.4.29-github-ai-local",
-  "description": "Windows 10 x64 — PCP, estoque, usuários, ferramentas auditáveis e integração opcional com IA local via llama-server",
+  "name": "rasputim-tecnologis-react",
+  "version": "0.5.0",
+  "description": "Rasputim Tecnologis — React + TypeScript + Electron para PCP, estoque, ferramentas e IA local",
   "productName": "Rasputim Tecnologis",
   "main": "src/main.cjs",
-  "author": "Rasputim Tecnologis",
+  "author": "Artur Barroquelli",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "dev:renderer": "vite --config vite.config.ts",
+    "build:renderer": "vite build --config vite.config.ts",
+    "typecheck": "tsc --noEmit",
     "test": "node --test test/*.test.cjs",
-    "verify": "node --check src/main.cjs && node --check src/preload.cjs && node --check src/renderer.js && node --test test/*.test.cjs",
-    "build:windows": "node scripts/package-windows.cjs"
+    "verify": "npm run typecheck && npm run build:renderer && node --check src/main.cjs && node --check src/preload.cjs && node --test test/*.test.cjs",
+    "build:windows": "npm run build:renderer && node scripts/package-windows.cjs"
   },
   "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.7.3",
+    "vite": "5.4.14"
   }
 }

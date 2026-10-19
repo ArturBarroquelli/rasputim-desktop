@@ -1,0 +1,20 @@
+import { useMemo, useState } from "react";
+import { MetricCard } from "../components/MetricCard";
+import { Panel } from "../components/Panel";
+import { date, number } from "../utils";
+export function PcpPage({ state, reload }: { state: any; reload: () => Promise<void> }) {
+  const pcp = state?.pcp || { projects: [], summary: {}, stages: [] };
+  const stages = pcp.stages || [];
+  const [query,setQuery]=useState("");
+  const [form,setForm]=useState({client:"",name:"",dueDate:"",responsible:"",priority:"NORMAL",notes:""});
+  const [showForm,setShowForm]=useState(false);
+  const projects=useMemo(()=> (pcp.projects||[]).filter((p:any)=>p.status!=="ARCHIVED" && (!query || [p.code,p.name,p.client,p.responsible].join(" ").toLowerCase().includes(query.toLowerCase()))),[pcp.projects,query]);
+  async function create(){ await window.rasputim.createPcpProject({...form,user:form.responsible}); setShowForm(false); setForm({client:"",name:"",dueDate:"",responsible:"",priority:"NORMAL",notes:""}); await reload(); }
+  async function move(id:string,direction:"NEXT"|"PREVIOUS"){ await window.rasputim.transitionPcpProject(id,{direction,user:state?.auth?.currentUser?.name||"Operador",note:"Movimentação pelo painel React v0.5.0"}); await reload(); }
+  return <div className="page-stack">
+    <div className="metric-grid five"><MetricCard label="OBRAS ATIVAS" value={number(pcp.summary?.active)}/><MetricCard label="CRÍTICAS" value={number(pcp.summary?.critical)}/><MetricCard label="ATRASADAS" value={number(pcp.summary?.late)}/><MetricCard label="BLOQUEADAS" value={number(pcp.summary?.blocked)}/><MetricCard label="CONCLUÍDAS" value={number(pcp.summary?.completed)}/></div>
+    <div className="toolbar"><input placeholder="Buscar obra, cliente ou responsável..." value={query} onChange={e=>setQuery(e.target.value)}/><button className="outline-button" onClick={async()=>{await window.rasputim.refreshPcp();await reload();}}>ATUALIZAR</button><button className="primary-button" onClick={()=>setShowForm(v=>!v)}>+ NOVA OBRA</button></div>
+    {showForm&&<Panel eyebrow="CADASTRO" title="Nova obra"><div className="form-grid"><input placeholder="Cliente" value={form.client} onChange={e=>setForm({...form,client:e.target.value})}/><input placeholder="Nome da obra" value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/><input type="date" value={form.dueDate} onChange={e=>setForm({...form,dueDate:e.target.value})}/><input placeholder="Responsável" value={form.responsible} onChange={e=>setForm({...form,responsible:e.target.value})}/><select value={form.priority} onChange={e=>setForm({...form,priority:e.target.value})}><option>NORMAL</option><option>ALTA</option><option>URGENTE</option></select><input placeholder="Observação" value={form.notes} onChange={e=>setForm({...form,notes:e.target.value})}/><button className="primary-button" onClick={create}>CADASTRAR OBRA</button></div></Panel>}
+    <Panel eyebrow="FLUXO" title="Painel de Produção" action={<span className="panel-hint">{projects.length} obras visíveis</span>}><div className="kanban">{stages.map((stage:any)=><section className="kanban-column" key={stage.key}><header><span>{stage.shortLabel||stage.label}</span><b>{projects.filter((p:any)=>p.currentStage===stage.key).length}</b></header><div>{projects.filter((p:any)=>p.currentStage===stage.key).map((p:any)=><article className={`work-card ${p.status?.toLowerCase()}`} key={p.id}><div className="card-top"><small>{p.code}</small><span>{p.priority}</span></div><h3>{p.name}</h3><p>{p.client}</p><dl><div><dt>PRAZO</dt><dd>{date(p.dueDate)}</dd></div><div><dt>RESP.</dt><dd>{p.responsible||"—"}</dd></div></dl><div className="progress"><i style={{width:`${Math.max(0,Math.min(100,Number(p.progress)||0))}%`}}/></div><div className="card-actions"><button onClick={()=>move(p.id,"PREVIOUS")}>←</button><button onClick={()=>move(p.id,"NEXT")}>→</button></div></article>)}</div></section>)}</div></Panel>
+  </div>;
+}

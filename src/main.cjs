@@ -1085,7 +1085,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, "index.html"));
+  mainWindow.loadFile(path.join(__dirname, "renderer-dist", "index.html"));
   mainWindow.once("ready-to-show", async () => {
     if (!capturePath) {
       mainWindow.show();
