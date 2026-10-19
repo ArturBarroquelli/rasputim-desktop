@@ -1,0 +1,2396 @@
+[
+  {
+    "codigoIbge": 4100103,
+    "nome": "Abatiá",
+    "latitude": -23.3049,
+    "longitude": -50.3133
+  },
+  {
+    "codigoIbge": 4100202,
+    "nome": "Adrianópolis",
+    "latitude": -24.6606,
+    "longitude": -48.9922
+  },
+  {
+    "codigoIbge": 4100301,
+    "nome": "Agudos do Sul",
+    "latitude": -25.9899,
+    "longitude": -49.3343
+  },
+  {
+    "codigoIbge": 4100400,
+    "nome": "Almirante Tamandaré",
+    "latitude": -25.3188,
+    "longitude": -49.3037
+  },
+  {
+    "codigoIbge": 4100459,
+    "nome": "Altamira do Paraná",
+    "latitude": -24.7983,
+    "longitude": -52.7128
+  },
+  {
+    "codigoIbge": 4128625,
+    "nome": "Alto Paraíso",
+    "latitude": -26.1146,
+    "longitude": -52.7469
+  },
+  {
+    "codigoIbge": 4100608,
+    "nome": "Alto Paraná",
+    "latitude": -23.1312,
+    "longitude": -52.3189
+  },
+  {
+    "codigoIbge": 4100707,
+    "nome": "Alto Piquiri",
+    "latitude": -24.0224,
+    "longitude": -53.44
+  },
+  {
+    "codigoIbge": 4100509,
+    "nome": "Altônia",
+    "latitude": -23.8759,
+    "longitude": -53.8958
+  },
+  {
+    "codigoIbge": 4100806,
+    "nome": "Alvorada do Sul",
+    "latitude": -22.7813,
+    "longitude": -51.2297
+  },
+  {
+    "codigoIbge": 4100905,
+    "nome": "Amaporã",
+    "latitude": -23.0943,
+    "longitude": -52.7866
+  },
+  {
+    "codigoIbge": 4101002,
+    "nome": "Ampére",
+    "latitude": -25.9168,
+    "longitude": -53.4686
+  },
+  {
+    "codigoIbge": 4101051,
+    "nome": "Anahy",
+    "latitude": -24.6449,
+    "longitude": -53.1332
+  },
+  {
+    "codigoIbge": 4101101,
+    "nome": "Andirá",
+    "latitude": -23.0533,
+    "longitude": -50.2304
+  },
+  {
+    "codigoIbge": 4101150,
+    "nome": "Ângulo",
+    "latitude": -23.1946,
+    "longitude": -51.9154
+  },
+  {
+    "codigoIbge": 4101200,
+    "nome": "Antonina",
+    "latitude": -25.4386,
+    "longitude": -48.7191
+  },
+  {
+    "codigoIbge": 4101309,
+    "nome": "Antônio Olinto",
+    "latitude": -25.9804,
+    "longitude": -50.1972
+  },
+  {
+    "codigoIbge": 4101408,
+    "nome": "Apucarana",
+    "latitude": -23.55,
+    "longitude": -51.4635
+  },
+  {
+    "codigoIbge": 4101507,
+    "nome": "Arapongas",
+    "latitude": -23.4153,
+    "longitude": -51.4259
+  },
+  {
+    "codigoIbge": 4101606,
+    "nome": "Arapoti",
+    "latitude": -24.1548,
+    "longitude": -49.8285
+  },
+  {
+    "codigoIbge": 4101655,
+    "nome": "Arapuã",
+    "latitude": -24.3132,
+    "longitude": -51.7856
+  },
+  {
+    "codigoIbge": 4101705,
+    "nome": "Araruna",
+    "latitude": -23.9315,
+    "longitude": -52.5021
+  },
+  {
+    "codigoIbge": 4101804,
+    "nome": "Araucária",
+    "latitude": -25.5859,
+    "longitude": -49.4047
+  },
+  {
+    "codigoIbge": 4101853,
+    "nome": "Ariranha do Ivaí",
+    "latitude": -24.3857,
+    "longitude": -51.5839
+  },
+  {
+    "codigoIbge": 4101903,
+    "nome": "Assaí",
+    "latitude": -23.3697,
+    "longitude": -50.8459
+  },
+  {
+    "codigoIbge": 4102000,
+    "nome": "Assis Chateaubriand",
+    "latitude": -24.4168,
+    "longitude": -53.5213
+  },
+  {
+    "codigoIbge": 4102109,
+    "nome": "Astorga",
+    "latitude": -23.2318,
+    "longitude": -51.6668
+  },
+  {
+    "codigoIbge": 4102208,
+    "nome": "Atalaia",
+    "latitude": -23.1517,
+    "longitude": -52.0551
+  },
+  {
+    "codigoIbge": 4102307,
+    "nome": "Balsa Nova",
+    "latitude": -25.5804,
+    "longitude": -49.6291
+  },
+  {
+    "codigoIbge": 4102406,
+    "nome": "Bandeirantes",
+    "latitude": -23.1078,
+    "longitude": -50.3704
+  },
+  {
+    "codigoIbge": 4102505,
+    "nome": "Barbosa Ferraz",
+    "latitude": -24.0334,
+    "longitude": -52.004
+  },
+  {
+    "codigoIbge": 4102703,
+    "nome": "Barra do Jacaré",
+    "latitude": -23.116,
+    "longitude": -50.1842
+  },
+  {
+    "codigoIbge": 4102604,
+    "nome": "Barracão",
+    "latitude": -26.2502,
+    "longitude": -53.6324
+  },
+  {
+    "codigoIbge": 4102752,
+    "nome": "Bela Vista da Caroba",
+    "latitude": -25.8842,
+    "longitude": -53.6725
+  },
+  {
+    "codigoIbge": 4102802,
+    "nome": "Bela Vista do Paraíso",
+    "latitude": -22.9937,
+    "longitude": -51.1927
+  },
+  {
+    "codigoIbge": 4102901,
+    "nome": "Bituruna",
+    "latitude": -26.1607,
+    "longitude": -51.5518
+  },
+  {
+    "codigoIbge": 4103008,
+    "nome": "Boa Esperança",
+    "latitude": -24.2467,
+    "longitude": -52.7876
+  },
+  {
+    "codigoIbge": 4103024,
+    "nome": "Boa Esperança do Iguaçu",
+    "latitude": -25.6324,
+    "longitude": -53.2108
+  },
+  {
+    "codigoIbge": 4103040,
+    "nome": "Boa Ventura de São Roque",
+    "latitude": -24.8688,
+    "longitude": -51.6276
+  },
+  {
+    "codigoIbge": 4103057,
+    "nome": "Boa Vista da Aparecida",
+    "latitude": -25.4308,
+    "longitude": -53.4117
+  },
+  {
+    "codigoIbge": 4103107,
+    "nome": "Bocaiúva do Sul",
+    "latitude": -25.2066,
+    "longitude": -49.1141
+  },
+  {
+    "codigoIbge": 4103156,
+    "nome": "Bom Jesus do Sul",
+    "latitude": -26.1958,
+    "longitude": -53.5955
+  },
+  {
+    "codigoIbge": 4103206,
+    "nome": "Bom Sucesso",
+    "latitude": -23.7063,
+    "longitude": -51.7671
+  },
+  {
+    "codigoIbge": 4103222,
+    "nome": "Bom Sucesso do Sul",
+    "latitude": -26.0731,
+    "longitude": -52.8353
+  },
+  {
+    "codigoIbge": 4103305,
+    "nome": "Borrazópolis",
+    "latitude": -23.9366,
+    "longitude": -51.5875
+  },
+  {
+    "codigoIbge": 4103354,
+    "nome": "Braganey",
+    "latitude": -24.8173,
+    "longitude": -53.1218
+  },
+  {
+    "codigoIbge": 4103370,
+    "nome": "Brasilândia do Sul",
+    "latitude": -24.1978,
+    "longitude": -53.5275
+  },
+  {
+    "codigoIbge": 4103404,
+    "nome": "Cafeara",
+    "latitude": -22.789,
+    "longitude": -51.7142
+  },
+  {
+    "codigoIbge": 4103453,
+    "nome": "Cafelândia",
+    "latitude": -24.6189,
+    "longitude": -53.3207
+  },
+  {
+    "codigoIbge": 4103479,
+    "nome": "Cafezal do Sul",
+    "latitude": -23.9005,
+    "longitude": -53.5124
+  },
+  {
+    "codigoIbge": 4103503,
+    "nome": "Califórnia",
+    "latitude": -23.6566,
+    "longitude": -51.3574
+  },
+  {
+    "codigoIbge": 4103602,
+    "nome": "Cambará",
+    "latitude": -23.0423,
+    "longitude": -50.0753
+  },
+  {
+    "codigoIbge": 4103701,
+    "nome": "Cambé",
+    "latitude": -23.2766,
+    "longitude": -51.2798
+  },
+  {
+    "codigoIbge": 4103800,
+    "nome": "Cambira",
+    "latitude": -23.589,
+    "longitude": -51.5792
+  },
+  {
+    "codigoIbge": 4103909,
+    "nome": "Campina da Lagoa",
+    "latitude": -24.5893,
+    "longitude": -52.7976
+  },
+  {
+    "codigoIbge": 4103958,
+    "nome": "Campina do Simão",
+    "latitude": -25.0802,
+    "longitude": -51.8237
+  },
+  {
+    "codigoIbge": 4104006,
+    "nome": "Campina Grande do Sul",
+    "latitude": -25.3044,
+    "longitude": -49.0551
+  },
+  {
+    "codigoIbge": 4104055,
+    "nome": "Campo Bonito",
+    "latitude": -25.0294,
+    "longitude": -52.9939
+  },
+  {
+    "codigoIbge": 4104105,
+    "nome": "Campo do Tenente",
+    "latitude": -25.98,
+    "longitude": -49.6844
+  },
+  {
+    "codigoIbge": 4104204,
+    "nome": "Campo Largo",
+    "latitude": -25.4525,
+    "longitude": -49.529
+  },
+  {
+    "codigoIbge": 4104253,
+    "nome": "Campo Magro",
+    "latitude": -25.3687,
+    "longitude": -49.4501
+  },
+  {
+    "codigoIbge": 4104303,
+    "nome": "Campo Mourão",
+    "latitude": -24.0463,
+    "longitude": -52.378
+  },
+  {
+    "codigoIbge": 4104402,
+    "nome": "Cândido de Abreu",
+    "latitude": -24.5649,
+    "longitude": -51.3372
+  },
+  {
+    "codigoIbge": 4104428,
+    "nome": "Candói",
+    "latitude": -25.5758,
+    "longitude": -52.0409
+  },
+  {
+    "codigoIbge": 4104451,
+    "nome": "Cantagalo",
+    "latitude": -25.3734,
+    "longitude": -52.1198
+  },
+  {
+    "codigoIbge": 4104501,
+    "nome": "Capanema",
+    "latitude": -25.6691,
+    "longitude": -53.8055
+  },
+  {
+    "codigoIbge": 4104600,
+    "nome": "Capitão Leônidas Marques",
+    "latitude": -25.4816,
+    "longitude": -53.6112
+  },
+  {
+    "codigoIbge": 4104659,
+    "nome": "Carambeí",
+    "latitude": -24.9152,
+    "longitude": -50.0986
+  },
+  {
+    "codigoIbge": 4104709,
+    "nome": "Carlópolis",
+    "latitude": -23.4269,
+    "longitude": -49.7235
+  },
+  {
+    "codigoIbge": 4104808,
+    "nome": "Cascavel",
+    "latitude": -24.9573,
+    "longitude": -53.459
+  },
+  {
+    "codigoIbge": 4104907,
+    "nome": "Castro",
+    "latitude": -24.7891,
+    "longitude": -50.0108
+  },
+  {
+    "codigoIbge": 4105003,
+    "nome": "Catanduvas",
+    "latitude": -25.2044,
+    "longitude": -53.1548
+  },
+  {
+    "codigoIbge": 4105102,
+    "nome": "Centenário do Sul",
+    "latitude": -22.8188,
+    "longitude": -51.5973
+  },
+  {
+    "codigoIbge": 4105201,
+    "nome": "Cerro Azul",
+    "latitude": -26.0891,
+    "longitude": -52.8691
+  },
+  {
+    "codigoIbge": 4105300,
+    "nome": "Céu Azul",
+    "latitude": -25.1489,
+    "longitude": -53.8415
+  },
+  {
+    "codigoIbge": 4105409,
+    "nome": "Chopinzinho",
+    "latitude": -25.8515,
+    "longitude": -52.5173
+  },
+  {
+    "codigoIbge": 4105508,
+    "nome": "Cianorte",
+    "latitude": -23.6599,
+    "longitude": -52.6054
+  },
+  {
+    "codigoIbge": 4105607,
+    "nome": "Cidade Gaúcha",
+    "latitude": -23.3772,
+    "longitude": -52.9436
+  },
+  {
+    "codigoIbge": 4105706,
+    "nome": "Clevelândia",
+    "latitude": -26.4043,
+    "longitude": -52.3508
+  },
+  {
+    "codigoIbge": 4105805,
+    "nome": "Colombo",
+    "latitude": -25.2925,
+    "longitude": -49.2262
+  },
+  {
+    "codigoIbge": 4105904,
+    "nome": "Colorado",
+    "latitude": -22.8374,
+    "longitude": -51.9743
+  },
+  {
+    "codigoIbge": 4106001,
+    "nome": "Congonhinhas",
+    "latitude": -23.5493,
+    "longitude": -50.5569
+  },
+  {
+    "codigoIbge": 4106100,
+    "nome": "Conselheiro Mairinck",
+    "latitude": -23.623,
+    "longitude": -50.1707
+  },
+  {
+    "codigoIbge": 4106209,
+    "nome": "Contenda",
+    "latitude": -25.6788,
+    "longitude": -49.535
+  },
+  {
+    "codigoIbge": 4106308,
+    "nome": "Corbélia",
+    "latitude": -24.7971,
+    "longitude": -53.3006
+  },
+  {
+    "codigoIbge": 4106407,
+    "nome": "Cornélio Procópio",
+    "latitude": -23.1829,
+    "longitude": -50.6498
+  },
+  {
+    "codigoIbge": 4106456,
+    "nome": "Coronel Domingos Soares",
+    "latitude": -26.2277,
+    "longitude": -52.0356
+  },
+  {
+    "codigoIbge": 4106506,
+    "nome": "Coronel Vivida",
+    "latitude": -25.9767,
+    "longitude": -52.5641
+  },
+  {
+    "codigoIbge": 4106555,
+    "nome": "Corumbataí do Sul",
+    "latitude": -24.101,
+    "longitude": -52.1177
+  },
+  {
+    "codigoIbge": 4106803,
+    "nome": "Cruz Machado",
+    "latitude": -26.0166,
+    "longitude": -51.343
+  },
+  {
+    "codigoIbge": 4106571,
+    "nome": "Cruzeiro do Iguaçu",
+    "latitude": -25.6192,
+    "longitude": -53.1285
+  },
+  {
+    "codigoIbge": 4106605,
+    "nome": "Cruzeiro do Oeste",
+    "latitude": -23.7799,
+    "longitude": -53.0774
+  },
+  {
+    "codigoIbge": 4106704,
+    "nome": "Cruzeiro do Sul",
+    "latitude": -22.9624,
+    "longitude": -52.1622
+  },
+  {
+    "codigoIbge": 4106852,
+    "nome": "Cruzmaltina",
+    "latitude": -24.0132,
+    "longitude": -51.4563
+  },
+  {
+    "codigoIbge": 4106902,
+    "nome": "Curitiba",
+    "latitude": -25.4195,
+    "longitude": -49.2646
+  },
+  {
+    "codigoIbge": 4107009,
+    "nome": "Curiúva",
+    "latitude": -24.0362,
+    "longitude": -50.4576
+  },
+  {
+    "codigoIbge": 4107157,
+    "nome": "Diamante D'Oeste",
+    "latitude": -24.9419,
+    "longitude": -54.1052
+  },
+  {
+    "codigoIbge": 4107108,
+    "nome": "Diamante do Norte",
+    "latitude": -22.655,
+    "longitude": -52.8617
+  },
+  {
+    "codigoIbge": 4107124,
+    "nome": "Diamante do Sul",
+    "latitude": -25.035,
+    "longitude": -52.6768
+  },
+  {
+    "codigoIbge": 4107207,
+    "nome": "Dois Vizinhos",
+    "latitude": -25.7407,
+    "longitude": -53.057
+  },
+  {
+    "codigoIbge": 4107256,
+    "nome": "Douradina",
+    "latitude": -23.3807,
+    "longitude": -53.2918
+  },
+  {
+    "codigoIbge": 4107306,
+    "nome": "Doutor Camargo",
+    "latitude": -23.5582,
+    "longitude": -52.2178
+  },
+  {
+    "codigoIbge": 4128633,
+    "nome": "Doutor Ulysses",
+    "latitude": -24.5665,
+    "longitude": -49.4219
+  },
+  {
+    "codigoIbge": 4107405,
+    "nome": "Enéas Marques",
+    "latitude": -25.9445,
+    "longitude": -53.1659
+  },
+  {
+    "codigoIbge": 4107504,
+    "nome": "Engenheiro Beltrão",
+    "latitude": -23.797,
+    "longitude": -52.2659
+  },
+  {
+    "codigoIbge": 4107538,
+    "nome": "Entre Rios do Oeste",
+    "latitude": -24.7042,
+    "longitude": -54.2385
+  },
+  {
+    "codigoIbge": 4107520,
+    "nome": "Esperança Nova",
+    "latitude": -23.7238,
+    "longitude": -53.811
+  },
+  {
+    "codigoIbge": 4107546,
+    "nome": "Espigão Alto do Iguaçu",
+    "latitude": -25.4216,
+    "longitude": -52.8348
+  },
+  {
+    "codigoIbge": 4107553,
+    "nome": "Farol",
+    "latitude": -24.0958,
+    "longitude": -52.6217
+  },
+  {
+    "codigoIbge": 4107603,
+    "nome": "Faxinal",
+    "latitude": -24.0077,
+    "longitude": -51.3227
+  },
+  {
+    "codigoIbge": 4107652,
+    "nome": "Fazenda Rio Grande",
+    "latitude": -25.6624,
+    "longitude": -49.3073
+  },
+  {
+    "codigoIbge": 4107702,
+    "nome": "Fênix",
+    "latitude": -23.9135,
+    "longitude": -51.9805
+  },
+  {
+    "codigoIbge": 4107736,
+    "nome": "Fernandes Pinheiro",
+    "latitude": -25.4107,
+    "longitude": -50.5456
+  },
+  {
+    "codigoIbge": 4107751,
+    "nome": "Figueira",
+    "latitude": -23.8455,
+    "longitude": -50.4031
+  },
+  {
+    "codigoIbge": 4107850,
+    "nome": "Flor da Serra do Sul",
+    "latitude": -26.2523,
+    "longitude": -53.3092
+  },
+  {
+    "codigoIbge": 4107801,
+    "nome": "Floraí",
+    "latitude": -23.3178,
+    "longitude": -52.3029
+  },
+  {
+    "codigoIbge": 4107900,
+    "nome": "Floresta",
+    "latitude": -23.6031,
+    "longitude": -52.0807
+  },
+  {
+    "codigoIbge": 4108007,
+    "nome": "Florestópolis",
+    "latitude": -22.8623,
+    "longitude": -51.3882
+  },
+  {
+    "codigoIbge": 4108106,
+    "nome": "Flórida",
+    "latitude": -23.0847,
+    "longitude": -51.9546
+  },
+  {
+    "codigoIbge": 4108205,
+    "nome": "Formosa do Oeste",
+    "latitude": -24.2951,
+    "longitude": -53.3114
+  },
+  {
+    "codigoIbge": 4108304,
+    "nome": "Foz do Iguaçu",
+    "latitude": -25.5427,
+    "longitude": -54.5827
+  },
+  {
+    "codigoIbge": 4108452,
+    "nome": "Foz do Jordão",
+    "latitude": -25.7371,
+    "longitude": -52.1188
+  },
+  {
+    "codigoIbge": 4108320,
+    "nome": "Francisco Alves",
+    "latitude": -24.0667,
+    "longitude": -53.8461
+  },
+  {
+    "codigoIbge": 4108403,
+    "nome": "Francisco Beltrão",
+    "latitude": -26.0817,
+    "longitude": -53.0535
+  },
+  {
+    "codigoIbge": 4108502,
+    "nome": "General Carneiro",
+    "latitude": -26.425,
+    "longitude": -51.3172
+  },
+  {
+    "codigoIbge": 4108551,
+    "nome": "Godoy Moreira",
+    "latitude": -24.173,
+    "longitude": -51.9246
+  },
+  {
+    "codigoIbge": 4108601,
+    "nome": "Goioerê",
+    "latitude": -24.1835,
+    "longitude": -53.0248
+  },
+  {
+    "codigoIbge": 4108650,
+    "nome": "Goioxim",
+    "latitude": -25.1927,
+    "longitude": -51.9911
+  },
+  {
+    "codigoIbge": 4108700,
+    "nome": "Grandes Rios",
+    "latitude": -24.1466,
+    "longitude": -51.5094
+  },
+  {
+    "codigoIbge": 4108809,
+    "nome": "Guaíra",
+    "latitude": -24.085,
+    "longitude": -54.2573
+  },
+  {
+    "codigoIbge": 4108908,
+    "nome": "Guairaçá",
+    "latitude": -22.932,
+    "longitude": -52.6906
+  },
+  {
+    "codigoIbge": 4108957,
+    "nome": "Guamiranga",
+    "latitude": -25.1912,
+    "longitude": -50.8021
+  },
+  {
+    "codigoIbge": 4109005,
+    "nome": "Guapirama",
+    "latitude": -23.5203,
+    "longitude": -50.0407
+  },
+  {
+    "codigoIbge": 4109104,
+    "nome": "Guaporema",
+    "latitude": -23.3402,
+    "longitude": -52.7786
+  },
+  {
+    "codigoIbge": 4109203,
+    "nome": "Guaraci",
+    "latitude": -22.9694,
+    "longitude": -51.6504
+  },
+  {
+    "codigoIbge": 4109302,
+    "nome": "Guaraniaçu",
+    "latitude": -25.0968,
+    "longitude": -52.8755
+  },
+  {
+    "codigoIbge": 4109401,
+    "nome": "Guarapuava",
+    "latitude": -25.3902,
+    "longitude": -51.4623
+  },
+  {
+    "codigoIbge": 4109500,
+    "nome": "Guaraqueçaba",
+    "latitude": -25.3071,
+    "longitude": -48.3204
+  },
+  {
+    "codigoIbge": 4109609,
+    "nome": "Guaratuba",
+    "latitude": -25.8817,
+    "longitude": -48.5752
+  },
+  {
+    "codigoIbge": 4109658,
+    "nome": "Honório Serpa",
+    "latitude": -26.139,
+    "longitude": -52.3848
+  },
+  {
+    "codigoIbge": 4109708,
+    "nome": "Ibaiti",
+    "latitude": -23.8478,
+    "longitude": -50.1932
+  },
+  {
+    "codigoIbge": 4109757,
+    "nome": "Ibema",
+    "latitude": -25.1193,
+    "longitude": -53.0072
+  },
+  {
+    "codigoIbge": 4109807,
+    "nome": "Ibiporã",
+    "latitude": -23.2659,
+    "longitude": -51.0522
+  },
+  {
+    "codigoIbge": 4109906,
+    "nome": "Icaraíma",
+    "latitude": -23.3944,
+    "longitude": -53.615
+  },
+  {
+    "codigoIbge": 4110003,
+    "nome": "Iguaraçu",
+    "latitude": -23.1949,
+    "longitude": -51.8256
+  },
+  {
+    "codigoIbge": 4110052,
+    "nome": "Iguatu",
+    "latitude": -24.7153,
+    "longitude": -53.0827
+  },
+  {
+    "codigoIbge": 4110078,
+    "nome": "Imbaú",
+    "latitude": -24.448,
+    "longitude": -50.7533
+  },
+  {
+    "codigoIbge": 4110102,
+    "nome": "Imbituva",
+    "latitude": -25.2285,
+    "longitude": -50.5989
+  },
+  {
+    "codigoIbge": 4110201,
+    "nome": "Inácio Martins",
+    "latitude": -25.5704,
+    "longitude": -51.0769
+  },
+  {
+    "codigoIbge": 4110300,
+    "nome": "Inajá",
+    "latitude": -22.7509,
+    "longitude": -52.1995
+  },
+  {
+    "codigoIbge": 4110409,
+    "nome": "Indianópolis",
+    "latitude": -23.4762,
+    "longitude": -52.6989
+  },
+  {
+    "codigoIbge": 4110508,
+    "nome": "Ipiranga",
+    "latitude": -25.0238,
+    "longitude": -50.5794
+  },
+  {
+    "codigoIbge": 4110607,
+    "nome": "Iporã",
+    "latitude": -24.0083,
+    "longitude": -53.706
+  },
+  {
+    "codigoIbge": 4110656,
+    "nome": "Iracema do Oeste",
+    "latitude": -24.4262,
+    "longitude": -53.3528
+  },
+  {
+    "codigoIbge": 4110706,
+    "nome": "Irati",
+    "latitude": -25.4697,
+    "longitude": -50.6493
+  },
+  {
+    "codigoIbge": 4110805,
+    "nome": "Iretama",
+    "latitude": -24.4253,
+    "longitude": -52.1012
+  },
+  {
+    "codigoIbge": 4110904,
+    "nome": "Itaguajé",
+    "latitude": -22.6183,
+    "longitude": -51.9674
+  },
+  {
+    "codigoIbge": 4110953,
+    "nome": "Itaipulândia",
+    "latitude": -25.1366,
+    "longitude": -54.3001
+  },
+  {
+    "codigoIbge": 4111001,
+    "nome": "Itambaracá",
+    "latitude": -23.0181,
+    "longitude": -50.4097
+  },
+  {
+    "codigoIbge": 4111100,
+    "nome": "Itambé",
+    "latitude": -23.6601,
+    "longitude": -51.9912
+  },
+  {
+    "codigoIbge": 4111209,
+    "nome": "Itapejara d'Oeste",
+    "latitude": -25.9619,
+    "longitude": -52.8152
+  },
+  {
+    "codigoIbge": 4111258,
+    "nome": "Itaperuçu",
+    "latitude": -25.2193,
+    "longitude": -49.3454
+  },
+  {
+    "codigoIbge": 4111308,
+    "nome": "Itaúna do Sul",
+    "latitude": -22.7289,
+    "longitude": -52.8874
+  },
+  {
+    "codigoIbge": 4111407,
+    "nome": "Ivaí",
+    "latitude": -25.0067,
+    "longitude": -50.857
+  },
+  {
+    "codigoIbge": 4111506,
+    "nome": "Ivaiporã",
+    "latitude": -24.2485,
+    "longitude": -51.6754
+  },
+  {
+    "codigoIbge": 4111555,
+    "nome": "Ivaté",
+    "latitude": -23.4072,
+    "longitude": -53.3687
+  },
+  {
+    "codigoIbge": 4111605,
+    "nome": "Ivatuba",
+    "latitude": -23.6187,
+    "longitude": -52.2203
+  },
+  {
+    "codigoIbge": 4111704,
+    "nome": "Jaboti",
+    "latitude": -23.7435,
+    "longitude": -50.0729
+  },
+  {
+    "codigoIbge": 4111803,
+    "nome": "Jacarezinho",
+    "latitude": -23.1591,
+    "longitude": -49.9739
+  },
+  {
+    "codigoIbge": 4111902,
+    "nome": "Jaguapitã",
+    "latitude": -23.1104,
+    "longitude": -51.5342
+  },
+  {
+    "codigoIbge": 4112009,
+    "nome": "Jaguariaíva",
+    "latitude": -24.2439,
+    "longitude": -49.7066
+  },
+  {
+    "codigoIbge": 4112108,
+    "nome": "Jandaia do Sul",
+    "latitude": -23.6011,
+    "longitude": -51.6448
+  },
+  {
+    "codigoIbge": 4112207,
+    "nome": "Janiópolis",
+    "latitude": -24.1401,
+    "longitude": -52.7784
+  },
+  {
+    "codigoIbge": 4112306,
+    "nome": "Japira",
+    "latitude": -23.8142,
+    "longitude": -50.1422
+  },
+  {
+    "codigoIbge": 4112405,
+    "nome": "Japurá",
+    "latitude": -23.4693,
+    "longitude": -52.5557
+  },
+  {
+    "codigoIbge": 4112504,
+    "nome": "Jardim Alegre",
+    "latitude": -24.1809,
+    "longitude": -51.6902
+  },
+  {
+    "codigoIbge": 4112603,
+    "nome": "Jardim Olinda",
+    "latitude": -22.5523,
+    "longitude": -52.0503
+  },
+  {
+    "codigoIbge": 4112702,
+    "nome": "Jataizinho",
+    "latitude": -23.2578,
+    "longitude": -50.9777
+  },
+  {
+    "codigoIbge": 4112751,
+    "nome": "Jesuítas",
+    "latitude": -24.3839,
+    "longitude": -53.3849
+  },
+  {
+    "codigoIbge": 4112801,
+    "nome": "Joaquim Távora",
+    "latitude": -23.4987,
+    "longitude": -49.909
+  },
+  {
+    "codigoIbge": 4112900,
+    "nome": "Jundiaí do Sul",
+    "latitude": -23.4357,
+    "longitude": -50.2496
+  },
+  {
+    "codigoIbge": 4112959,
+    "nome": "Juranda",
+    "latitude": -24.4209,
+    "longitude": -52.8413
+  },
+  {
+    "codigoIbge": 4113007,
+    "nome": "Jussara",
+    "latitude": -23.6219,
+    "longitude": -52.4693
+  },
+  {
+    "codigoIbge": 4113106,
+    "nome": "Kaloré",
+    "latitude": -23.8188,
+    "longitude": -51.6687
+  },
+  {
+    "codigoIbge": 4113205,
+    "nome": "Lapa",
+    "latitude": -25.7671,
+    "longitude": -49.7168
+  },
+  {
+    "codigoIbge": 4113254,
+    "nome": "Laranjal",
+    "latitude": -24.8862,
+    "longitude": -52.47
+  },
+  {
+    "codigoIbge": 4113304,
+    "nome": "Laranjeiras do Sul",
+    "latitude": -25.4077,
+    "longitude": -52.4109
+  },
+  {
+    "codigoIbge": 4113403,
+    "nome": "Leópolis",
+    "latitude": -23.0818,
+    "longitude": -50.7511
+  },
+  {
+    "codigoIbge": 4113429,
+    "nome": "Lidianópolis",
+    "latitude": -24.11,
+    "longitude": -51.6506
+  },
+  {
+    "codigoIbge": 4113452,
+    "nome": "Lindoeste",
+    "latitude": -25.2596,
+    "longitude": -53.5733
+  },
+  {
+    "codigoIbge": 4113502,
+    "nome": "Loanda",
+    "latitude": -22.9232,
+    "longitude": -53.1362
+  },
+  {
+    "codigoIbge": 4113601,
+    "nome": "Lobato",
+    "latitude": -23.0058,
+    "longitude": -51.9524
+  },
+  {
+    "codigoIbge": 4113700,
+    "nome": "Londrina",
+    "latitude": -23.304,
+    "longitude": -51.1691
+  },
+  {
+    "codigoIbge": 4113734,
+    "nome": "Luiziana",
+    "latitude": -24.2853,
+    "longitude": -52.269
+  },
+  {
+    "codigoIbge": 4113759,
+    "nome": "Lunardelli",
+    "latitude": -24.0821,
+    "longitude": -51.7368
+  },
+  {
+    "codigoIbge": 4113809,
+    "nome": "Lupionópolis",
+    "latitude": -22.755,
+    "longitude": -51.6601
+  },
+  {
+    "codigoIbge": 4113908,
+    "nome": "Mallet",
+    "latitude": -25.8806,
+    "longitude": -50.8173
+  },
+  {
+    "codigoIbge": 4114005,
+    "nome": "Mamborê",
+    "latitude": -24.317,
+    "longitude": -52.5271
+  },
+  {
+    "codigoIbge": 4114104,
+    "nome": "Mandaguaçu",
+    "latitude": -23.3458,
+    "longitude": -52.0944
+  },
+  {
+    "codigoIbge": 4114203,
+    "nome": "Mandaguari",
+    "latitude": -23.5446,
+    "longitude": -51.671
+  },
+  {
+    "codigoIbge": 4114302,
+    "nome": "Mandirituba",
+    "latitude": -25.777,
+    "longitude": -49.3282
+  },
+  {
+    "codigoIbge": 4114351,
+    "nome": "Manfrinópolis",
+    "latitude": -26.1441,
+    "longitude": -53.3113
+  },
+  {
+    "codigoIbge": 4114401,
+    "nome": "Mangueirinha",
+    "latitude": -25.9421,
+    "longitude": -52.1743
+  },
+  {
+    "codigoIbge": 4114500,
+    "nome": "Manoel Ribas",
+    "latitude": -24.5144,
+    "longitude": -51.6658
+  },
+  {
+    "codigoIbge": 4114609,
+    "nome": "Marechal Cândido Rondon",
+    "latitude": -24.557,
+    "longitude": -54.0571
+  },
+  {
+    "codigoIbge": 4114708,
+    "nome": "Maria Helena",
+    "latitude": -23.6158,
+    "longitude": -53.2053
+  },
+  {
+    "codigoIbge": 4114807,
+    "nome": "Marialva",
+    "latitude": -23.4843,
+    "longitude": -51.7928
+  },
+  {
+    "codigoIbge": 4114906,
+    "nome": "Marilândia do Sul",
+    "latitude": -23.7425,
+    "longitude": -51.3137
+  },
+  {
+    "codigoIbge": 4115002,
+    "nome": "Marilena",
+    "latitude": -22.7336,
+    "longitude": -53.0402
+  },
+  {
+    "codigoIbge": 4115101,
+    "nome": "Mariluz",
+    "latitude": -24.0089,
+    "longitude": -53.1432
+  },
+  {
+    "codigoIbge": 4115200,
+    "nome": "Maringá",
+    "latitude": -23.4205,
+    "longitude": -51.9333
+  },
+  {
+    "codigoIbge": 4115309,
+    "nome": "Mariópolis",
+    "latitude": -26.355,
+    "longitude": -52.5532
+  },
+  {
+    "codigoIbge": 4115358,
+    "nome": "Maripá",
+    "latitude": -24.42,
+    "longitude": -53.8286
+  },
+  {
+    "codigoIbge": 4115408,
+    "nome": "Marmeleiro",
+    "latitude": -26.1472,
+    "longitude": -53.0267
+  },
+  {
+    "codigoIbge": 4115457,
+    "nome": "Marquinho",
+    "latitude": -25.112,
+    "longitude": -52.2497
+  },
+  {
+    "codigoIbge": 4115507,
+    "nome": "Marumbi",
+    "latitude": -23.7058,
+    "longitude": -51.6404
+  },
+  {
+    "codigoIbge": 4115606,
+    "nome": "Matelândia",
+    "latitude": -25.2496,
+    "longitude": -53.9935
+  },
+  {
+    "codigoIbge": 4115705,
+    "nome": "Matinhos",
+    "latitude": -25.8237,
+    "longitude": -48.549
+  },
+  {
+    "codigoIbge": 4115739,
+    "nome": "Mato Rico",
+    "latitude": -24.6995,
+    "longitude": -52.1454
+  },
+  {
+    "codigoIbge": 4115754,
+    "nome": "Mauá da Serra",
+    "latitude": -23.8988,
+    "longitude": -51.2277
+  },
+  {
+    "codigoIbge": 4115804,
+    "nome": "Medianeira",
+    "latitude": -25.2977,
+    "longitude": -54.0943
+  },
+  {
+    "codigoIbge": 4115853,
+    "nome": "Mercedes",
+    "latitude": -24.4538,
+    "longitude": -54.1618
+  },
+  {
+    "codigoIbge": 4115903,
+    "nome": "Mirador",
+    "latitude": -23.255,
+    "longitude": -52.7761
+  },
+  {
+    "codigoIbge": 4116000,
+    "nome": "Miraselva",
+    "latitude": -22.9657,
+    "longitude": -51.4846
+  },
+  {
+    "codigoIbge": 4116059,
+    "nome": "Missal",
+    "latitude": -25.0919,
+    "longitude": -54.2477
+  },
+  {
+    "codigoIbge": 4116109,
+    "nome": "Moreira Sales",
+    "latitude": -24.0509,
+    "longitude": -53.0102
+  },
+  {
+    "codigoIbge": 4116208,
+    "nome": "Morretes",
+    "latitude": -25.4744,
+    "longitude": -48.8345
+  },
+  {
+    "codigoIbge": 4116307,
+    "nome": "Munhoz de Melo",
+    "latitude": -23.1487,
+    "longitude": -51.7737
+  },
+  {
+    "codigoIbge": 4116406,
+    "nome": "Nossa Senhora das Graças",
+    "latitude": -22.9129,
+    "longitude": -51.7978
+  },
+  {
+    "codigoIbge": 4116505,
+    "nome": "Nova Aliança do Ivaí",
+    "latitude": -23.1763,
+    "longitude": -52.6032
+  },
+  {
+    "codigoIbge": 4116604,
+    "nome": "Nova América da Colina",
+    "latitude": -23.3308,
+    "longitude": -50.7168
+  },
+  {
+    "codigoIbge": 4116703,
+    "nome": "Nova Aurora",
+    "latitude": -24.5289,
+    "longitude": -53.2575
+  },
+  {
+    "codigoIbge": 4116802,
+    "nome": "Nova Cantu",
+    "latitude": -24.6723,
+    "longitude": -52.5661
+  },
+  {
+    "codigoIbge": 4116901,
+    "nome": "Nova Esperança",
+    "latitude": -23.182,
+    "longitude": -52.2031
+  },
+  {
+    "codigoIbge": 4116950,
+    "nome": "Nova Esperança do Sudoeste",
+    "latitude": -25.9004,
+    "longitude": -53.2618
+  },
+  {
+    "codigoIbge": 4117008,
+    "nome": "Nova Fátima",
+    "latitude": -23.4324,
+    "longitude": -50.5665
+  },
+  {
+    "codigoIbge": 4117057,
+    "nome": "Nova Laranjeiras",
+    "latitude": -25.3054,
+    "longitude": -52.5447
+  },
+  {
+    "codigoIbge": 4117107,
+    "nome": "Nova Londrina",
+    "latitude": -22.7639,
+    "longitude": -52.9868
+  },
+  {
+    "codigoIbge": 4117206,
+    "nome": "Nova Olímpia",
+    "latitude": -23.4703,
+    "longitude": -53.0898
+  },
+  {
+    "codigoIbge": 4117255,
+    "nome": "Nova Prata do Iguaçu",
+    "latitude": -25.6309,
+    "longitude": -53.3469
+  },
+  {
+    "codigoIbge": 4117214,
+    "nome": "Nova Santa Bárbara",
+    "latitude": -23.5865,
+    "longitude": -50.7598
+  },
+  {
+    "codigoIbge": 4117222,
+    "nome": "Nova Santa Rosa",
+    "latitude": -24.4693,
+    "longitude": -53.9552
+  },
+  {
+    "codigoIbge": 4117271,
+    "nome": "Nova Tebas",
+    "latitude": -24.438,
+    "longitude": -51.9454
+  },
+  {
+    "codigoIbge": 4117297,
+    "nome": "Novo Itacolomi",
+    "latitude": -23.7631,
+    "longitude": -51.5079
+  },
+  {
+    "codigoIbge": 4117305,
+    "nome": "Ortigueira",
+    "latitude": -24.2058,
+    "longitude": -50.9185
+  },
+  {
+    "codigoIbge": 4117404,
+    "nome": "Ourizona",
+    "latitude": -23.4053,
+    "longitude": -52.1964
+  },
+  {
+    "codigoIbge": 4117453,
+    "nome": "Ouro Verde do Oeste",
+    "latitude": -24.7933,
+    "longitude": -53.9043
+  },
+  {
+    "codigoIbge": 4117503,
+    "nome": "Paiçandu",
+    "latitude": -23.4555,
+    "longitude": -52.046
+  },
+  {
+    "codigoIbge": 4117602,
+    "nome": "Palmas",
+    "latitude": -26.4839,
+    "longitude": -51.9888
+  },
+  {
+    "codigoIbge": 4117701,
+    "nome": "Palmeira",
+    "latitude": -25.4257,
+    "longitude": -50.007
+  },
+  {
+    "codigoIbge": 4117800,
+    "nome": "Palmital",
+    "latitude": -24.8853,
+    "longitude": -52.2029
+  },
+  {
+    "codigoIbge": 4117909,
+    "nome": "Palotina",
+    "latitude": -24.2868,
+    "longitude": -53.8404
+  },
+  {
+    "codigoIbge": 4118006,
+    "nome": "Paraíso do Norte",
+    "latitude": -23.2824,
+    "longitude": -52.6054
+  },
+  {
+    "codigoIbge": 4118105,
+    "nome": "Paranacity",
+    "latitude": -22.9297,
+    "longitude": -52.1549
+  },
+  {
+    "codigoIbge": 4118204,
+    "nome": "Paranaguá",
+    "latitude": -25.5161,
+    "longitude": -48.5225
+  },
+  {
+    "codigoIbge": 4118303,
+    "nome": "Paranapoema",
+    "latitude": -22.6412,
+    "longitude": -52.0905
+  },
+  {
+    "codigoIbge": 4118402,
+    "nome": "Paranavaí",
+    "latitude": -23.0816,
+    "longitude": -52.4617
+  },
+  {
+    "codigoIbge": 4118451,
+    "nome": "Pato Bragado",
+    "latitude": -24.6271,
+    "longitude": -54.2265
+  },
+  {
+    "codigoIbge": 4118501,
+    "nome": "Pato Branco",
+    "latitude": -26.2292,
+    "longitude": -52.6706
+  },
+  {
+    "codigoIbge": 4118600,
+    "nome": "Paula Freitas",
+    "latitude": -26.2105,
+    "longitude": -50.931
+  },
+  {
+    "codigoIbge": 4118709,
+    "nome": "Paulo Frontin",
+    "latitude": -26.0466,
+    "longitude": -50.8304
+  },
+  {
+    "codigoIbge": 4118808,
+    "nome": "Peabiru",
+    "latitude": -23.914,
+    "longitude": -52.3431
+  },
+  {
+    "codigoIbge": 4118857,
+    "nome": "Perobal",
+    "latitude": -23.8949,
+    "longitude": -53.4098
+  },
+  {
+    "codigoIbge": 4118907,
+    "nome": "Pérola",
+    "latitude": -23.8039,
+    "longitude": -53.6834
+  },
+  {
+    "codigoIbge": 4119004,
+    "nome": "Pérola d'Oeste",
+    "latitude": -25.8278,
+    "longitude": -53.7433
+  },
+  {
+    "codigoIbge": 4119103,
+    "nome": "Piên",
+    "latitude": -26.0965,
+    "longitude": -49.4336
+  },
+  {
+    "codigoIbge": 4119152,
+    "nome": "Pinhais",
+    "latitude": -25.4429,
+    "longitude": -49.1927
+  },
+  {
+    "codigoIbge": 4119251,
+    "nome": "Pinhal de São Bento",
+    "latitude": -26.0324,
+    "longitude": -53.482
+  },
+  {
+    "codigoIbge": 4119202,
+    "nome": "Pinhalão",
+    "latitude": -23.7982,
+    "longitude": -50.0536
+  },
+  {
+    "codigoIbge": 4119301,
+    "nome": "Pinhão",
+    "latitude": -25.6944,
+    "longitude": -51.6536
+  },
+  {
+    "codigoIbge": 4119400,
+    "nome": "Piraí do Sul",
+    "latitude": -24.5306,
+    "longitude": -49.9433
+  },
+  {
+    "codigoIbge": 4119509,
+    "nome": "Piraquara",
+    "latitude": -25.4422,
+    "longitude": -49.0624
+  },
+  {
+    "codigoIbge": 4119608,
+    "nome": "Pitanga",
+    "latitude": -24.7588,
+    "longitude": -51.7596
+  },
+  {
+    "codigoIbge": 4119657,
+    "nome": "Pitangueiras",
+    "latitude": -23.2281,
+    "longitude": -51.5873
+  },
+  {
+    "codigoIbge": 4119707,
+    "nome": "Planaltina do Paraná",
+    "latitude": -23.0101,
+    "longitude": -52.9162
+  },
+  {
+    "codigoIbge": 4119806,
+    "nome": "Planalto",
+    "latitude": -25.7211,
+    "longitude": -53.7642
+  },
+  {
+    "codigoIbge": 4119905,
+    "nome": "Ponta Grossa",
+    "latitude": -25.0916,
+    "longitude": -50.1668
+  },
+  {
+    "codigoIbge": 4119954,
+    "nome": "Pontal do Paraná",
+    "latitude": -25.6735,
+    "longitude": -48.5111
+  },
+  {
+    "codigoIbge": 4120002,
+    "nome": "Porecatu",
+    "latitude": -22.7537,
+    "longitude": -51.3795
+  },
+  {
+    "codigoIbge": 4120101,
+    "nome": "Porto Amazonas",
+    "latitude": -25.54,
+    "longitude": -49.8946
+  },
+  {
+    "codigoIbge": 4120150,
+    "nome": "Porto Barreiro",
+    "latitude": -25.5477,
+    "longitude": -52.4067
+  },
+  {
+    "codigoIbge": 4120200,
+    "nome": "Porto Rico",
+    "latitude": -22.7747,
+    "longitude": -53.2677
+  },
+  {
+    "codigoIbge": 4120309,
+    "nome": "Porto Vitória",
+    "latitude": -26.1674,
+    "longitude": -51.231
+  },
+  {
+    "codigoIbge": 4120333,
+    "nome": "Prado Ferreira",
+    "latitude": -23.0357,
+    "longitude": -51.4429
+  },
+  {
+    "codigoIbge": 4120358,
+    "nome": "Pranchita",
+    "latitude": -26.0209,
+    "longitude": -53.7397
+  },
+  {
+    "codigoIbge": 4120408,
+    "nome": "Presidente Castelo Branco",
+    "latitude": -23.2782,
+    "longitude": -52.1536
+  },
+  {
+    "codigoIbge": 4120507,
+    "nome": "Primeiro de Maio",
+    "latitude": -22.8517,
+    "longitude": -51.0293
+  },
+  {
+    "codigoIbge": 4120606,
+    "nome": "Prudentópolis",
+    "latitude": -25.2111,
+    "longitude": -50.9754
+  },
+  {
+    "codigoIbge": 4120655,
+    "nome": "Quarto Centenário",
+    "latitude": -24.2775,
+    "longitude": -53.0759
+  },
+  {
+    "codigoIbge": 4120705,
+    "nome": "Quatiguá",
+    "latitude": -23.5671,
+    "longitude": -49.916
+  },
+  {
+    "codigoIbge": 4120804,
+    "nome": "Quatro Barras",
+    "latitude": -25.3673,
+    "longitude": -49.0763
+  },
+  {
+    "codigoIbge": 4120853,
+    "nome": "Quatro Pontes",
+    "latitude": -24.5752,
+    "longitude": -53.9759
+  },
+  {
+    "codigoIbge": 4120903,
+    "nome": "Quedas do Iguaçu",
+    "latitude": -25.4492,
+    "longitude": -52.9102
+  },
+  {
+    "codigoIbge": 4121000,
+    "nome": "Querência do Norte",
+    "latitude": -23.0838,
+    "longitude": -53.483
+  },
+  {
+    "codigoIbge": 4121109,
+    "nome": "Quinta do Sol",
+    "latitude": -23.8533,
+    "longitude": -52.1309
+  },
+  {
+    "codigoIbge": 4121208,
+    "nome": "Quitandinha",
+    "latitude": -25.8734,
+    "longitude": -49.4973
+  },
+  {
+    "codigoIbge": 4121257,
+    "nome": "Ramilândia",
+    "latitude": -25.1195,
+    "longitude": -54.023
+  },
+  {
+    "codigoIbge": 4121307,
+    "nome": "Rancho Alegre",
+    "latitude": -23.0676,
+    "longitude": -50.9145
+  },
+  {
+    "codigoIbge": 4121356,
+    "nome": "Rancho Alegre D'Oeste",
+    "latitude": -24.3065,
+    "longitude": -52.9552
+  },
+  {
+    "codigoIbge": 4121406,
+    "nome": "Realeza",
+    "latitude": -25.7711,
+    "longitude": -53.526
+  },
+  {
+    "codigoIbge": 4121505,
+    "nome": "Rebouças",
+    "latitude": -25.6232,
+    "longitude": -50.6877
+  },
+  {
+    "codigoIbge": 4121604,
+    "nome": "Renascença",
+    "latitude": -26.1588,
+    "longitude": -52.9703
+  },
+  {
+    "codigoIbge": 4121703,
+    "nome": "Reserva",
+    "latitude": -24.6492,
+    "longitude": -50.8466
+  },
+  {
+    "codigoIbge": 4121752,
+    "nome": "Reserva do Iguaçu",
+    "latitude": -25.8319,
+    "longitude": -52.0272
+  },
+  {
+    "codigoIbge": 4121802,
+    "nome": "Ribeirão Claro",
+    "latitude": -23.1941,
+    "longitude": -49.7597
+  },
+  {
+    "codigoIbge": 4121901,
+    "nome": "Ribeirão do Pinhal",
+    "latitude": -23.4091,
+    "longitude": -50.3601
+  },
+  {
+    "codigoIbge": 4122008,
+    "nome": "Rio Azul",
+    "latitude": -25.7306,
+    "longitude": -50.7985
+  },
+  {
+    "codigoIbge": 4122107,
+    "nome": "Rio Bom",
+    "latitude": -23.7606,
+    "longitude": -51.4122
+  },
+  {
+    "codigoIbge": 4122156,
+    "nome": "Rio Bonito do Iguaçu",
+    "latitude": -25.4874,
+    "longitude": -52.5292
+  },
+  {
+    "codigoIbge": 4122172,
+    "nome": "Rio Branco do Ivaí",
+    "latitude": -24.3244,
+    "longitude": -51.3187
+  },
+  {
+    "codigoIbge": 4122206,
+    "nome": "Rio Branco do Sul",
+    "latitude": -25.1892,
+    "longitude": -49.3115
+  },
+  {
+    "codigoIbge": 4122305,
+    "nome": "Rio Negro",
+    "latitude": -26.095,
+    "longitude": -49.7982
+  },
+  {
+    "codigoIbge": 4122404,
+    "nome": "Rolândia",
+    "latitude": -23.3101,
+    "longitude": -51.3659
+  },
+  {
+    "codigoIbge": 4122503,
+    "nome": "Roncador",
+    "latitude": -24.5958,
+    "longitude": -52.2716
+  },
+  {
+    "codigoIbge": 4122602,
+    "nome": "Rondon",
+    "latitude": -23.412,
+    "longitude": -52.7659
+  },
+  {
+    "codigoIbge": 4122651,
+    "nome": "Rosário do Ivaí",
+    "latitude": -24.2682,
+    "longitude": -51.272
+  },
+  {
+    "codigoIbge": 4122701,
+    "nome": "Sabáudia",
+    "latitude": -23.3155,
+    "longitude": -51.555
+  },
+  {
+    "codigoIbge": 4122800,
+    "nome": "Salgado Filho",
+    "latitude": -26.1777,
+    "longitude": -53.3631
+  },
+  {
+    "codigoIbge": 4122909,
+    "nome": "Salto do Itararé",
+    "latitude": -23.6074,
+    "longitude": -49.6354
+  },
+  {
+    "codigoIbge": 4123006,
+    "nome": "Salto do Lontra",
+    "latitude": -25.7813,
+    "longitude": -53.3135
+  },
+  {
+    "codigoIbge": 4123105,
+    "nome": "Santa Amélia",
+    "latitude": -23.2654,
+    "longitude": -50.4288
+  },
+  {
+    "codigoIbge": 4123204,
+    "nome": "Santa Cecília do Pavão",
+    "latitude": -23.5201,
+    "longitude": -50.7835
+  },
+  {
+    "codigoIbge": 4123303,
+    "nome": "Santa Cruz de Monte Castelo",
+    "latitude": -22.9582,
+    "longitude": -53.2949
+  },
+  {
+    "codigoIbge": 4123402,
+    "nome": "Santa Fé",
+    "latitude": -23.04,
+    "longitude": -51.808
+  },
+  {
+    "codigoIbge": 4123501,
+    "nome": "Santa Helena",
+    "latitude": -24.8585,
+    "longitude": -54.336
+  },
+  {
+    "codigoIbge": 4123600,
+    "nome": "Santa Inês",
+    "latitude": -22.6376,
+    "longitude": -51.9024
+  },
+  {
+    "codigoIbge": 4123709,
+    "nome": "Santa Isabel do Ivaí",
+    "latitude": -23.0025,
+    "longitude": -53.1989
+  },
+  {
+    "codigoIbge": 4123808,
+    "nome": "Santa Izabel do Oeste",
+    "latitude": -25.8217,
+    "longitude": -53.4801
+  },
+  {
+    "codigoIbge": 4123824,
+    "nome": "Santa Lúcia",
+    "latitude": -25.4104,
+    "longitude": -53.5638
+  },
+  {
+    "codigoIbge": 4123857,
+    "nome": "Santa Maria do Oeste",
+    "latitude": -24.9377,
+    "longitude": -51.8696
+  },
+  {
+    "codigoIbge": 4123907,
+    "nome": "Santa Mariana",
+    "latitude": -23.1465,
+    "longitude": -50.5167
+  },
+  {
+    "codigoIbge": 4123956,
+    "nome": "Santa Mônica",
+    "latitude": -23.108,
+    "longitude": -53.1103
+  },
+  {
+    "codigoIbge": 4124020,
+    "nome": "Santa Tereza do Oeste",
+    "latitude": -25.0543,
+    "longitude": -53.6274
+  },
+  {
+    "codigoIbge": 4124053,
+    "nome": "Santa Terezinha de Itaipu",
+    "latitude": -25.4391,
+    "longitude": -54.402
+  },
+  {
+    "codigoIbge": 4124004,
+    "nome": "Santana do Itararé",
+    "latitude": -23.7587,
+    "longitude": -49.6293
+  },
+  {
+    "codigoIbge": 4124103,
+    "nome": "Santo Antônio da Platina",
+    "latitude": -23.2959,
+    "longitude": -50.0815
+  },
+  {
+    "codigoIbge": 4124202,
+    "nome": "Santo Antônio do Caiuá",
+    "latitude": -22.7351,
+    "longitude": -52.344
+  },
+  {
+    "codigoIbge": 4124301,
+    "nome": "Santo Antônio do Paraíso",
+    "latitude": -23.4969,
+    "longitude": -50.6455
+  },
+  {
+    "codigoIbge": 4124400,
+    "nome": "Santo Antônio do Sudoeste",
+    "latitude": -26.0737,
+    "longitude": -53.7251
+  },
+  {
+    "codigoIbge": 4124509,
+    "nome": "Santo Inácio",
+    "latitude": -22.6957,
+    "longitude": -51.7969
+  },
+  {
+    "codigoIbge": 4124608,
+    "nome": "São Carlos do Ivaí",
+    "latitude": -23.3158,
+    "longitude": -52.4761
+  },
+  {
+    "codigoIbge": 4124707,
+    "nome": "São Jerônimo da Serra",
+    "latitude": -23.7218,
+    "longitude": -50.7475
+  },
+  {
+    "codigoIbge": 4124806,
+    "nome": "São João",
+    "latitude": -25.8214,
+    "longitude": -52.7252
+  },
+  {
+    "codigoIbge": 4124905,
+    "nome": "São João do Caiuá",
+    "latitude": -22.8535,
+    "longitude": -52.3411
+  },
+  {
+    "codigoIbge": 4125001,
+    "nome": "São João do Ivaí",
+    "latitude": -23.9833,
+    "longitude": -51.8215
+  },
+  {
+    "codigoIbge": 4125100,
+    "nome": "São João do Triunfo",
+    "latitude": -25.683,
+    "longitude": -50.2949
+  },
+  {
+    "codigoIbge": 4125209,
+    "nome": "São Jorge d'Oeste",
+    "latitude": -25.7085,
+    "longitude": -52.9204
+  },
+  {
+    "codigoIbge": 4125308,
+    "nome": "São Jorge do Ivaí",
+    "latitude": -23.4336,
+    "longitude": -52.2929
+  },
+  {
+    "codigoIbge": 4125357,
+    "nome": "São Jorge do Patrocínio",
+    "latitude": -23.7647,
+    "longitude": -53.8823
+  },
+  {
+    "codigoIbge": 4125407,
+    "nome": "São José da Boa Vista",
+    "latitude": -23.9122,
+    "longitude": -49.6577
+  },
+  {
+    "codigoIbge": 4125456,
+    "nome": "São José das Palmeiras",
+    "latitude": -24.8369,
+    "longitude": -54.0572
+  },
+  {
+    "codigoIbge": 4125506,
+    "nome": "São José dos Pinhais",
+    "latitude": -25.5313,
+    "longitude": -49.2031
+  },
+  {
+    "codigoIbge": 4125555,
+    "nome": "São Manoel do Paraná",
+    "latitude": -23.3941,
+    "longitude": -52.6454
+  },
+  {
+    "codigoIbge": 4125605,
+    "nome": "São Mateus do Sul",
+    "latitude": -25.8677,
+    "longitude": -50.384
+  },
+  {
+    "codigoIbge": 4125704,
+    "nome": "São Miguel do Iguaçu",
+    "latitude": -25.3492,
+    "longitude": -54.2405
+  },
+  {
+    "codigoIbge": 4125753,
+    "nome": "São Pedro do Iguaçu",
+    "latitude": -24.9373,
+    "longitude": -53.8521
+  },
+  {
+    "codigoIbge": 4125803,
+    "nome": "São Pedro do Ivaí",
+    "latitude": -23.8634,
+    "longitude": -51.8568
+  },
+  {
+    "codigoIbge": 4125902,
+    "nome": "São Pedro do Paraná",
+    "latitude": -22.8239,
+    "longitude": -53.2241
+  },
+  {
+    "codigoIbge": 4126009,
+    "nome": "São Sebastião da Amoreira",
+    "latitude": -23.4656,
+    "longitude": -50.7625
+  },
+  {
+    "codigoIbge": 4126108,
+    "nome": "São Tomé",
+    "latitude": -23.5349,
+    "longitude": -52.5901
+  },
+  {
+    "codigoIbge": 4126207,
+    "nome": "Sapopema",
+    "latitude": -23.9078,
+    "longitude": -50.5801
+  },
+  {
+    "codigoIbge": 4126256,
+    "nome": "Sarandi",
+    "latitude": -23.4441,
+    "longitude": -51.876
+  },
+  {
+    "codigoIbge": 4126272,
+    "nome": "Saudade do Iguaçu",
+    "latitude": -25.6917,
+    "longitude": -52.6184
+  },
+  {
+    "codigoIbge": 4126306,
+    "nome": "Sengés",
+    "latitude": -24.1129,
+    "longitude": -49.4616
+  },
+  {
+    "codigoIbge": 4126355,
+    "nome": "Serranópolis do Iguaçu",
+    "latitude": -25.3799,
+    "longitude": -54.0518
+  },
+  {
+    "codigoIbge": 4126405,
+    "nome": "Sertaneja",
+    "latitude": -23.0361,
+    "longitude": -50.8317
+  },
+  {
+    "codigoIbge": 4126504,
+    "nome": "Sertanópolis",
+    "latitude": -23.0571,
+    "longitude": -51.0399
+  },
+  {
+    "codigoIbge": 4126603,
+    "nome": "Siqueira Campos",
+    "latitude": -23.6875,
+    "longitude": -49.8304
+  },
+  {
+    "codigoIbge": 4126652,
+    "nome": "Sulina",
+    "latitude": -25.7066,
+    "longitude": -52.7299
+  },
+  {
+    "codigoIbge": 4126678,
+    "nome": "Tamarana",
+    "latitude": -23.7204,
+    "longitude": -51.0991
+  },
+  {
+    "codigoIbge": 4126702,
+    "nome": "Tamboara",
+    "latitude": -23.2036,
+    "longitude": -52.4743
+  },
+  {
+    "codigoIbge": 4126801,
+    "nome": "Tapejara",
+    "latitude": -23.7315,
+    "longitude": -52.8735
+  },
+  {
+    "codigoIbge": 4126900,
+    "nome": "Tapira",
+    "latitude": -23.3193,
+    "longitude": -53.0684
+  },
+  {
+    "codigoIbge": 4127007,
+    "nome": "Teixeira Soares",
+    "latitude": -25.3701,
+    "longitude": -50.4571
+  },
+  {
+    "codigoIbge": 4127106,
+    "nome": "Telêmaco Borba",
+    "latitude": -24.3245,
+    "longitude": -50.6176
+  },
+  {
+    "codigoIbge": 4127205,
+    "nome": "Terra Boa",
+    "latitude": -23.7683,
+    "longitude": -52.447
+  },
+  {
+    "codigoIbge": 4127304,
+    "nome": "Terra Rica",
+    "latitude": -22.7111,
+    "longitude": -52.6188
+  },
+  {
+    "codigoIbge": 4127403,
+    "nome": "Terra Roxa",
+    "latitude": -24.1575,
+    "longitude": -54.0988
+  },
+  {
+    "codigoIbge": 4127502,
+    "nome": "Tibagi",
+    "latitude": -24.5153,
+    "longitude": -50.4176
+  },
+  {
+    "codigoIbge": 4127601,
+    "nome": "Tijucas do Sul",
+    "latitude": -25.9311,
+    "longitude": -49.195
+  },
+  {
+    "codigoIbge": 4127700,
+    "nome": "Toledo",
+    "latitude": -24.7246,
+    "longitude": -53.7412
+  },
+  {
+    "codigoIbge": 4127809,
+    "nome": "Tomazina",
+    "latitude": -23.7796,
+    "longitude": -49.9499
+  },
+  {
+    "codigoIbge": 4127858,
+    "nome": "Três Barras do Paraná",
+    "latitude": -25.4185,
+    "longitude": -53.1833
+  },
+  {
+    "codigoIbge": 4127882,
+    "nome": "Tunas do Paraná",
+    "latitude": -24.9731,
+    "longitude": -49.0879
+  },
+  {
+    "codigoIbge": 4127908,
+    "nome": "Tuneiras do Oeste",
+    "latitude": -23.8648,
+    "longitude": -52.8769
+  },
+  {
+    "codigoIbge": 4127957,
+    "nome": "Tupãssi",
+    "latitude": -24.5879,
+    "longitude": -53.5105
+  },
+  {
+    "codigoIbge": 4127965,
+    "nome": "Turvo",
+    "latitude": -25.0437,
+    "longitude": -51.5282
+  },
+  {
+    "codigoIbge": 4128005,
+    "nome": "Ubiratã",
+    "latitude": -24.5393,
+    "longitude": -52.9865
+  },
+  {
+    "codigoIbge": 4128104,
+    "nome": "Umuarama",
+    "latitude": -23.7656,
+    "longitude": -53.3201
+  },
+  {
+    "codigoIbge": 4128203,
+    "nome": "União da Vitória",
+    "latitude": -26.2273,
+    "longitude": -51.0873
+  },
+  {
+    "codigoIbge": 4128302,
+    "nome": "Uniflor",
+    "latitude": -23.0868,
+    "longitude": -52.1573
+  },
+  {
+    "codigoIbge": 4128401,
+    "nome": "Uraí",
+    "latitude": -23.2,
+    "longitude": -50.7939
+  },
+  {
+    "codigoIbge": 4128534,
+    "nome": "Ventania",
+    "latitude": -24.2458,
+    "longitude": -50.2376
+  },
+  {
+    "codigoIbge": 4128559,
+    "nome": "Vera Cruz do Oeste",
+    "latitude": -25.0577,
+    "longitude": -53.8771
+  },
+  {
+    "codigoIbge": 4128609,
+    "nome": "Verê",
+    "latitude": -25.8772,
+    "longitude": -52.9051
+  },
+  {
+    "codigoIbge": 4128658,
+    "nome": "Virmond",
+    "latitude": -25.3829,
+    "longitude": -52.1987
+  },
+  {
+    "codigoIbge": 4128708,
+    "nome": "Vitorino",
+    "latitude": -26.2683,
+    "longitude": -52.7843
+  },
+  {
+    "codigoIbge": 4128500,
+    "nome": "Wenceslau Braz",
+    "latitude": -23.8742,
+    "longitude": -49.8032
+  },
+  {
+    "codigoIbge": 4128807,
+    "nome": "Xambrê",
+    "latitude": -23.7364,
+    "longitude": -53.4884
+  }
+]

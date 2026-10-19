@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Rasputim Tecnologis · Ferramentas, Acessos e Estoque</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="titlebar">
+    <div class="titlebar-caption"><span class="titlebar-dot"></span> RASPUTIM TECNOLOGIS <span>• WINDOWS 10 · FERRAMENTAS, ACESSOS E ESTOQUE</span></div>
+    <div class="window-controls">
+      <button id="minimize-window" class="window-button" aria-label="Minimizar">─</button>
+      <button id="maximize-window" class="window-button" aria-label="Maximizar">□</button>
+      <button id="close-window" class="window-button close" aria-label="Fechar">×</button>
+    </div>
+  </div>
+
+  <div id="auth-gate" class="auth-gate" aria-live="polite">
+    <section class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <div class="auth-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <span class="section-index">ACESSO INDIVIDUAL</span>
+      <h1 id="auth-title">Entrar no Rasputim</h1>
+      <p id="auth-subtitle">Use sua conta pessoal. Cada operação ficará vinculada ao usuário que a realizou.</p>
+      <form id="auth-setup-form" class="auth-form" hidden>
+        <label class="field"><span>NOME DO RESPONSÁVEL GERAL</span><input id="setup-name" type="text" maxlength="120" autocomplete="name" required placeholder="Nome completo"></label>
+        <label class="field"><span>USUÁRIO</span><input id="setup-login" type="text" maxlength="60" autocomplete="username" required placeholder="Ex.: joao.silva"></label>
+        <label class="field"><span>CRIAR SENHA</span><input id="setup-password" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="No mínimo 8 caracteres"></label>
+        <label class="field"><span>CONFIRMAR SENHA</span><input id="setup-password-confirm" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="Repita a senha"></label>
+        <small class="auth-help">No primeiro acesso, cadastre o responsável geral. Ele poderá criar e bloquear as demais contas.</small>
+        <button type="submit" class="primary-button">CRIAR ACESSO SEGURO</button>
+      </form>
+      <form id="auth-login-form" class="auth-form" hidden>
+        <label class="field"><span>USUÁRIO</span><input id="login-user" type="text" maxlength="60" autocomplete="username" required placeholder="Seu usuário"></label>
+        <label class="field"><span>SENHA</span><input id="login-password" type="password" maxlength="200" autocomplete="current-password" required placeholder="Sua senha"></label>
+        <small class="auth-help">Após cinco tentativas incorretas, o acesso fica bloqueado temporariamente. A sessão expira após 20 minutos sem uso.</small>
+        <button type="submit" class="primary-button">ENTRAR</button>
+        <button id="connect-shared-users" type="button" class="outline-button">CONECTAR BASE CENTRAL DE USUÁRIOS</button>
+      </form>
+      <p id="auth-message" class="auth-message" hidden></p>
+    </section>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 3 57 17.5v29L32 61 7 46.5v-29z"/>
+          <path d="M32 13 48.5 22.5v19L32 51l-16.5-9.5v-19z"/>
+          <path d="M32 22 40.5 27v10L32 42l-8.5-5V27z"/>
+        </svg>
+        <div>
+          <div class="brand-title">RASPUTIM TECNOLOGIS</div>
+          <div class="brand-subtitle">INTELIGÊNCIA OPERACIONAL</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="pcp">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h2v6H8zM14 7h2v8h-2zM4 11h4M10 11h4M16 11h4"/></svg>
+          <span>PCP · PRODUÇÃO</span><span id="nav-pcp-count" class="nav-badge">0</span>
+        </button>
+        <button class="nav-item" data-view="procurement">
+          <svg viewBox="0 0 24 24"><path d="M3 5h2l2 11h11l3-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span>ESTOQUE & COMPRAS</span><span id="nav-buy-count" class="nav-badge">0</span>
+        </button>
+        <button class="nav-item" data-view="tools">
+          <svg viewBox="0 0 24 24"><path d="m14.7 6.3 3-3a4.2 4.2 0 0 1-5.4 5.4L5.1 16a2.8 2.8 0 1 0 3.9 3.9l7.2-7.2a4.2 4.2 0 0 1 5.4-5.4l-3 3"/><path d="m4.7 19.3 2-2"/></svg>
+          <span>FERRAMENTAS</span><span id="nav-tool-count" class="nav-badge">0</span>
+        </button>
+        <button class="nav-item" data-view="ai">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+          <span>IA LOCAL</span><span id="nav-ai-status" class="nav-badge">OFF</span>
+        </button>
+        <button class="nav-item" data-view="settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"/></svg>
+          <span>CONFIGURAÇÕES</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="local-node"><span class="pulse-dot"></span><div><strong>SISTEMA LOCAL</strong><small>Nenhum dado enviado à internet</small></div></div>
+        <div class="version-label">Rasputim v<span id="sidebar-version">0.1.0</span></div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-header">
+        <div>
+          <div class="eyebrow" id="page-eyebrow">CENTRAL DE CONTROLE</div>
+          <h1 id="page-title">Painel de Operações</h1>
+          <p id="page-subtitle">Leitura, conferência e inteligência comercial em um só lugar.</p>
+        </div>
+        <div class="security-pill">
+          <svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+          <span id="active-user-label">Sistema local</span><i></i><strong id="active-role-label">Protegido</strong><button id="logout-user" type="button" class="security-logout" title="Trocar usuário" aria-label="Trocar usuário">⇄</button><b></b>
+        </div>
+      </header>
+
+      <section id="view-dashboard" class="view active">
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="metric-icon"><svg viewBox="0 0 24 24"><path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+            <div><span>PROJETOS ANALISADOS</span><strong id="metric-projects">0</strong><small id="metric-project-value">R$ 0,00 conferidos</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon"><svg viewBox="0 0 24 24"><path d="M5 20V10h3v10zM10.5 20V4h3v16zM16 20v-7h3v7z"/></svg></div>
+            <div><span>VENDAS REGISTRADAS</span><strong id="metric-sales">R$ 0,00</strong><small id="metric-sales-count">0 clientes fechados</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon"><svg viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
+            <div><span>TICKET MÉDIO</span><strong id="metric-ticket">R$ 0,00</strong><small id="metric-median">Mediana R$ 0,00</small></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
+            <div><span>ALERTAS DE CONFERÊNCIA</span><strong id="metric-alerts">0</strong><small id="metric-differences">0 diferença comercial</small></div>
+          </article>
+        </div>
+
+        <div class="dashboard-main-grid">
+          <article class="panel import-panel">
+            <div class="panel-heading"><div><span class="section-index">01</span><h2>ANALISAR NOVO PROJETO</h2></div><span class="panel-hint">Excel</span></div>
+            <div id="drop-zone" class="drop-zone" tabindex="0">
+              <div class="file-orbit">
+                <svg viewBox="0 0 64 64"><path d="M14 6h25l11 11v41H14z"/><path d="M39 6v12h11"/><path d="M20 33h24M20 41h24M20 49h16"/></svg>
+              </div>
+              <strong>Arraste o orçamento aqui</strong>
+              <span>ou use o seletor para localizar o arquivo</span>
+              <button id="select-project-dashboard" class="primary-button">SELECIONAR ARQUIVO</button>
+              <small>.XLS&nbsp;&nbsp;•&nbsp;&nbsp;.XLSX&nbsp;&nbsp;•&nbsp;&nbsp;até 20 arquivos</small>
+            </div>
+          </article>
+
+          <article class="panel status-panel">
+            <div class="panel-heading"><div><span class="section-index">02</span><h2>STATUS DA ANÁLISE</h2></div><span id="analysis-badge" class="status-badge ready">PRONTO</span></div>
+            <div class="analysis-body">
+              <div id="scanner-core" class="scanner-core idle" aria-label="Núcleo de análise">
+                <div class="scan-ring ring-1"></div><div class="scan-ring ring-2"></div><div class="scan-ring ring-3"></div><div class="scan-ring ring-4"></div>
+                <div class="scan-cross horizontal"></div><div class="scan-cross vertical"></div>
+                <div class="core-light"></div><div class="scan-sweep"></div>
+              </div>
+              <ol id="analysis-stages" class="analysis-stages">
+                <li data-stage="0"><i></i><div><span>LENDO</span><small>Estrutura do arquivo</small></div></li>
+                <li data-stage="1"><i></i><div><span>COMPARANDO</span><small>Categorias e valores</small></div></li>
+                <li data-stage="2"><i></i><div><span>CONFERINDO</span><small>Fórmulas e referências</small></div></li>
+                <li data-stage="3"><i></i><div><span>CALCULANDO</span><small>Totais e diferenças</small></div></li>
+                <li data-stage="4"><i></i><div><span>RELATÓRIO</span><small>Ficha padronizada</small></div></li>
+              </ol>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel table-panel">
+          <div class="panel-heading"><div><span class="section-index">03</span><h2>PROJETOS RECENTES</h2></div><button class="outline-button" data-go-view="reports">VER RELATÓRIOS</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>PROJETO</th><th>PORTE</th><th>AMBIENTES</th><th>VALOR</th><th>STATUS</th><th></th></tr></thead>
+              <tbody id="recent-projects-body"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="view-projects" class="view">
+        <div class="view-toolbar">
+          <div class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="project-search" type="search" placeholder="Buscar projeto, arquivo ou porte..."></div>
+          <button id="select-project-projects" class="primary-button">+ ANALISAR PROJETO</button>
+        </div>
+        <article class="panel table-panel large-table-panel">
+          <div class="panel-heading"><div><span class="section-index">BASE</span><h2>TODOS OS PROJETOS</h2></div><span id="project-list-summary" class="panel-hint"></span></div>
+          <div class="table-wrap">
+            <table><thead><tr><th>PROJETO</th><th>ARQUIVO</th><th>PORTE</th><th>AMBIENTES</th><th>VALOR</th><th>ALERTAS</th><th>STATUS</th><th></th></tr></thead><tbody id="all-projects-body"></tbody></table>
+          </div>
+        </article>
+      </section>
+
+      <section id="view-clients" class="view">
+        <div class="client-summary-grid">
+          <article class="summary-card emphasis"><span>FATURAMENTO REGISTRADO</span><strong id="client-total-sales">R$ 0,00</strong><small id="client-total-count">0 clientes</small></article>
+          <article class="summary-card"><span>MAIOR VENDA</span><strong id="client-largest-sale">R$ 0,00</strong><small>Maior projeto da base</small></article>
+          <article class="summary-card"><span>MENOR VENDA</span><strong id="client-smallest-sale">R$ 0,00</strong><small>Menor serviço registrado</small></article>
+          <article class="summary-card"><span>TICKET MEDIANO</span><strong id="client-median-ticket">R$ 0,00</strong><small>Centro real das vendas</small></article>
+        </div>
+        <article class="panel category-panel">
+          <div class="panel-heading"><div><span class="section-index">MIX</span><h2>COMPOSIÇÃO DAS VENDAS</h2></div><button id="import-sales" class="outline-button">IMPORTAR PLANILHA · AUTO</button></div>
+          <div id="category-bars" class="category-bars"></div>
+        </article>
+        <article class="panel table-panel">
+          <div class="panel-heading"><div><span class="section-index">CRM</span><h2>CLIENTES COM VENDA FECHADA</h2></div><span id="sales-file-label" class="panel-hint">Base inicial</span></div>
+          <div class="table-wrap"><table><thead><tr><th>CLIENTE / PROJETO</th><th>MARCENARIA</th><th>SERRALHERIA</th><th>VIDRAÇARIA</th><th>ILUMINAÇÃO</th><th>TOTAL</th></tr></thead><tbody id="clients-body"></tbody></table></div>
+        </article>
+      </section>
+
+      <section id="view-pcp" class="view">
+        <div class="view-toolbar pcp-toolbar">
+          <div class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="pcp-search" type="search" placeholder="Buscar obra, cliente, código ou responsável..."></div>
+          <select id="pcp-stage-filter" class="toolbar-select" aria-label="Filtrar por etapa"><option value="ALL">TODAS AS ETAPAS</option></select>
+          <select id="pcp-priority-filter" class="toolbar-select" aria-label="Filtrar por prioridade"><option value="ALL">TODAS AS PRIORIDADES</option><option value="URGENTE">URGENTE</option><option value="ALTA">ALTA</option><option value="NORMAL">NORMAL</option><option value="BLOCKED">BLOQUEADAS</option></select>
+          <div class="toolbar-actions">
+            <button id="pcp-refresh" class="outline-button" type="button">ATUALIZAR</button>
+            <button id="pcp-open-network" class="outline-button" type="button">4 COMPUTADORES</button>
+            <button id="pcp-new-project" class="primary-button" type="button">+ NOVA OBRA</button>
+          </div>
+        </div>
+
+        <div id="pcp-connection-strip" class="pcp-connection-strip local">
+          <div><span class="pulse-dot"></span><strong id="pcp-connection-status">PCP LOCAL</strong></div>
+          <span id="pcp-connection-detail">Salvo neste computador</span>
+          <small id="pcp-connection-sync">Aguardando primeira atualização</small>
+        </div>
+
+        <div class="pcp-metrics">
+          <article class="summary-card emphasis"><span>OBRAS EM ANDAMENTO</span><strong id="pcp-active-count">0</strong><small>Do orçamento à instalação</small></article>
+          <article class="summary-card warning-card"><span>PRAZOS CRÍTICOS</span><strong id="pcp-critical-count">0</strong><small id="pcp-late-count">0 atrasadas</small></article>
+          <article class="summary-card danger-summary"><span>BLOQUEADAS</span><strong id="pcp-blocked-count">0</strong><small>Aguardando ação para avançar</small></article>
+          <article class="summary-card"><span>ENTREGAS NO MÊS</span><strong id="pcp-delivery-count">0</strong><small>Obras com prazo neste mês</small></article>
+          <article class="summary-card success-card"><span>CONCLUÍDAS</span><strong id="pcp-completed-count">0</strong><small>Entrega integral finalizada</small></article>
+        </div>
+
+        <article class="panel pcp-board-panel">
+          <div class="panel-heading"><div><span class="section-index">FLUXO</span><h2>PAINEL DE PRODUÇÃO</h2></div><div class="pcp-board-heading"><span id="pcp-board-summary" class="panel-hint">0 obras visíveis</span><small>Clique em uma obra para movimentar, bloquear ou consultar o histórico.</small></div></div>
+          <div id="pcp-board" class="pcp-board" aria-label="Quadro de etapas do PCP"></div>
+        </article>
+      </section>
+
+      <section id="view-reports" class="view">
+        <div class="report-hero panel">
+          <div><span class="eyebrow">EXPORTAÇÃO EXECUTIVA</span><h2>Relatórios prontos para decisão</h2><p>Gere um panorama geral ou abra a ficha técnica de cada projeto analisado.</p></div>
+          <button id="export-summary" class="primary-button">GERAR RELATÓRIO GERAL EM PDF</button>
+        </div>
+        <div class="report-grid">
+          <article class="panel report-summary-panel">
+            <div class="panel-heading"><div><span class="section-index">RESUMO</span><h2>INDICADORES CONSOLIDADOS</h2></div></div>
+            <div id="report-kpis" class="report-kpis"></div>
+            <div class="report-note"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg><div><strong>Relatório produzido localmente</strong><span>Nenhuma informação é enviada para serviços externos.</span></div></div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading"><div><span class="section-index">FICHAS</span><h2>RELATÓRIOS POR PROJETO</h2></div></div>
+            <div id="report-project-list" class="report-project-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-procurement" class="view">
+        <div class="view-toolbar">
+          <div class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="stock-search" type="search" placeholder="Buscar material, categoria ou status..."></div>
+          <div class="toolbar-actions">
+            <button id="import-stock" class="outline-button">NOVO LEVANTAMENTO</button>
+            <button id="open-material" class="outline-button">+ CADASTRAR MATERIAL</button>
+            <button id="open-movement" class="primary-button">+ ENTRADA / SAÍDA</button>
+          </div>
+        </div>
+        <div class="live-status-strip">
+          <div><span class="pulse-dot"></span><strong>CONTROLE ATUALIZADO IMEDIATAMENTE</strong></div>
+          <span id="stock-last-update">Nenhuma movimentação registrada</span>
+          <small>Entradas, saídas e contagens ficam gravadas no histórico.</small>
+        </div>
+        <div class="procurement-metrics">
+          <article class="summary-card"><span>MATERIAIS CADASTRADOS</span><strong id="stock-material-count">0</strong><small>Base oficial do sistema</small></article>
+          <article class="summary-card success-card"><span>ESTOQUE ADEQUADO</span><strong id="stock-adequate-count">0</strong><small>No mínimo definido</small></article>
+          <article class="summary-card emphasis"><span>COMPRAR AGORA</span><strong id="buy-material-count">0 itens</strong><small id="buy-critical-count">0 urgentes</small></article>
+          <article class="summary-card warning-card"><span>VERIFICAR / PARAMETRIZAR</span><strong id="stock-verify-count">0</strong><small>Detalhamento ou mínimo pendente</small></article>
+          <article class="summary-card"><span>ORÇAMENTO CONHECIDO</span><strong id="buy-budget">R$ 0,00</strong><small id="buy-unpriced-count">0 itens sem cotação</small></article>
+        </div>
+        <div class="procurement-tabs" role="tablist" aria-label="Áreas de estoque e compras">
+          <button class="active" data-procurement-tab="stock">ESTOQUE ATUAL</button>
+          <button data-procurement-tab="counts">LEVANTAMENTOS</button>
+          <button data-procurement-tab="movements">MOVIMENTAÇÕES</button>
+          <button data-procurement-tab="purchases">COMPRAS & COTAÇÕES</button>
+          <button data-procurement-tab="suppliers">FORNECEDORES</button>
+        </div>
+
+        <div id="procurement-panel-stock" class="procurement-panel active" data-procurement-panel="stock">
+          <article class="panel table-panel procurement-main-table">
+            <div class="panel-heading"><div><span class="section-index">SALDO</span><h2>ESTOQUE OPERACIONAL</h2></div><span class="panel-hint">Mínimos específicos da planilha • campos vazios usam padrão 100</span></div>
+            <div class="table-wrap"><table><thead><tr><th>MATERIAL</th><th>SALDO ATUAL</th><th>MÍNIMO</th><th>FALTA</th><th>ÚLTIMO PREÇO</th><th>MELHOR FORNECEDOR</th><th>STATUS</th><th>AÇÃO</th></tr></thead><tbody id="stock-body"></tbody></table></div>
+          </article>
+        </div>
+
+        <div id="procurement-panel-counts" class="procurement-panel" data-procurement-panel="counts">
+          <article class="panel stock-count-import-card">
+            <div class="panel-heading"><div><span class="section-index">PLANILHA</span><h2>IMPORTAR LEVANTAMENTO DE ESTOQUE</h2></div><span id="stock-count-last" class="panel-hint">Nenhum levantamento aplicado</span></div>
+            <div class="stock-count-import-body">
+              <div id="stock-drop-zone" class="drop-zone stock-drop-zone" tabindex="0">
+                <div class="file-orbit">
+                  <svg viewBox="0 0 64 64"><path d="M14 6h25l11 11v41H14z"/><path d="M39 6v12h11"/><path d="M20 33h24M20 41h24M20 49h16"/></svg>
+                </div>
+                <strong>Arraste o levantamento aqui</strong>
+                <span>ou selecione a planilha atualizada no computador</span>
+                <label class="stock-import-mode"><span>FORMA DE ATUALIZAÇÃO</span><select id="stock-import-mode"><option value="REPLACE" selected>SUBSTITUIR TODO O ESTOQUE</option><option value="MERGE">ATUALIZAR SEM EXCLUIR AUSENTES</option></select></label>
+                <button id="select-stock-count" class="primary-button" type="button">SELECIONAR PLANILHA</button>
+                <small>.XLS &nbsp;•&nbsp; .XLSX &nbsp;•&nbsp; .XLSM &nbsp;•&nbsp; .CSV</small>
+              </div>
+              <div class="stock-count-rules">
+                <div><i>1</i><p><strong>PRÉVIA OBRIGATÓRIA</strong><span>Veja saldos anteriores, novos valores e divergências antes de aplicar.</span></p></div>
+                <div><i>2</i><p><strong>SUBSTITUIÇÃO TOTAL CONTROLADA</strong><span>No modo total, a base antiga é arquivada automaticamente e somente a nova planilha permanece ativa.</span></p></div>
+                <div><i>3</i><p><strong>BACKUP E AUDITORIA</strong><span>Arquivo, data, responsável, itens removidos e cópia da base anterior ficam registrados.</span></p></div>
+                <div><i>4</i><p><strong>SALDO AUSENTE</strong><span>Quantidade vazia ou inválida vira VERIFICAR NO ESTOQUE, nunca zero automático.</span></p></div>
+              </div>
+            </div>
+          </article>
+
+          <article id="stock-import-preview" class="panel stock-count-preview" hidden>
+            <div class="panel-heading"><div><span class="section-index">PRÉVIA</span><h2 id="stock-preview-file">PLANILHA SELECIONADA</h2></div><span id="stock-preview-sheet" class="panel-hint"></span></div>
+            <div class="stock-count-preview-metrics">
+              <div><span>ITENS LIDOS</span><strong id="stock-preview-valid">0</strong></div>
+              <div><span>SALDOS ALTERADOS</span><strong id="stock-preview-changed">0</strong></div>
+              <div><span>NOVOS MATERIAIS</span><strong id="stock-preview-new">0</strong></div>
+              <div><span>VERIFICAR</span><strong id="stock-preview-pending">0</strong></div>
+              <div><span>PRESERVADOS</span><strong id="stock-preview-preserved">0</strong></div>
+              <div><span>REMOVIDOS</span><strong id="stock-preview-removed">0</strong></div>
+            </div>
+            <div id="stock-preview-warning" class="stock-preview-warning" hidden></div>
+            <div class="stock-count-approval">
+              <label class="field"><span>RESPONSÁVEL PELO LEVANTAMENTO *</span><input id="stock-count-responsible" type="text" maxlength="100" readonly aria-readonly="true" placeholder="Entre com sua conta para registrar"></label>
+              <button id="cancel-stock-count" class="outline-button" type="button">CANCELAR</button>
+              <button id="apply-stock-count" class="primary-button" type="button">SUBSTITUIR ESTOQUE</button>
+            </div>
+            <div class="table-wrap stock-preview-table"><table><thead><tr><th>MATERIAL</th><th>SALDO ANTERIOR</th><th>SALDO DA PLANILHA</th><th>DIFERENÇA</th><th>AÇÃO</th><th>ORIGEM</th></tr></thead><tbody id="stock-preview-body"></tbody></table></div>
+          </article>
+
+          <article class="panel table-panel stock-count-history">
+            <div class="panel-heading"><div><span class="section-index">AUDITORIA</span><h2>HISTÓRICO DE LEVANTAMENTOS</h2></div><span id="stock-count-history-count" class="panel-hint">0 registros</span></div>
+            <div class="table-wrap"><table><thead><tr><th>DATA / HORA</th><th>MODO</th><th>ARQUIVO / ABA</th><th>RESPONSÁVEL</th><th>ALTERADOS</th><th>NOVOS</th><th>VERIFICAR</th><th>PRESERVADOS</th><th>REMOVIDOS</th></tr></thead><tbody id="stock-count-history-body"></tbody></table></div>
+          </article>
+        </div>
+
+        <div id="procurement-panel-movements" class="procurement-panel" data-procurement-panel="movements">
+          <article class="panel table-panel">
+            <div class="panel-heading"><div><span class="section-index">AUDITORIA</span><h2>HISTÓRICO DE ENTRADAS, SAÍDAS E CONTAGENS</h2></div><span id="movement-count" class="panel-hint">0 registros</span></div>
+            <div class="table-wrap"><table><thead><tr><th>DATA / HORA</th><th>MATERIAL</th><th>TIPO</th><th>QUANTIDADE</th><th>SALDO ANTES → DEPOIS</th><th>OPERAÇÃO / AUTORIZAÇÃO</th><th>MOTIVO / DOCUMENTO</th></tr></thead><tbody id="movement-body"></tbody></table></div>
+          </article>
+        </div>
+
+        <div id="procurement-panel-purchases" class="procurement-panel" data-procurement-panel="purchases">
+          <article class="panel table-panel procurement-purchase-table">
+            <div class="panel-heading"><div><span class="section-index">DECISÃO</span><h2>MATERIAIS PARA COMPRAR</h2></div><div class="purchase-summary"><span id="buy-saving">Economia possível: R$ 0,00</span><span id="quotation-count">0 cotações</span></div></div>
+            <div class="table-wrap"><table><thead><tr><th>MATERIAL</th><th>COMPRAR</th><th>REFERÊNCIA HISTÓRICA</th><th>COTAÇÃO RECOMENDADA</th><th>PRAZO</th><th>CONFIANÇA</th><th>CUSTO PREVISTO</th><th>AÇÕES</th></tr></thead><tbody id="purchase-body"></tbody></table></div>
+          </article>
+          <article class="panel table-panel procurement-invoices">
+            <div class="panel-heading"><div><span class="section-index">NOTAS</span><h2>HISTÓRICO E CONFERÊNCIA</h2></div><span id="pending-invoice-count" class="panel-hint"></span></div>
+            <div class="table-wrap"><table><thead><tr><th>NF-e</th><th>EMISSÃO</th><th>FORNECEDOR</th><th>VALOR</th><th>OBSERVAÇÃO</th><th>STATUS</th><th>AÇÃO</th></tr></thead><tbody id="invoice-body"></tbody></table></div>
+          </article>
+        </div>
+
+        <div id="procurement-panel-suppliers" class="procurement-panel" data-procurement-panel="suppliers">
+          <div id="supplier-grid" class="supplier-grid"></div>
+        </div>
+      </section>
+
+      <section id="view-tools" class="view">
+        <div class="view-toolbar tools-toolbar">
+          <div class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="tools-search" type="search" placeholder="Buscar ferramenta, patrimônio, local ou status..."></div>
+          <div class="tool-guidance"><span class="pulse-dot"></span><strong>CONTROLE POR USUÁRIO E AUTORIZAÇÃO</strong><small>Uma ferramenta só sai após confirmação de um responsável habilitado.</small></div>
+        </div>
+
+        <div class="tools-metrics">
+          <article class="summary-card"><span>FERRAMENTAS CADASTRADAS</span><strong id="tool-total-count">0</strong><small>Patrimônios individuais controlados</small></article>
+          <article class="summary-card success-card"><span>DISPONÍVEIS</span><strong id="tool-available-count">0</strong><small>Prontas para retirada</small></article>
+          <article class="summary-card emphasis"><span>EM USO</span><strong id="tool-in-use-count">0</strong><small>Com saída ainda aberta</small></article>
+          <article class="summary-card warning-card"><span>EM MANUTENÇÃO</span><strong id="tool-maintenance-count">0</strong><small>Bloqueadas para retirada</small></article>
+        </div>
+
+        <div class="tools-workspace-grid">
+          <article class="panel tool-operation-card">
+            <div class="panel-heading"><div><span class="section-index">SAÍDA</span><h2>REGISTRAR RETIRADA</h2></div><span id="tool-checkout-status" class="panel-hint">Selecione uma ferramenta disponível</span></div>
+            <form id="tool-checkout-form" class="tool-form">
+              <label class="field field-wide"><span>FERRAMENTA *</span><select id="tool-checkout-tool" required><option value="">Nenhuma ferramenta disponível</option></select></label>
+              <label class="field field-wide"><span>FUNCIONÁRIO QUE RETIROU *</span><select id="tool-checkout-employee" required><option value="">SELECIONE O FUNCIONÁRIO</option></select><small>Este é quem ficará responsável pelo uso da ferramenta; não é a pessoa que autoriza a retirada.</small></label>
+              <label class="field field-wide"><span>FINALIDADE / OBRA</span><input id="tool-checkout-purpose" type="text" maxlength="500" placeholder="Ex.: Usinagem da obra Silva"></label>
+              <div id="tool-checkout-authorization" class="movement-authorization field-wide">
+                <div><strong>AUTORIZAÇÃO DE RETIRADA</strong><span>Informe a conta de quem autoriza esta saída. O funcionário que retirou e o autorizador ficam separados no histórico.</span></div>
+                <label class="field"><span>USUÁRIO AUTORIZADOR *</span><input id="tool-authorizer-login" type="text" maxlength="60" autocomplete="off" placeholder="Usuário responsável"></label>
+                <label class="field"><span>SENHA DO AUTORIZADOR *</span><input id="tool-authorizer-password" type="password" maxlength="200" autocomplete="off" placeholder="Senha individual"></label>
+              </div>
+              <div class="form-actions field-wide"><button id="tool-checkout-submit" type="submit" class="primary-button">REGISTRAR SAÍDA AUTORIZADA</button></div>
+            </form>
+          </article>
+
+          <article class="panel tool-operation-card">
+            <div class="panel-heading"><div><span class="section-index">CADASTRO</span><h2>NOVA FERRAMENTA</h2></div><span class="panel-hint">Cadastre cada patrimônio separadamente</span></div>
+            <form id="tool-register-form" class="tool-form tool-register-form">
+              <label class="field"><span>NOME DA FERRAMENTA *</span><input id="tool-name" type="text" maxlength="160" required placeholder="Ex.: Parafusadeira Bosch 18V"></label>
+              <label class="field"><span>CATEGORIA *</span><select id="tool-category" required><option value="PARAFUSADEIRAS">PARAFUSADEIRAS</option><option value="FURADEIRAS">FURADEIRAS</option><option value="SERRAS TICO-TICO">SERRAS TICO-TICO</option><option value="LIXADEIRAS">LIXADEIRAS</option><option value="ESMERILHADEIRAS">ESMERILHADEIRAS</option><option value="PLAINAS">PLAINAS</option><option value="TUPIAS">TUPIAS</option><option value="SOPRADORES">SOPRADORES</option><option value="OUTRAS">OUTRAS</option></select></label>
+              <label class="field"><span>PATRIMÔNIO / IDENTIFICAÇÃO</span><input id="tool-asset-tag" type="text" maxlength="80" placeholder="Ex.: PAT-001"></label>
+              <label class="field"><span>MARCA / MODELO</span><input id="tool-brand-model" type="text" maxlength="160" placeholder="Ex.: Bosch GSR 18V"></label>
+              <label class="field field-wide"><span>LOCAL DE GUARDA</span><input id="tool-location" type="text" maxlength="120" placeholder="Ex.: Armário A · Rua 001"></label>
+              <label class="field field-wide"><span>OBSERVAÇÕES</span><textarea id="tool-notes" maxlength="700" rows="2" placeholder="Acessórios, estado de conservação ou orientação de uso"></textarea></label>
+              <div class="form-actions field-wide"><button id="tool-register-submit" type="submit" class="outline-button">CADASTRAR FERRAMENTA</button></div>
+            </form>
+          </article>
+        </div>
+
+        <article class="panel table-panel tool-table-panel">
+          <div class="panel-heading"><div><span class="section-index">PATRIMÔNIO</span><h2>FERRAMENTAS CADASTRADAS</h2></div><span id="tool-list-summary" class="panel-hint">0 ferramentas</span></div>
+          <div class="table-wrap"><table><thead><tr><th>FERRAMENTA</th><th>PATRIMÔNIO / MODELO</th><th>LOCAL</th><th>STATUS</th><th>EM USO POR</th><th>ÚLTIMA MOVIMENTAÇÃO</th><th>AÇÃO</th></tr></thead><tbody id="tools-body"></tbody></table></div>
+        </article>
+
+        <article class="panel table-panel tool-history-panel">
+          <div class="panel-heading"><div><span class="section-index">AUDITORIA</span><h2>HISTÓRICO DE USO E DEVOLUÇÃO</h2></div><span id="tool-history-count" class="panel-hint">0 registros</span></div>
+          <div class="table-wrap"><table><thead><tr><th>SAÍDA</th><th>DEVOLUÇÃO</th><th>FERRAMENTA</th><th>FUNCIONÁRIO</th><th>AUTORIZADO POR</th><th>RESPONSÁVEL PELA DEVOLUÇÃO</th><th>FINALIDADE / OBSERVAÇÃO</th></tr></thead><tbody id="tool-history-body"></tbody></table></div>
+        </article>
+      </section>
+
+      <section id="view-ai" class="view">
+        <div class="ai-layout">
+          <article class="panel ai-core-panel">
+            <div class="panel-heading"><div><span class="section-index">NÚCLEO</span><h2>IA LOCAL DO RASPUTIM</h2></div><span id="ai-status" class="status-badge">OFFLINE</span></div>
+            <div class="ai-core-wrap">
+              <div id="ai-core" class="ai-core idle" aria-label="Núcleo da IA local">
+                <div class="ai-orbit orbit-a"></div><div class="ai-orbit orbit-b"></div><div class="ai-orbit orbit-c"></div>
+                <div class="ai-core-glow"></div><div class="ai-core-dot"></div>
+              </div>
+              <div class="ai-core-copy"><strong id="ai-core-state">AGUARDANDO SERVIDOR LOCAL</strong><small id="ai-core-detail">Inicie o llama-server para ativar o núcleo.</small></div>
+            </div>
+            <dl class="info-list ai-info"><div><dt>ENDPOINT</dt><dd id="ai-endpoint">http://127.0.0.1:8080</dd></div><div><dt>MODELO</dt><dd id="ai-model">—</dd></div><div><dt>PRIVACIDADE</dt><dd>Somente localhost</dd></div></dl>
+            <button id="ai-refresh" type="button" class="outline-button">TESTAR CONEXÃO LOCAL</button>
+          </article>
+          <article class="panel ai-chat-panel">
+            <div class="panel-heading"><div><span class="section-index">CHAT</span><h2>ASSISTENTE OPERACIONAL</h2></div><span class="panel-hint">PCP · ESTOQUE · FERRAMENTAS</span></div>
+            <div id="ai-chat-log" class="ai-chat-log" aria-live="polite">
+              <div class="ai-message system"><strong>RASPUTIM</strong><p>A IA funciona somente quando o servidor local estiver ativo. Nenhum prompt desta aba é enviado a um provedor externo.</p></div>
+            </div>
+            <form id="ai-chat-form" class="ai-chat-form">
+              <textarea id="ai-prompt" rows="4" maxlength="12000" placeholder="Pergunte sobre o status operacional ou peça uma análise local..." required></textarea>
+              <div class="ai-chat-actions"><small>Ctrl + Enter para enviar</small><button id="ai-send" type="submit" class="primary-button">ENVIAR PARA IA LOCAL</button></div>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-settings" class="view">
+        <div class="settings-grid">
+          <article class="panel settings-card">
+            <div class="panel-heading"><div><span class="section-index">SEGURANÇA</span><h2>ARMAZENAMENTO LOCAL</h2></div><span class="status-badge ready">ATIVO</span></div>
+            <p>Projetos, valores e histórico ficam armazenados apenas neste computador. Quando o analista inicia uma pesquisa, somente o nome do material, Maringá e o raio escolhido são enviados ao mecanismo de busca; planilhas e valores internos não são enviados.</p>
+            <dl class="info-list"><div><dt>Local dos dados</dt><dd id="data-path">Carregando...</dd></div><div><dt>Plataforma</dt><dd id="platform-label">—</dd></div><div><dt>Versão</dt><dd id="settings-version">0.1.0</dd></div></dl>
+          </article>
+          <article class="panel settings-card">
+            <div class="panel-heading"><div><span class="section-index">ENTRADA</span><h2>FORMATOS ACEITOS</h2></div></div>
+            <div class="format-list"><span>.XLS</span><span>.XLSX</span><span>.XLSM</span><span>.XLSB</span></div>
+            <p>O leitor procura a aba <strong>PROPOSTA</strong>, confere ambientes, categorias, totais e referências de fórmulas. O arquivo original nunca é modificado.</p>
+          </article>
+          <article class="panel settings-card market-settings-card">
+            <div class="panel-heading"><div><span class="section-index">MERCADO</span><h2>PESQUISA TAVILY</h2></div><span id="market-api-status" class="status-badge ready">KEYLESS ATIVO</span></div>
+            <p>A chave Tavily é opcional. Quando configurada, ela tem prioridade nas pesquisas; se falhar ou atingir o limite, o Rasputim tenta automaticamente o modo gratuito Keyless e a fonte aberta de reserva.</p>
+            <div class="secret-field">
+              <input id="market-api-key" type="password" autocomplete="off" spellcheck="false" maxlength="210" placeholder="tvly-..." aria-label="Chave da API Tavily">
+              <button id="test-market-api-key" type="button" class="outline-button">TESTAR</button>
+              <button id="save-market-api-key" type="button" class="primary-button">SALVAR</button>
+              <button id="remove-market-api-key" type="button" class="danger-button">REMOVER</button>
+            </div>
+            <dl class="info-list market-credential-info"><div><dt>MODO ATUAL</dt><dd id="market-api-mode">Tavily Keyless</dd></div><div><dt>PROTEÇÃO</dt><dd id="market-api-storage">Verificando...</dd></div><div><dt>PLANO / USO</dt><dd id="market-api-plan">Sem chave configurada</dd></div></dl>
+            <small id="market-api-help" class="settings-help">A chave nunca é gravada no código nem exibida inteira depois de salva.</small>
+          </article>
+          <article id="user-management-card" class="panel settings-card user-management-card">
+            <div class="panel-heading"><div><span class="section-index">ACESSOS</span><h2>USUÁRIOS E AUTORIZAÇÕES</h2></div><button id="open-user-modal" type="button" class="primary-button">+ CADASTRAR USUÁRIO</button></div>
+            <p>Contas individuais, sem senhas compartilhadas. Apenas o responsável geral cadastra, bloqueia e define os cargos. Saídas de estoque mostram quem solicitou e quem autorizou.</p>
+            <div id="user-management-notice" class="settings-access-notice"></div>
+            <div class="table-wrap user-table-wrap"><table><thead><tr><th>NOME</th><th>USUÁRIO</th><th>CARGO</th><th>STATUS</th><th>ÚLTIMO ACESSO</th><th></th></tr></thead><tbody id="users-body"></tbody></table></div>
+          </article>
+          <article id="user-network-card" class="panel settings-card">
+            <div class="panel-heading"><div><span class="section-index">REDE</span><h2>BASE CENTRAL DE USUÁRIOS</h2></div><span id="user-directory-status" class="status-badge">LOCAL</span></div>
+            <p id="user-directory-message">Os logins desta instalação ainda ficam somente neste computador.</p>
+            <dl class="info-list"><div><dt>PASTA CENTRAL</dt><dd id="user-directory-path">Não configurada</dd></div></dl>
+            <div class="button-row"><button id="enable-shared-users" class="primary-button">CENTRALIZAR USUÁRIOS</button><button id="use-local-users" class="outline-button">USAR SOMENTE NESTE COMPUTADOR</button></div>
+          </article>
+          <article class="panel settings-card danger-zone">
+            <div class="panel-heading"><div><span class="section-index">DADOS</span><h2>GERENCIAR HISTÓRICO</h2></div></div>
+            <p>Você pode limpar o histórico local ou restaurar os três projetos e a base comercial usados na validação inicial.</p>
+            <div class="button-row"><button id="restore-demo" class="outline-button">RESTAURAR BASE INICIAL</button><button id="clear-data" class="danger-button">LIMPAR DADOS LOCAIS</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-project-name">
+      <button class="modal-close" data-close-modal aria-label="Fechar">×</button>
+      <div class="modal-topline"><span id="modal-project-size" class="status-badge">PROJETO</span><span id="modal-project-file"></span></div>
+      <h2 id="modal-project-name">Projeto</h2>
+      <div id="modal-project-kpis" class="modal-kpis"></div>
+      <div class="modal-tabs"><button class="active" data-modal-tab="environments">AMBIENTES</button><button data-modal-tab="alerts">ALERTAS</button><button data-modal-tab="commercial">COMERCIAL</button></div>
+      <div id="modal-content" class="modal-content"></div>
+      <div class="modal-actions"><button id="modal-reveal-file" class="text-button">LOCALIZAR ARQUIVO</button><div><button id="modal-delete-project" class="text-button danger-text">EXCLUIR DO HISTÓRICO</button><button id="modal-export-report" class="primary-button">GERAR PDF</button></div></div>
+    </section>
+  </div>
+
+  <div id="confirm-dialog" class="modal confirm-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <section class="confirm-card" role="alertdialog" aria-modal="true">
+      <div class="confirm-icon">!</div><h2 id="confirm-title">Confirmar ação</h2><p id="confirm-message"></p>
+      <div class="button-row"><button id="confirm-cancel" class="outline-button">CANCELAR</button><button id="confirm-accept" class="danger-button">CONFIRMAR</button></div>
+    </section>
+  </div>
+
+  <div id="pcp-project-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-pcp-project></div>
+    <section class="form-card pcp-project-form-card" role="dialog" aria-modal="true" aria-labelledby="pcp-project-title">
+      <button class="modal-close" data-close-pcp-project aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">PCP</span><div><h2 id="pcp-project-title">Cadastrar nova obra</h2><p id="pcp-project-subtitle">A obra entra em Orçamento e será controlada como uma entrega única.</p></div></div>
+      <form id="pcp-project-form">
+        <input id="pcp-project-id" type="hidden">
+        <label class="field"><span>CLIENTE</span><input id="pcp-project-client" type="text" maxlength="160" required placeholder="Nome do cliente"></label>
+        <label class="field"><span>NOME DA OBRA / PROJETO</span><input id="pcp-project-name" type="text" maxlength="180" required placeholder="Ex.: Residência Silva"></label>
+        <label class="field"><span>PRAZO DA OBRA COMPLETA</span><input id="pcp-project-due-date" type="date" required></label>
+        <label class="field"><span>RESPONSÁVEL ATUAL</span><input id="pcp-project-responsible" type="text" maxlength="100" required placeholder="Nome do responsável"></label>
+        <label class="field"><span>PRIORIDADE</span><select id="pcp-project-priority"><option value="NORMAL">NORMAL</option><option value="ALTA">ALTA</option><option value="URGENTE">URGENTE</option></select></label>
+        <label class="field"><span>VINCULAR PROJETO ANALISADO</span><select id="pcp-project-source"><option value="">SEM VÍNCULO</option></select></label>
+        <label class="field field-wide"><span>OBSERVAÇÕES GERAIS</span><textarea id="pcp-project-notes" maxlength="3000" rows="4" placeholder="Escopo, restrições, data combinada e informações importantes"></textarea></label>
+        <div class="pcp-form-notice field-wide"><strong>FLUXO INTEGRAL</strong><span>Orçamento → Lista de compra + caderno técnico → Usinagem → Montagem → Expedição → Entrega → Instalação → Concluído.</span></div>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-pcp-project>CANCELAR</button><button id="pcp-project-save" type="submit" class="primary-button">CADASTRAR OBRA</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="pcp-detail-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-pcp-detail></div>
+    <section class="modal-card pcp-detail-card" role="dialog" aria-modal="true" aria-labelledby="pcp-detail-title">
+      <button class="modal-close" data-close-pcp-detail aria-label="Fechar">×</button>
+      <div class="pcp-detail-heading">
+        <div><div class="pcp-detail-badges"><span id="pcp-detail-code" class="section-index">PCP-0000</span><span id="pcp-detail-status" class="status-badge">ATIVA</span></div><h2 id="pcp-detail-title">Obra</h2><p id="pcp-detail-client">Cliente</p></div>
+        <button id="pcp-edit-project" class="outline-button" type="button">EDITAR CADASTRO</button>
+      </div>
+      <div id="pcp-detail-kpis" class="pcp-detail-kpis"></div>
+      <div id="pcp-detail-blocked" class="pcp-blocked-banner" hidden></div>
+      <div id="pcp-timeline" class="pcp-timeline"></div>
+      <div class="pcp-detail-grid">
+        <section class="pcp-history-panel"><div class="pcp-subheading"><span>HISTÓRICO DA OBRA</span><small>Todas as alterações ficam registradas</small></div><div id="pcp-history" class="pcp-history"></div></section>
+        <section class="pcp-action-panel">
+          <div class="pcp-subheading"><span>MOVIMENTAR OBRA</span><small>A obra avança inteira para a próxima etapa</small></div>
+          <label class="field"><span>RESPONSÁVEL POR ESTA AÇÃO</span><input id="pcp-action-user" type="text" maxlength="100" readonly aria-readonly="true" placeholder="Conta do operador"></label>
+          <label class="field"><span>OBSERVAÇÃO / MOTIVO DO BLOQUEIO</span><textarea id="pcp-action-note" maxlength="1000" rows="4" placeholder="Informe o que foi concluído, a pendência ou o motivo"></textarea></label>
+          <div class="pcp-primary-actions"><button id="pcp-previous-stage" class="outline-button" type="button">← ETAPA ANTERIOR</button><button id="pcp-next-stage" class="primary-button" type="button">PRÓXIMA ETAPA →</button></div>
+          <div class="pcp-secondary-actions"><button id="pcp-toggle-block" class="outline-button" type="button">BLOQUEAR OBRA</button><button id="pcp-archive-project" class="text-button danger-text" type="button">ARQUIVAR OBRA</button></div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <div id="pcp-network-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-pcp-network></div>
+    <section class="form-card pcp-network-card" role="dialog" aria-modal="true" aria-labelledby="pcp-network-title">
+      <button class="modal-close" data-close-pcp-network aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">REDE</span><div><h2 id="pcp-network-title">PCP em 4 computadores</h2><p>Use a mesma pasta compartilhada do Windows nas quatro estações.</p></div></div>
+      <div class="pcp-network-content">
+        <label class="field"><span>NOME DESTA ESTAÇÃO</span><input id="pcp-station-name" type="text" maxlength="80" placeholder="Ex.: ORÇAMENTO, USINAGEM ou PC-01"></label>
+        <div id="pcp-network-state" class="pcp-network-state"><strong>MODO LOCAL</strong><span>O PCP está salvo somente neste computador.</span></div>
+        <dl class="info-list"><div><dt>PASTA ATUAL</dt><dd id="pcp-network-path">Somente armazenamento local</dd></div><div><dt>ÚLTIMA SINCRONIZAÇÃO</dt><dd id="pcp-network-sync">—</dd></div><div><dt>REVISÃO</dt><dd id="pcp-network-revision">0</dd></div></dl>
+        <div class="pcp-network-rules"><div><i>1</i><span>Crie ou escolha uma pasta de rede que todos os quatro computadores possam abrir.</span></div><div><i>2</i><span>Em cada computador, abra esta tela e selecione exatamente a mesma pasta.</span></div><div><i>3</i><span>O Rasputim recarrega mudanças automaticamente e protege gravações simultâneas.</span></div></div>
+        <div class="form-actions"><button id="pcp-use-local" type="button" class="outline-button">USAR SOMENTE ESTE PC</button><button id="pcp-save-station" type="button" class="outline-button">SALVAR NOME</button><button id="pcp-select-shared" type="button" class="primary-button">SELECIONAR PASTA COMPARTILHADA</button></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="movement-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-movement></div>
+    <section class="form-card" role="dialog" aria-modal="true" aria-labelledby="movement-title">
+      <button class="modal-close" data-close-movement aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">ESTOQUE</span><div><h2 id="movement-title">Registrar movimentação</h2><p>Entradas e saídas podem ser registradas quantas vezes forem necessárias. Saldos negativos geram alerta, mas não bloqueiam o operador.</p></div></div>
+      <form id="movement-form">
+        <label class="field field-wide"><span>MATERIAL</span><select id="movement-material" required></select><small id="movement-balance">Selecione um material</small></label>
+        <label class="field"><span>TIPO</span><select id="movement-type" required><option value="ENTRADA">ENTRADA</option><option value="SAIDA">SAÍDA</option><option value="CONTAGEM">CONTAGEM FÍSICA</option></select></label>
+        <label class="field"><span>QUANTIDADE</span><input id="movement-quantity" type="number" min="0" step="0.01" required></label>
+        <label class="field field-wide"><span>MOTIVO</span><input id="movement-reason" type="text" maxlength="300" placeholder="Ex.: material recebido, consumo do projeto ou contagem semanal" required></label>
+        <label class="field"><span>RESPONSÁVEL PELO REGISTRO</span><input id="movement-user" type="text" maxlength="100" readonly aria-readonly="true" placeholder="Entre com sua conta"></label>
+        <label class="field"><span>DOCUMENTO (OPCIONAL)</span><input id="movement-document" type="text" maxlength="120" placeholder="NF-e, projeto ou ordem"></label>
+        <div id="movement-authorization" class="movement-authorization field-wide" hidden>
+          <div><strong>AUTORIZAÇÃO DA SAÍDA</strong><span>Informe a conta de quem conferiu e autorizou esta baixa. A senha não é salva no histórico.</span></div>
+          <label class="field"><span>USUÁRIO AUTORIZADOR</span><input id="movement-authorizer-login" type="text" maxlength="60" autocomplete="username" placeholder="Usuário do responsável"></label>
+          <label class="field"><span>SENHA DO AUTORIZADOR</span><input id="movement-authorizer-password" type="password" maxlength="200" autocomplete="current-password" placeholder="Senha do responsável"></label>
+        </div>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-movement>CANCELAR</button><button type="submit" class="outline-button" data-continue-movement="true">SALVAR E REGISTRAR OUTRO</button><button type="submit" class="primary-button">SALVAR MOVIMENTAÇÃO</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="material-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-material></div>
+    <section class="form-card" role="dialog" aria-modal="true" aria-labelledby="material-title">
+      <button class="modal-close" data-close-material aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">ESTOQUE</span><div><h2 id="material-title">Cadastrar material</h2><p>Inclua um novo material diretamente no sistema. O saldo inicial e o responsável ficam registrados no histórico.</p></div></div>
+      <form id="material-form">
+        <label class="field field-wide"><span>NOME DO MATERIAL *</span><input id="material-name" type="text" maxlength="180" required placeholder="Ex.: Parafuso 4,0 × 40 mm"></label>
+        <label class="field"><span>CATEGORIA *</span><select id="material-category" required><option value="MDF">MDF</option><option value="FERRAGENS">FERRAGENS</option><option value="MATERIAL GERAL" selected>MATERIAL GERAL</option><option value="OUTROS">OUTROS</option></select></label>
+        <label class="field"><span>UNIDADE *</span><input id="material-unit" type="text" maxlength="30" required value="UN." placeholder="UN., M, CHAPA, KG"></label>
+        <label class="field"><span>SALDO INICIAL *</span><input id="material-current" type="number" min="0" step="0.01" required value="0"></label>
+        <label class="field"><span>ESTOQUE MÍNIMO *</span><input id="material-minimum" type="number" min="0" step="0.01" required value="0"></label>
+        <label class="field field-wide"><span>LOCAL DE GUARDA</span><input id="material-location" type="text" maxlength="120" placeholder="Ex.: Armário B · Rua 002"></label>
+        <label class="field field-wide"><span>OBSERVAÇÕES</span><textarea id="material-notes" maxlength="500" rows="2" placeholder="Marca, medida ou referência"></textarea></label>
+        <label class="field field-wide"><span>DOCUMENTO / REFERÊNCIA</span><input id="material-document" type="text" maxlength="120" placeholder="NF-e, fornecedor ou referência interna"></label>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-material>CANCELAR</button><button type="submit" class="primary-button">CADASTRAR MATERIAL</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="quotation-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-quotation></div>
+    <section class="form-card quotation-form-card" role="dialog" aria-modal="true" aria-labelledby="quotation-title">
+      <button class="modal-close" data-close-quotation aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">COTAÇÃO</span><div><h2 id="quotation-title">Registrar cotação</h2><p>Preço, entrega e confiança serão comparados para recomendar a compra.</p></div></div>
+      <form id="quotation-form">
+        <label class="field field-wide"><span>MATERIAL</span><select id="quotation-material" required></select></label>
+        <label class="field"><span>FORNECEDOR CADASTRADO</span><select id="quotation-supplier" required></select></label>
+        <label class="field"><span>NOME DA LOJA / EMPRESA</span><input id="quotation-supplier-name" type="text" maxlength="120" required></label>
+        <label class="field"><span>QUANTIDADE COTADA</span><input id="quotation-quantity" type="number" min="0.01" step="0.01" required></label>
+        <label class="field"><span>PREÇO UNITÁRIO</span><input id="quotation-price" type="number" min="0.01" step="0.01" required></label>
+        <label class="field"><span>FRETE (VAZIO = A CONFIRMAR)</span><input id="quotation-freight" type="number" min="0" step="0.01" placeholder="Ex.: 35,00 ou 0 para grátis"></label>
+        <label class="field"><span>PRAZO (DIAS)</span><input id="quotation-delivery" type="number" min="0" step="1" required></label>
+        <label class="field"><span>CONFIABILIDADE</span><select id="quotation-reliability"><option>ALTA</option><option selected>MÉDIA</option><option>NÃO AVALIADA</option><option>BAIXA</option></select></label>
+        <label class="field field-wide"><span>LINK / FONTE</span><input id="quotation-url" type="url" maxlength="1200" placeholder="https://..."></label>
+        <label class="field field-wide"><span>OBSERVAÇÃO</span><input id="quotation-note" type="text" maxlength="400" placeholder="Marca, embalagem, disponibilidade e compromisso de entrega"></label>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-quotation>CANCELAR</button><button type="submit" class="primary-button">SALVAR COTAÇÃO</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="market-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-market></div>
+    <section class="modal-card market-card" role="dialog" aria-modal="true" aria-labelledby="market-title">
+      <button class="modal-close" data-close-market aria-label="Fechar">×</button>
+      <div class="market-heading"><span class="section-index">AO VIVO</span><div><h2 id="market-title">Pesquisa de mercado</h2><p id="market-subtitle">Resultados atuais para conferência.</p></div></div>
+      <div class="market-search-bar">
+        <div><label for="market-radius">RAIO DE PESQUISA</label><small>Origem fixa: Maringá/PR. O raio pode variar de 1 a 5.000 km, mas nunca ultrapassa a divisa do Paraná.</small></div>
+        <div class="market-radius-field"><input id="market-radius" type="number" min="1" max="5000" step="1" value="100"><span>KM</span></div>
+        <button id="market-run" class="primary-button">BUSCAR NOVOS FORNECEDORES</button>
+      </div>
+      <div id="market-summary" class="market-summary" aria-live="polite"></div>
+      <div id="market-results" class="market-results"></div>
+      <div class="modal-actions"><span>Somente fornecedores com localização confirmada no Paraná são exibidos. O Rasputim procura SITE OFICIAL, TELEFONE e WHATSAPP automaticamente; mapas, guias e cadastros de endereço nunca ocupam o botão do site. Quando um contato não puder ser confirmado, isso será informado claramente. Confirme unidade, CNPJ, estoque, frete e prazo por escrito. Validação territorial: base municipal do Paraná e © colaboradores do OpenStreetMap.</span><button class="outline-button" data-close-market>FECHAR</button></div>
+    </section>
+  </div>
+
+  <div id="user-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-user-modal></div>
+    <section class="form-card user-form-card" role="dialog" aria-modal="true" aria-labelledby="user-modal-title">
+      <button class="modal-close" data-close-user-modal aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">ACESSOS</span><div><h2 id="user-modal-title">Cadastrar usuário</h2><p>Crie uma conta individual e escolha o cargo que define as permissões do colaborador.</p></div></div>
+      <form id="user-form">
+        <label class="field"><span>NOME COMPLETO</span><input id="user-name" type="text" maxlength="120" autocomplete="name" required placeholder="Nome do colaborador"></label>
+        <label class="field"><span>USUÁRIO</span><input id="user-login" type="text" maxlength="60" autocomplete="username" required placeholder="Ex.: maria.souza"></label>
+        <label class="field"><span>CARGO</span><select id="user-role" required></select><small id="user-role-description">Selecione o cargo para ver o limite de acesso.</small></label>
+        <label class="field"><span>SENHA INICIAL</span><input id="user-password" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="No mínimo 8 caracteres"></label>
+        <label class="field"><span>CONFIRMAR SENHA</span><input id="user-password-confirm" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="Repita a senha para evitar erro de digitação"></label>
+        <small class="auth-help field-wide">Para deixar esta pessoa responsável pelo sistema, escolha o cargo <strong>Responsável geral</strong>. O usuário e a senha informados aqui serão exatamente os dados de entrada dela.</small>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-user-modal>CANCELAR</button><button type="submit" class="primary-button">CRIAR USUÁRIO</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="password-reset-modal" class="modal form-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-password-reset></div>
+    <section class="form-card user-form-card" role="dialog" aria-modal="true" aria-labelledby="password-reset-title">
+      <button class="modal-close" data-close-password-reset aria-label="Fechar">×</button>
+      <div class="form-card-heading"><span class="section-index">ACESSOS</span><div><h2 id="password-reset-title">Redefinir senha</h2><p id="password-reset-subtitle">Defina uma nova senha para a conta selecionada.</p></div></div>
+      <form id="password-reset-form">
+        <label class="field"><span>NOVA SENHA</span><input id="password-reset-value" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="No mínimo 8 caracteres"></label>
+        <label class="field"><span>CONFIRMAR NOVA SENHA</span><input id="password-reset-confirm" type="password" minlength="8" maxlength="200" autocomplete="new-password" required placeholder="Repita a nova senha"></label>
+        <div class="form-actions field-wide"><button type="button" class="outline-button" data-close-password-reset>CANCELAR</button><button type="submit" class="primary-button">SALVAR NOVA SENHA</button></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>

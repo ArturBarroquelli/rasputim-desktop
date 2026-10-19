@@ -1,0 +1,43 @@
+RASPUTIM TECNOLOGIS — TESTE WINDOWS 10 x64 · ACESSOS E ESTOQUE COMPLETO
+
+Esta edição é um piloto de compatibilidade baseado diretamente na versão
+Rasputim Tecnologis v0.4.17 ESTOQUE LIVRE aprovada, atualizada para v0.4.19.
+
+Atualização de estoque v0.4.18
+- Complementa automaticamente os 75 materiais que estavam presentes na base
+  antiga de 205 itens e não existiam na base de 130 itens.
+- Corrige a descrição de PONTEIRAS PERFIL Y PRETO 18 MM.
+- Não altera saldos ou materiais já cadastrados; somente adiciona os ausentes.
+
+Atualização de acessos v0.4.19
+- Primeiro acesso cria o Responsável Geral; depois, cada colaborador usa uma
+  conta individual com cargo próprio.
+- O Responsável Geral cadastra, ativa e bloqueia usuários na tela
+  Configurações > Usuários e autorizações.
+- A sessão encerra após 20 minutos sem uso. Cinco senhas incorretas bloqueiam
+  temporariamente o acesso por 15 minutos.
+- Entradas, contagens e importações continuam permitindo lançamentos
+  consecutivos conforme o cargo. Saídas exigem usuário e senha de quem
+  autorizou e registram solicitante, autorizador, data e hora no histórico.
+
+O que foi preservado
+- Aplicativo de área de trabalho (EXE), sem navegador externo, link ou HTTPS.
+- Estoque com movimentações consecutivas de entrada e saída.
+- PCP com as etapas: Orçamento; Lista de compra + caderno técnico; Usinagem;
+  Montagem; Expedição; Entrega; Instalação; Concluído.
+- Compartilhamento do PCP por pasta de rede para até quatro computadores.
+
+Como testar
+1. Extraia TODO o conteúdo deste ZIP para uma pasta local.
+2. Não execute o programa de dentro do ZIP.
+3. Abra "Rasputim Tecnologis - TESTE Acessos.exe".
+4. No primeiro acesso, crie a conta do Responsável Geral.
+5. Em Configurações, cadastre uma conta de Estoque e uma conta de Produção
+   para testar a autorização de saída.
+
+Dados do teste
+Esta edição usa uma identificação própria para que os dados do piloto não se
+misturem aos dados de uma instalação Rasputim existente no mesmo computador.
+
+Requisito
+Windows 10 64 bits ou superior.

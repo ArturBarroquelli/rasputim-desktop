@@ -1,0 +1,18 @@
+{
+  "name": "rasputim-tecnologis-ferramentas-win10",
+  "version": "0.4.29-github-ai-local",
+  "description": "Windows 10 x64 — PCP, estoque, usuários, ferramentas auditáveis e integração opcional com IA local via llama-server",
+  "productName": "Rasputim Tecnologis",
+  "main": "src/main.cjs",
+  "author": "Rasputim Tecnologis",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "verify": "node --check src/main.cjs && node --check src/preload.cjs && node --check src/renderer.js && node --test test/*.test.cjs",
+    "build:windows": "node scripts/package-windows.cjs"
+  },
+  "dependencies": {
+    "xlsx": "0.18.5"
+  }
+}
