@@ -2,12 +2,6 @@ name: Bootstrap Rasputim v0.4.29
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - release/v0.4.29-github-ai-local
-    paths:
-      - 'release/parts/**'
-      - '.github/workflows/bootstrap-v0429.yml'
 
 permissions:
   contents: write
