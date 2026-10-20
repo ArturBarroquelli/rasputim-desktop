@@ -8,7 +8,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 test('a versão web mantém os módulos centrais do Rasputim', () => {
   const app = read('src/web/App.tsx');
-  for (const label of ['PCP', 'Estoque', 'Ferramentas', 'Usuários', 'Relatórios']) {
+  for (const label of ['PCP', 'ESTOQUE', 'FERRAMENTAS', 'USUÁRIOS', 'RELATÓRIOS']) {
     assert.match(app, new RegExp(label));
   }
   assert.match(app, /Novo projeto/);

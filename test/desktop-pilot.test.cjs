@@ -9,9 +9,9 @@ const main = fs.readFileSync(path.join(root, "src", "main.cjs"), "utf8");
 const legacyHtml = fs.readFileSync(path.join(root, "src", "index.html"), "utf8");
 const reactEntry = fs.readFileSync(path.join(root, "src", "renderer", "main.tsx"), "utf8");
 
-test("v0.6.2 preserva o modelo desktop local com renderer React", () => {
+test("v0.6.3 preserva o modelo desktop local com renderer React", () => {
   assert.equal(packageInfo.name, "rasputim-tecnologis-react");
-  assert.equal(packageInfo.version, "0.6.2");
+  assert.equal(packageInfo.version, "0.6.3");
   assert.match(legacyHtml, /WINDOWS 10/);
   assert.match(reactEntry, /ReactDOM\.createRoot/);
   assert.match(main, /mainWindow\.loadFile\(path\.join\(__dirname, "renderer-dist", "index\.html"\)\)/);

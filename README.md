@@ -1,10 +1,10 @@
-# Rasputim Tecnologis v0.6.2
+# Rasputim Tecnologis v0.6.3
 
 **React + TypeScript + Electron + Node.js + IA local** aplicados a um sistema desktop de operação fabril.
 
 > **Para recrutadores:** veja a [visão técnica do projeto](docs/PORTFOLIO_RECRUTADORES.md), com problema resolvido, decisões de arquitetura e evidências de engenharia.
 
-O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.6.2 acrescenta uma demonstração interativa e operações reais na interface web local, acessada pelos navegadores da rede da empresa.
+O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.6.3 preserva na interface web local o mesmo painel visual escuro da versão executável, acessada pelos navegadores da rede da empresa.
 
 ## Stack
 
