@@ -3,19 +3,20 @@ const fs = require("node:fs");
 const http = require("node:http");
 const path = require("node:path");
 
-const { loadSeed, enrich: enrichProcurement } = require("./procurement.cjs");
-const { emptyTools, normalizeTools, toolSummary } = require("./tools.cjs");
+const { loadSeed, enrich: enrichProcurement, recordMovement, registerManualMaterial } = require("./procurement.cjs");
+const { addTool, checkoutTool, emptyTools, normalizeTools, returnTool, setToolStatus, toolSummary } = require("./tools.cjs");
 const {
   SESSION_IDLE_MS,
   authenticate,
   createFirstAdmin,
+  createUser,
   emptySecurity,
   hasPermission,
   normalizeSecurity,
   publicUser,
   PERMISSIONS,
 } = require("./security.cjs");
-const { createPcpProject, enrichPcp } = require("./pcp.cjs");
+const { createPcpProject, enrichPcp, setPcpBlocked, transitionPcpProject } = require("./pcp.cjs");
 const { createPcpStore } = require("./pcp-store.cjs");
 
 const MAX_BODY_BYTES = 256 * 1024;
@@ -101,6 +102,34 @@ function createWebServer(options = {}) {
     }
   }
   function persist() { state.updatedAt = new Date().toISOString(); writeJson(statePath, state); }
+  function seedDemonstration() {
+    if (state.demoSeededAt) return;
+    const administrator = { id: "DEMO-ADMIN", name: "Administrador Rasputim" };
+    const materials = [
+      ["MDF Branco TX 18 mm", "MDF", "CHAPA", 18, 8, "A-001"],
+      ["Fita de borda branca 22 mm", "MATERIAL GERAL", "ROLO", 5, 12, "B-003"],
+      ["Parafuso Confirmat 7 x 50", "FERRAGENS", "UN.", 180, 300, "C-012"],
+      ["Cola de contato", "MATERIAL GERAL", "LATA", 2, 5, "D-004"],
+    ];
+    for (const [material, category, unit, current, minimum, storageLocation] of materials) {
+      try { state.procurement = registerManualMaterial(state.procurement, { material, category, unit, current, minimum, storageLocation, registeredBy: administrator.name }); } catch {}
+    }
+    for (const [name, category, assetTag, location] of [["Parafusadeira 18V", "PARAFUSADEIRA", "PAR-01", "Bancada 1"], ["Furadeira de bancada", "FURADEIRA", "FUR-02", "Usinagem"], ["Lixadeira orbital", "LIXADEIRA", "LIX-03", "Montagem"]]) {
+      try { state.tools = addTool(state.tools, { name, category, assetTag, location }, administrator); } catch {}
+    }
+    const today = new Date(); const date = (days) => new Date(today.getTime() + days * 86400000).toISOString().slice(0, 10);
+    pcpStore.mutate((current) => {
+      if (current.projects.length) return current;
+      let next = current;
+      [
+        ["Residencial Almeida", "Cozinha planejada", "Ricardo Costa", 7, "URGENTE"],
+        ["Loja Conforto", "Balcão e expositores", "Ana Müller", 14, "ALTA"],
+        ["Apartamento Silva", "Guarda-roupa master", "João Silva", 21, "NORMAL"],
+      ].forEach(([client, name, responsible, days, priority]) => { next = createPcpProject(next, { client, name, responsible, dueDate: date(days), priority, historyNote: "Projeto fictício criado para demonstração interativa." }); });
+      return next;
+    });
+    state.demoSeededAt = new Date().toISOString(); persist();
+  }
   function userForRequest(req) {
     const token = parseCookies(req.headers.cookie)[COOKIE];
     const session = token && sessions.get(token);
@@ -125,6 +154,9 @@ function createWebServer(options = {}) {
     if (!user) throw new Error("Sua sessão expirou. Entre novamente.");
     if (!hasPermission(user, permission)) throw new Error("Seu cargo não possui permissão para esta operação.");
     return user;
+  }
+  function dashboardResponse(req, res, status = 200, extra = {}) {
+    return sendJson(res, status, { ...dashboard(req), ...extra });
   }
   function dashboard(req) {
     const auth = authPayload(req);
@@ -154,10 +186,59 @@ function createWebServer(options = {}) {
       return sendJson(res, 200, { ok: true }, { "Set-Cookie": `${COOKIE}=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0` });
     }
     if (req.method === "GET" && url.pathname === "/api/dashboard") { requireUser(req); return sendJson(res, 200, dashboard(req)); }
+    if (req.method === "POST" && url.pathname === "/api/demo/load") {
+      requireUser(req, PERMISSIONS.MANAGE_USERS); seedDemonstration(); return dashboardResponse(req, res, 201);
+    }
     if (req.method === "POST" && url.pathname === "/api/pcp/projects") {
       const actor = requireUser(req, PERMISSIONS.PCP_MANAGE); const input = await readBody(req);
       const updated = pcpStore.mutate((current) => createPcpProject(current, { ...input, responsible: input.responsible || actor.name, historyNote: `Obra cadastrada por ${actor.name}.` }));
-      return sendJson(res, 201, { pcp: enrichPcp(updated) });
+      return dashboardResponse(req, res, 201, { pcp: enrichPcp(updated) });
+    }
+    const projectMatch = /^\/api\/pcp\/projects\/([^/]+)\/(transition|block)$/.exec(url.pathname);
+    if (req.method === "POST" && projectMatch) {
+      const actor = requireUser(req, PERMISSIONS.PCP_MANAGE); const input = await readBody(req);
+      const projectId = decodeURIComponent(projectMatch[1]);
+      const updated = pcpStore.mutate((current) => projectMatch[2] === "transition"
+        ? transitionPcpProject(current, projectId, { ...input, user: actor.name })
+        : setPcpBlocked(current, projectId, { ...input, user: actor.name }));
+      return dashboardResponse(req, res, 200, { pcp: enrichPcp(updated) });
+    }
+    if (req.method === "POST" && url.pathname === "/api/stock/materials") {
+      const actor = requireUser(req, PERMISSIONS.STOCK_MANAGE_MATERIALS); const input = await readBody(req);
+      state.procurement = registerManualMaterial(state.procurement, { ...input, registeredBy: actor.name }); persist();
+      return dashboardResponse(req, res, 201);
+    }
+    if (req.method === "POST" && url.pathname === "/api/stock/movements") {
+      const actor = requireUser(req); const input = await readBody(req); const type = String(input.type || "").toUpperCase();
+      const required = type === "ENTRADA" ? PERMISSIONS.STOCK_ENTRY : type === "CONTAGEM" ? PERMISSIONS.STOCK_COUNT : PERMISSIONS.STOCK_REQUEST_EXIT;
+      if (!hasPermission(actor, required)) throw new Error("Seu cargo não possui permissão para esta operação.");
+      state.procurement = recordMovement(state.procurement, { ...input, type, registeredBy: actor.name, requestedBy: input.requestedBy || actor.name }); persist();
+      return dashboardResponse(req, res, 201);
+    }
+    if (req.method === "POST" && url.pathname === "/api/tools") {
+      const actor = requireUser(req, PERMISSIONS.TOOL_MANAGE); state.tools = addTool(state.tools, await readBody(req), actor); persist();
+      return dashboardResponse(req, res, 201);
+    }
+    const toolMatch = /^\/api\/tools\/([^/]+)\/(checkout|return|status)$/.exec(url.pathname);
+    if (req.method === "POST" && toolMatch) {
+      const actor = requireUser(req); const input = await readBody(req); const toolId = decodeURIComponent(toolMatch[1]);
+      if (toolMatch[2] === "checkout") {
+        if (!hasPermission(actor, PERMISSIONS.TOOL_REQUEST_WITHDRAWAL)) throw new Error("Seu cargo não possui permissão para esta operação.");
+        const authorizer = hasPermission(actor, PERMISSIONS.TOOL_AUTHORIZE_WITHDRAWAL) ? actor : null;
+        if (!authorizer) throw new Error("A retirada deve ser autorizada por um responsável habilitado.");
+        state.tools = checkoutTool(state.tools, { ...input, toolId }, actor, authorizer);
+      } else if (toolMatch[2] === "return") {
+        if (!hasPermission(actor, PERMISSIONS.TOOL_REGISTER_RETURN)) throw new Error("Seu cargo não possui permissão para esta operação.");
+        state.tools = returnTool(state.tools, { ...input, toolId }, actor);
+      } else {
+        if (!hasPermission(actor, PERMISSIONS.TOOL_MANAGE)) throw new Error("Seu cargo não possui permissão para esta operação.");
+        state.tools = setToolStatus(state.tools, toolId, input, actor);
+      }
+      persist(); return dashboardResponse(req, res, 200);
+    }
+    if (req.method === "POST" && url.pathname === "/api/users") {
+      requireUser(req, PERMISSIONS.MANAGE_USERS); const created = createUser(state.security, await readBody(req)); state.security = created.security; persist();
+      return dashboardResponse(req, res, 201);
     }
     return sendJson(res, 404, { error: "Rota não encontrada." });
   }

@@ -1,6 +1,6 @@
 {
   "name": "rasputim-tecnologis-react",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Rasputim Tecnologis — React + TypeScript + Electron para PCP, estoque, ferramentas e IA local",
   "productName": "Rasputim Tecnologis",
   "main": "src/main.cjs",
