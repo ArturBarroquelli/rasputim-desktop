@@ -60,6 +60,7 @@ const {
 const { createPcpStore } = require("../core/pcp-store.cjs");
 const { createSecurityStore } = require("../core/security-store.cjs");
 const { createCentralStore } = require("../core/central-store.cjs");
+const { createWebServer } = require("../core/web-server.cjs");
 const { DEFAULT_BASE_URL, localAiStatus, sendLocalAiMessage } = require("../core/local-ai.cjs");
 const {
   addTool,
@@ -89,6 +90,7 @@ let pcpConnectionSignature = "";
 let centralPollTimer = null;
 let centralConnectionSignature = "";
 let activeSession = null;
+let webServer = null;
 const stockImportPreviews = new Map();
 
 if (process.env.RASPUTIM_USER_DATA_DIR) {
@@ -1185,6 +1187,32 @@ function createWindow() {
   mainWindow.on("closed", () => { mainWindow = null; });
 }
 
+function localWebAddresses(port) {
+  const addresses = new Set([`http://localhost:${port}`]);
+  for (const entries of Object.values(os.networkInterfaces())) {
+    for (const entry of entries || []) {
+      if (entry.family === "IPv4" && !entry.internal) addresses.add(`http://${entry.address}:${port}`);
+    }
+  }
+  return [...addresses];
+}
+
+async function startCentralWeb() {
+  const port = Math.max(1024, Math.min(65535, Number(process.env.RASPUTIM_WEB_PORT || 8080) || 8080));
+  webServer = createWebServer({
+    userDataPath: app.getPath("userData"),
+    staticRoot: path.join(__dirname, "../web-dist"),
+    seedFile: seedFile(),
+    procurementSeedFile: procurementSeedFile(),
+    stationName: os.hostname(),
+    version: appPackage.version,
+  });
+  await webServer.start({ port });
+  const addresses = localWebAddresses(port);
+  console.log(`Rasputim Central Web iniciado: ${addresses.join(" | ")}`);
+  await shell.openExternal(addresses[0]);
+}
+
 function startPcpPolling() {
   if (pcpPollTimer) clearInterval(pcpPollTimer);
   pcpConnectionSignature = pcpConnectionKey(getPcpStore().status());
@@ -1227,6 +1255,14 @@ function startCentralPolling() {
 }
 
 app.whenReady().then(() => {
+  if (process.argv.includes("--web-server")) {
+    startCentralWeb().catch((error) => {
+      console.error("Não foi possível iniciar o Rasputim Central Web:", error);
+      dialog.showErrorBox("Rasputim Central Web", error.message || "Não foi possível iniciar o servidor web.");
+      app.quit();
+    });
+    return;
+  }
   state = loadState();
   getPcpStore();
   registerHandlers();
@@ -1237,6 +1273,7 @@ app.whenReady().then(() => {
 });
 
 app.on("before-quit", () => {
+  webServer?.stop?.();
   if (pcpPollTimer) clearInterval(pcpPollTimer);
   pcpPollTimer = null;
   if (centralPollTimer) clearInterval(centralPollTimer);

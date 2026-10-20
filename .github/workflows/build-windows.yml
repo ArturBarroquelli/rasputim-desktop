@@ -12,6 +12,7 @@ on:
       - 'test/**'
       - 'package.json'
       - 'vite.config.ts'
+      - 'vite.web.config.ts'
       - 'tsconfig.json'
       - '.github/workflows/build-windows.yml'
   pull_request:
@@ -45,13 +46,14 @@ jobs:
         run: |
           $folder = Get-ChildItem dist -Directory | Select-Object -First 1
           if (-not $folder) { throw 'Build folder not found.' }
-          $zip = Join-Path dist 'Rasputim-Tecnologis-v0.5.1-CENTRAL-Windows-x64.zip'
+          $version = (node -p "require('./package.json').version")
+          $zip = Join-Path dist "Rasputim-Tecnologis-v$version-CENTRAL-WEB-Windows-x64.zip"
           Compress-Archive -Path (Join-Path $folder.FullName '*') -DestinationPath $zip -Force
           Get-FileHash $zip -Algorithm SHA256 | Format-List
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Rasputim-Tecnologis-v0.5.1-CENTRAL-Windows-x64
-          path: dist/Rasputim-Tecnologis-v0.5.1-CENTRAL-Windows-x64.zip
+          name: Rasputim-Tecnologis-CENTRAL-WEB-Windows-x64
+          path: dist/*-CENTRAL-WEB-Windows-x64.zip
           if-no-files-found: error
           retention-days: 14

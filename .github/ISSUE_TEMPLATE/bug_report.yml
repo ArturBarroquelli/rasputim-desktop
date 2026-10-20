@@ -1,0 +1,25 @@
+name: Relatar erro
+description: Ajude a corrigir um comportamento inesperado do Rasputim.
+title: "[Erro]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: O que aconteceu?
+      description: Não inclua senhas, dados de clientes ou planilhas reais.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Rasputim
+      placeholder: "Ex.: 0.6.1"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+    validations:
+      required: true

@@ -35,6 +35,19 @@ async function main() {
     ],
   });
 
+  const packageDirectory = paths[0];
+  const launcherPath = path.join(packageDirectory, "INICIAR-RASPUTIM-WEB-CENTRAL.cmd");
+  fs.writeFileSync(launcherPath, [
+    "@echo off",
+    "title Rasputim Central Web",
+    "pushd \"%~dp0\"",
+    "echo Iniciando o Rasputim na rede local...",
+    "start \"\" \"Rasputim Tecnologis.exe\" --web-server",
+    "echo O navegador sera aberto neste computador.",
+    "echo Nos outros computadores, use o endereco mostrado na tela inicial do Rasputim.",
+    "popd",
+  ].join("\r\n"), "utf8");
+
   console.log(`Build concluído: ${paths.join(', ')}`);
 }
 

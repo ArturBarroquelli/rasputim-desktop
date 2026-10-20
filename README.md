@@ -1,10 +1,10 @@
-# Rasputim Tecnologis v0.5.1
+# Rasputim Tecnologis v0.6.1
 
 **React + TypeScript + Electron + Node.js + IA local** aplicados a um sistema desktop de operação fabril.
 
 > **Para recrutadores:** veja a [visão técnica do projeto](docs/PORTFOLIO_RECRUTADORES.md), com problema resolvido, decisões de arquitetura e evidências de engenharia.
 
-O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.5.1 adiciona uma operação central para um notebook Windows 10 e três computadores Windows 11 na mesma rede.
+O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.6.1 acrescenta uma interface web local, acessada pelos navegadores da rede da empresa.
 
 ## Stack
 
@@ -48,6 +48,19 @@ O renderer não recebe acesso direto ao Node.js. A comunicação acontece pelo `
 - Build Windows x64 automatizado pelo GitHub Actions.
 
 ## Operação central na empresa
+
+### Acesso web local
+
+No notebook central, execute `INICIAR-RASPUTIM-WEB-CENTRAL.cmd` dentro da
+versão Windows. O notebook passa a atender a interface web em uma porta local e
+abre automaticamente o navegador. Nos outros computadores, acesse o endereço
+de rede exibido pelo central, por exemplo `http://192.168.1.50:8080`.
+
+O acesso não depende de internet: os dados e o login permanecem na rede local.
+O primeiro acesso cria o responsável geral. Os demais usuários usam suas
+próprias credenciais.
+
+### Operação compartilhada da versão desktop
 
 No notebook central, o responsável geral escolhe uma pasta compartilhada em **Sobre o projeto → Configurar como central**. Essa pasta concentra a base operacional, usuários e PCP. Em cada computador operacional, antes do primeiro login, use **Conectar ao computador central** e selecione a mesma pasta compartilhada.
 
