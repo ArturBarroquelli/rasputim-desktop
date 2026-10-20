@@ -59,6 +59,7 @@ const {
 } = require("../core/pcp.cjs");
 const { createPcpStore } = require("../core/pcp-store.cjs");
 const { createSecurityStore } = require("../core/security-store.cjs");
+const { createCentralStore } = require("../core/central-store.cjs");
 const { DEFAULT_BASE_URL, localAiStatus, sendLocalAiMessage } = require("../core/local-ai.cjs");
 const {
   addTool,
@@ -82,8 +83,11 @@ let state = null;
 let credentialVault = null;
 let pcpStore = null;
 let securityStore = null;
+let centralStore = null;
 let pcpPollTimer = null;
 let pcpConnectionSignature = "";
+let centralPollTimer = null;
+let centralConnectionSignature = "";
 let activeSession = null;
 const stockImportPreviews = new Map();
 
@@ -142,6 +146,17 @@ function getPcpStore() {
 function getSecurityStore() {
   if (!securityStore) securityStore = createSecurityStore({ userDataPath: app.getPath("userData") });
   return securityStore;
+}
+
+function getCentralStore() {
+  if (!centralStore) centralStore = createCentralStore({ userDataPath: app.getPath("userData"), stationName: os.hostname() });
+  return centralStore;
+}
+
+function centralPayload(rawState) {
+  const payload = structuredClone(rawState || emptyState());
+  delete payload.security;
+  return payload;
 }
 
 function pcpConnectionKey(connection) {
@@ -280,6 +295,8 @@ function loadState() {
       tools: normalizeTools(stored.tools),
       security: normalizeSecurity(stored.security),
     };
+    const sharedOperations = getCentralStore().read();
+    if (sharedOperations) Object.assign(loaded, sharedOperations);
     const sharedSecurity = getSecurityStore().read();
     if (sharedSecurity) loaded.security = sharedSecurity;
     const updated = applyBundledStockUpdates(loaded);
@@ -288,6 +305,8 @@ function loadState() {
     return cleaned.state;
   } catch {
     const seeded = initialState();
+    const sharedOperations = getCentralStore().read();
+    if (sharedOperations) Object.assign(seeded, sharedOperations);
     const sharedSecurity = getSecurityStore().read();
     if (sharedSecurity) seeded.security = sharedSecurity;
     const updated = applyBundledStockUpdates(seeded);
@@ -306,6 +325,7 @@ function persistState(nextState = state) {
   const temporary = `${target}.tmp`;
   fs.writeFileSync(temporary, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   fs.renameSync(temporary, target);
+  if (getCentralStore().isCentral()) getCentralStore().write(centralPayload(payload));
   state = payload;
 }
 
@@ -344,6 +364,7 @@ function authStatus() {
     users: canManageUsers ? (state.security.users || []).map((user) => publicUser(user)) : [],
     sessionIdleMinutes: Math.round(SESSION_IDLE_MS / 60000),
     userDirectory: getSecurityStore().status(),
+    centralDirectory: getCentralStore().status(),
   };
 }
 
@@ -403,6 +424,7 @@ function publicState() {
   snapshot.employees = (state.security.users || []).filter((user) => user.active).map((user) => ({ id: user.id, name: user.name, login: user.login, roleLabel: publicUser(user).roleLabel }));
   snapshot.pcp = enrichPcp(getPcpStore().read());
   snapshot.pcpConnection = getPcpStore().status();
+  snapshot.centralConnection = getCentralStore().status();
   return { ...calculateDashboard(snapshot), auth };
 }
 
@@ -515,6 +537,46 @@ function registerHandlers() {
   ipcMain.handle("auth:use-local-directory", () => {
     requirePermission(PERMISSIONS.MANAGE_USERS);
     getSecurityStore().useLocal();
+    persistState();
+    return publicState();
+  });
+
+  ipcMain.handle("central:setup", async () => {
+    requirePermission(PERMISSIONS.MANAGE_USERS);
+    const result = await dialog.showOpenDialog(mainWindow, {
+      title: "Selecionar pasta central do Rasputim",
+      properties: ["openDirectory", "createDirectory"],
+      buttonLabel: "CONFIGURAR COMPUTADOR CENTRAL",
+    });
+    if (result.canceled || !result.filePaths[0]) return { canceled: true, state: publicState() };
+    const directory = result.filePaths[0];
+    getCentralStore().enable(directory, centralPayload(state));
+    state.security = getSecurityStore().enableShared(directory, state.security);
+    getPcpStore().configureShared(directory, os.hostname());
+    persistState();
+    return { canceled: false, state: publicState() };
+  });
+
+  ipcMain.handle("central:connect", async () => {
+    const result = await dialog.showOpenDialog(mainWindow, {
+      title: "Selecionar pasta do computador central",
+      properties: ["openDirectory"],
+      buttonLabel: "CONECTAR A ESTA OPERAÇÃO",
+    });
+    if (result.canceled || !result.filePaths[0]) return { canceled: true, status: authStatus() };
+    const directory = result.filePaths[0];
+    getCentralStore().connect(directory);
+    getSecurityStore().connectExisting(directory);
+    getPcpStore().configureShared(directory, os.hostname());
+    state = loadState();
+    return { canceled: false, status: authStatus() };
+  });
+
+  ipcMain.handle("central:use-local", () => {
+    requirePermission(PERMISSIONS.MANAGE_USERS);
+    getCentralStore().useLocal();
+    getSecurityStore().useLocal();
+    getPcpStore().useLocal(os.hostname());
     persistState();
     return publicState();
   });
@@ -1140,18 +1202,45 @@ function startPcpPolling() {
   }, 3000);
 }
 
+function startCentralPolling() {
+  if (centralPollTimer) clearInterval(centralPollTimer);
+  centralConnectionSignature = JSON.stringify(getCentralStore().status());
+  centralPollTimer = setInterval(() => {
+    try {
+      const refreshed = getCentralStore().refresh();
+      const signature = JSON.stringify(getCentralStore().status());
+      if (refreshed.changed && refreshed.data) {
+        const localSecurity = state.security;
+        state = { ...state, ...refreshed.data, security: localSecurity };
+        const temporary = `${stateFile()}.tmp`;
+        fs.writeFileSync(temporary, `${JSON.stringify(state, null, 2)}\n`, "utf8");
+        fs.renameSync(temporary, stateFile());
+      }
+      if (refreshed.changed || signature !== centralConnectionSignature) {
+        centralConnectionSignature = signature;
+        if (mainWindow && !mainWindow.isDestroyed()) mainWindow.webContents.send("central:changed", publicState());
+      }
+    } catch (error) {
+      console.error("Falha ao atualizar a base central:", error);
+    }
+  }, 3000);
+}
+
 app.whenReady().then(() => {
   state = loadState();
   getPcpStore();
   registerHandlers();
   createWindow();
   startPcpPolling();
+  startCentralPolling();
   app.on("activate", () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });
 });
 
 app.on("before-quit", () => {
   if (pcpPollTimer) clearInterval(pcpPollTimer);
   pcpPollTimer = null;
+  if (centralPollTimer) clearInterval(centralPollTimer);
+  centralPollTimer = null;
 });
 
 app.on("window-all-closed", () => {

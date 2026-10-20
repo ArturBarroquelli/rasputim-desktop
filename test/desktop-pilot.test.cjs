@@ -11,7 +11,7 @@ const reactEntry = fs.readFileSync(path.join(root, "src", "renderer", "main.tsx"
 
 test("piloto Windows 10 preserva o modelo desktop local com renderer React", () => {
   assert.equal(packageInfo.name, "rasputim-tecnologis-react");
-  assert.equal(packageInfo.version, "0.5.0");
+  assert.equal(packageInfo.version, "0.5.1");
   assert.match(legacyHtml, /WINDOWS 10/);
   assert.match(reactEntry, /ReactDOM\.createRoot/);
   assert.match(main, /mainWindow\.loadFile\(path\.join\(__dirname, "renderer-dist", "index\.html"\)\)/);

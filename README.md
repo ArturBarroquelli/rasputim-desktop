@@ -1,10 +1,10 @@
-# Rasputim Tecnologis v0.5.0
+# Rasputim Tecnologis v0.5.1
 
 **React + TypeScript + Electron + Node.js + IA local** aplicados a um sistema desktop de operação fabril.
 
 > **Para recrutadores:** veja a [visão técnica do projeto](docs/PORTFOLIO_RECRUTADORES.md), com problema resolvido, decisões de arquitetura e evidências de engenharia.
 
-O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.5.0 migra o renderer para React + TypeScript sem reescrever o Core já validado.
+O Rasputim nasceu para resolver um problema real: centralizar **PCP, estoque/compras, ferramentas, usuários e inteligência operacional** em um único aplicativo Windows. A v0.5.1 adiciona uma operação central para um notebook Windows 10 e três computadores Windows 11 na mesma rede.
 
 ## Stack
 
@@ -46,6 +46,12 @@ O renderer não recebe acesso direto ao Node.js. A comunicação acontece pelo `
 - Login individual e trilha de responsabilidade.
 - Assistente de IA local conectado ao `llama-server`.
 - Build Windows x64 automatizado pelo GitHub Actions.
+
+## Operação central na empresa
+
+No notebook central, o responsável geral escolhe uma pasta compartilhada em **Sobre o projeto → Configurar como central**. Essa pasta concentra a base operacional, usuários e PCP. Em cada computador operacional, antes do primeiro login, use **Conectar ao computador central** e selecione a mesma pasta compartilhada.
+
+Todos os computadores precisam ter leitura e gravação nessa pasta. A conexão é local pela rede da empresa; não depende de internet.
 
 ## Desenvolvimento
 

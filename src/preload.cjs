@@ -9,6 +9,9 @@ contextBridge.exposeInMainWorld("rasputim", {
   enableSharedUserDirectory: () => ipcRenderer.invoke("auth:enable-shared-directory"),
   connectSharedUserDirectory: () => ipcRenderer.invoke("auth:connect-shared-directory"),
   useLocalUserDirectory: () => ipcRenderer.invoke("auth:use-local-directory"),
+  setupCentralOperation: () => ipcRenderer.invoke("central:setup"),
+  connectCentralOperation: () => ipcRenderer.invoke("central:connect"),
+  useLocalOperation: () => ipcRenderer.invoke("central:use-local"),
   createUser: (payload) => ipcRenderer.invoke("auth:create-user", payload),
   updateUser: (id, payload) => ipcRenderer.invoke("auth:update-user", id, payload),
   resetUserPassword: (id, password) => ipcRenderer.invoke("auth:reset-user-password", id, password),
@@ -64,6 +67,11 @@ contextBridge.exposeInMainWorld("rasputim", {
     const listener = (_event, payload) => callback(payload);
     ipcRenderer.on("pcp:changed", listener);
     return () => ipcRenderer.removeListener("pcp:changed", listener);
+  },
+  onCentralChanged: (callback) => {
+    const listener = (_event, payload) => callback(payload);
+    ipcRenderer.on("central:changed", listener);
+    return () => ipcRenderer.removeListener("central:changed", listener);
   },
   minimize: () => ipcRenderer.invoke("window:minimize"),
   toggleMaximize: () => ipcRenderer.invoke("window:toggle-maximize"),

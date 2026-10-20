@@ -3,12 +3,16 @@ node_modules/
 dist/
 build/
 out/
+src/renderer-dist/
 *.log
 
 # Dados locais / credenciais
 rasputim-state.json
 rasputim-credentials.json
 rasputim-usuarios-compartilhados.json
+rasputim-operacao-central.json
+rasputim-operacao-cache.json
+rasputim-central-config.json
 *.lock
 .env
 .env.*

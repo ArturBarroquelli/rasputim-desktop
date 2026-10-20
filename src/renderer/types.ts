@@ -6,6 +6,9 @@ export interface RasputimApi {
   setupAccount(payload: AnyRecord): Promise<AnyRecord>;
   login(payload: AnyRecord): Promise<AnyRecord>;
   logout(): Promise<AnyRecord>;
+  setupCentralOperation(): Promise<AnyRecord>;
+  connectCentralOperation(): Promise<AnyRecord>;
+  useLocalOperation(): Promise<AnyRecord>;
   getAppInfo(): Promise<AnyRecord>;
   getLocalAiStatus(): Promise<AnyRecord>;
   askLocalAi(prompt: string, model?: string): Promise<AnyRecord>;
@@ -23,6 +26,7 @@ export interface RasputimApi {
   setToolStatus(id: string, payload: AnyRecord): Promise<AnyRecord>;
   removeTool(id: string): Promise<AnyRecord>;
   onPcpChanged(callback: (state: AnyRecord) => void): () => void;
+  onCentralChanged(callback: (state: AnyRecord) => void): () => void;
   minimize(): Promise<void>;
   toggleMaximize(): Promise<void>;
   close(): Promise<void>;
