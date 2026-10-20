@@ -42,10 +42,22 @@ async function main() {
     "title Rasputim Central Web",
     "pushd \"%~dp0\"",
     "echo Iniciando o Rasputim na rede local...",
-    "start \"\" \"Rasputim Tecnologis.exe\" --web-server",
-    "echo O navegador sera aberto neste computador.",
-    "echo Nos outros computadores, use o endereco mostrado na tela inicial do Rasputim.",
+    "\"Rasputim Tecnologis.exe\" --web-server",
+    "echo Servidor encerrado.",
     "popd",
+  ].join("\r\n"), "utf8");
+  fs.writeFileSync(path.join(packageDirectory, "COMO-ACESSAR-PELA-REDE.txt"), [
+    "RASPUTIM CENTRAL WEB — ACESSO LOCAL",
+    "",
+    "1. No notebook central, deixe esta pasta extraída e execute INICIAR-RASPUTIM-WEB-CENTRAL.cmd.",
+    "2. O navegador do notebook abrirá automaticamente em http://localhost:8080.",
+    "3. No primeiro acesso, crie o responsável geral e a senha inicial.",
+    "4. Para descobrir o endereço dos outros computadores: pressione Win+R, digite cmd e execute ipconfig.",
+    "5. Localize 'Endereço IPv4' da rede Wi-Fi. Exemplo: 192.168.1.50.",
+    "6. Nos computadores da fábrica, abra http://SEU-IP:8080. Exemplo: http://192.168.1.50:8080.",
+    "",
+    "Deixe a janela do Rasputim aberta no notebook central enquanto os demais computadores estiverem usando o sistema.",
+    "O sistema funciona somente na rede local e não depende de internet.",
   ].join("\r\n"), "utf8");
 
   console.log(`Build concluído: ${paths.join(', ')}`);
