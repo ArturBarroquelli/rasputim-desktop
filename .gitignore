@@ -4,6 +4,7 @@ dist/
 build/
 out/
 src/renderer-dist/
+web-dist/
 *.log
 
 # Dados locais / credenciais
