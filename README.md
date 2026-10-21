@@ -36,7 +36,7 @@ Node.js Core
 └── IA local
 ```
 
-O renderer não recebe acesso direto ao Node.js. A comunicação acontece pelo `preload.cjs` com `contextIsolation: true`, `nodeIntegration: false` e sandbox habilitado.
+O renderer não recebe acesso direto ao Node.js. A comunicação acontece pelo `preload.cjs` com `contextIsolation: true`, `nodeIntegration: false` e sandbox habilitada.
 
 ## Funcionalidades demonstráveis
 
